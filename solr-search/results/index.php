@@ -67,7 +67,7 @@
 <?php echo pagination_links(); ?>
 
 <script>
-$( document ).ready(function(){ 
+jQuery(document).ready(function($){
 	if ($(window).width() > 930) {
 		$("#nav-bar-search").show( 0, function() {});
 		$("#nav-bar-button-search").attr('class', 'nav-bar-button-search-selected');
