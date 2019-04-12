@@ -1,6 +1,5 @@
 /* @group ----- Items ----- */
-.items #content,
-.items #contentDescription {
+.items #content {
   clear: both;
   font-size: var(--fontDocumentSize);
   line-height: 1.5em;
@@ -8,23 +7,6 @@
   padding: 0;
   position: relative;
   width: calc(100% - 540px);
-}
-
-.items #contentDescription {
-  max-width: 550px;
-  width: 100%;
-}
-
-#contentDescription p {
-  margin: 10px 0 0 0;
-}
-
-#contentDescription a {
-  color: var(--colorText);
-}
-
-#contentDescription a:hover {
-  color: var(--colorLink);
 }
 
 .items-content-button,

@@ -7,14 +7,15 @@ var uglify = require('gulp-uglify');
 
 var paths = {
     js: "javascripts",
+    sass: "scss",
     css: "css"
 };
 
 //compile
 function css() {
-    return gulp.src("scss/*.scss")
+    return gulp.src(paths.sass + "/*.scss")
         .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("css"));
+        .pipe(gulp.dest(paths.css));
 }
 
 // Run:
@@ -32,7 +33,10 @@ function js() {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 function watchFiles() {
-    gulp.watch("scss/*.scss", css);
+    gulp.watch([
+        paths.sass + "/**/*.scss",
+        paths.sass + "/*.scss"
+    ], css);
     gulp.watch([
         paths.js + "/*.js",
         "!" + paths.js + "/theme.js",

@@ -1,25 +1,26 @@
 
 
-@import "index";
+@import "theme/layout";
+@import "theme/util";
+@import "theme/index";
+@import "theme/forms";
+@import "theme/header";
+@import "theme/home";
+@import "theme/navbar";
+@import "theme/footer";
+@import "theme/item";
+@import "theme/collection";
+@import "theme/exhibit";
+@import "theme/content";
+@import "theme/search";
+@import "theme/related";
+@import "theme/pagination";
+@import "theme/exhibit-map";
+@import "theme/map";
+@import "theme/comments";
+@import "theme/references";
+@import "theme/feedback";
+@import "theme/tei";
+@import "theme/neatline";
 
-@import "forms";
-@import "header";
-@import "home";
-@import "navbar";
-@import "footer";
-@import "item";
-@import "collection";
-@import "exhibit";
-@import "content";
-@import "search";
-@import "related";
-@import "pagination";
-@import "exhibit-map";
-@import "map";
-@import "comments";
-@import "references";
-@import "feedback";
-@import "tei";
-@import "neatline";
-
-@import "mobile";
+@import "theme/mobile";

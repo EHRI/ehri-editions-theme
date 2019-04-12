@@ -70,11 +70,6 @@
     width: 90%;
   }
 
-  .items #contentDescription {
-    min-width: 0;
-    width: 100%;
-  }
-
   .items-content-button {
     margin: 6px 2px 30px 0;
   }
@@ -611,8 +606,7 @@
     display: none;
   }
 
-  .exhibits #content,
-  .exhibits #contentDescription {
+  .exhibits #content {
     clear: both;
     font-size: var(--fontDocumentSize);
     line-height: 1.5em;
