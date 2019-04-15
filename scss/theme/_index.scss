@@ -92,7 +92,7 @@ a:visited {
 
 /* -- Headings -- */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 18px;
+  margin-bottom: $margin-md;
 }
 
 h1 {
@@ -100,7 +100,7 @@ h1 {
   font-weight: bold;
   letter-spacing: 0.03em;
   line-height: 1.25em;
-  margin: 15px 0 10px -1px;
+  margin: $margin-md 0 $margin-sm -1px;
   min-height: 72px;
   text-transform: none;
   max-width: 700px;
@@ -109,7 +109,7 @@ h1 {
 }
 
 #exhibit-title {
-  margin: 20px 0 25px -1px;
+  margin: $margin-md 0 $margin-md -1px;
   min-height: 0;
 }
 
@@ -121,11 +121,11 @@ h2 {
 h3,
 #exhibit-blocks .exhibit-strong-title {
   border-top: 1px dashed var(--colorLineDashed);
-  padding: 35px 0 0 0;
+  padding: $padding-lg 0 0 0;
   font-weight: bold;
   font-size: 22px;
   letter-spacing: 0.03em;
-  margin-top: 35px;
+  margin-top: $margin-lg;
   width: 840px;
 }
 
@@ -135,8 +135,8 @@ h4 {
   font-size: 22px;
   letter-spacing: 1px;
   line-height: 18px;
-  margin: 35px 0 0 -195px;
-  padding: 35px 0 0 195px;
+  margin: $margin-lg 0 0 -195px;
+  padding: $padding-lg 0 0 195px;
   width: 10000px;
 }
 
@@ -144,7 +144,7 @@ h5,
 label {
   font-size: 14px;
   letter-spacing: 1px;
-  margin: 12px 18px;
+  margin: $margin-sm $margin-md;
   padding: 0;
 }
 
@@ -193,7 +193,7 @@ dt {
 }
 
 dd {
-  margin-left: 1.5em;
+  margin-left: $margin-md;
 }
 
 /* -- Links -- */
@@ -215,7 +215,7 @@ img a {
 .exhibit.record {
   color: var(--colorText);
   float: left;
-  margin: 35px 0 0 0;
+  margin: $margin-lg 0 0 0;
   width: 100%;
 }
 
@@ -224,7 +224,7 @@ img a {
 }
 
 #home .related-chapters {
-  margin: 26px 0 0 0;
+  margin: $margin-md 0 0 0;
 }
 
 .related-chapters img,
@@ -232,7 +232,7 @@ img a {
   border: 0;
   height: 176px;
   float: left;
-  margin: 0 30px 10px 0;
+  margin: 0 $margin-lg $margin-sm 0;
   width: 265px;
 }
 
@@ -247,7 +247,7 @@ img a {
   height: 176px;
   float: left;
   overflow: hidden;
-  margin: -50px 30px 10px 0;
+  margin: -$margin-xl $margin-lg $margin-sm 0;
   width: 265px;
 }
 
@@ -267,7 +267,7 @@ img a {
   clip: initial;
   color: #ff8000;
   height: auto;
-  padding: .5em;
+  padding: $margin-xs;
   top: 0;
   width: auto;
   z-index: 9999;
@@ -304,7 +304,7 @@ img a {
 
 #primary-nav {
   clear: both;
-  margin: 0 0 20px 240px;
+  margin: 0 0 $margin-md 240px;
   padding: 0;
   position: relative;
   width: 980px;
@@ -324,7 +324,7 @@ nav + .exhibit {
 .featured,
 .exhibits .featured {
   display: block;
-  margin: 54px 0 0 0;
+  margin: $margin-xl 0 0 0;
   max-width: 1170px;
   padding: 0 0 1px 0;
   width: 100%;
@@ -337,7 +337,7 @@ nav + .exhibit {
 .featured-carousel {
   display: block;
   height: 320px;
-  margin: 25px 0 0 0;
+  margin: $margin-md 0 0 0;
   max-width: 1170px;
   padding: 0;
   width: calc(100% + 30px);
@@ -360,7 +360,7 @@ nav + .exhibit {
 }
 
 #recent-items .item {
-  margin-bottom: 1.5em;
+  margin-bottom: $margin-md;
   overflow: hidden;
 }
 

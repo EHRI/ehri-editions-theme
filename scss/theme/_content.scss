@@ -1,6 +1,6 @@
 #content {
   border: 0;
-  margin: 0 40px 40px 190px;
+  margin: 0 $margin-lg $margin-lg 190px;
   padding: 0;
 }
 
@@ -28,7 +28,7 @@ body.exhibits-menu #content-share {
   display: none;
   height: auto;
   margin: 0;
-  padding: 15px 0 20px 0;
+  padding: $padding-sm 0 $padding-md 0;
   position: relative;
   width: 100%;
 }
@@ -38,14 +38,14 @@ body.exhibits-menu #content-share {
 #feedback-tab {
   font-size: 14px;
   letter-spacing: 1px;
-  margin: 0 0 10px 0;
+  margin: 0 0 $margin-sm 0;
 }
 
 #content-share-subtitle {
   display: block;
   float: left;
-  margin: 10px 0 10px 0;
-  padding: 10px 0 0 0;
+  margin: $margin-sm 0 $margin-sm 0;
+  padding: $padding-sm 0 0 0;
   width: 100%;
 }
 
@@ -62,7 +62,7 @@ body.exhibits-menu #content-share {
   float: left;
   cursor: pointer;
   font-weight: normal;
-  margin: 0 20px 0 0;
+  margin: 0 $margin-md 0 0;
   padding: 0;
 }
 
@@ -100,7 +100,7 @@ body.exhibits-menu #content-share {
   float: left;
   height: 265px;
   margin: 25px 0 0 0;
-  padding: 25px 0 25px 0;
+  padding: $padding-md 0;
   width: 100%;
 }
 
@@ -139,7 +139,7 @@ body.exhibits-menu #content-share {
 
 #content-files img,
 #content-files-mobile img {
-  margin: 0 0 15px 0;
+  margin: 0 0 $margin-sm 0;
 }
 
 #content-info {
@@ -157,7 +157,7 @@ body.exhibits-menu #content-share {
   background: var(--colorBackground);
   color: var(--colorText);
   display: block;
-  margin: 25px 0 0 0;
+  margin: $margin-sm 0 0 0;
   padding: 5px 7px;
   position: relative;
   width: 265px;
@@ -166,7 +166,7 @@ body.exhibits-menu #content-share {
 .content-info-annotation-mobile {
   background: var(--colorBackground);
   display: none;
-  margin: 25px 0 0 0;
+  margin: $margin-sm 0 0 0;
   max-width: 290px;
   padding: 5px 7px;
   width: 100%;
@@ -180,13 +180,13 @@ body.exhibits-menu #content-share {
   border: 1px solid var(--colorBorderContent);
   color: var(--colorText);
   display: block;
-  margin: 25px 0 0 0;
+  margin: $margin-sm 0 0 0;
   max-height: 420px;
   overflow: hidden;
   padding: 0;
   position: relative;
   width: 265px;
-  margin-top: 35px !important;
+  margin-top: $margin-lg !important;
 }
 
 .content-info-entity-body, .content-info-entity-footer {
@@ -194,14 +194,14 @@ body.exhibits-menu #content-share {
   /*height: 373px;*/
   margin: 0;
   overflow: auto;
-  padding: 0 18px 10px 18px;
+  padding: 0 $padding-md $padding-sm $padding-md;
   width: 100%;
 }
 
 .content-info-entity-body img {
   display: block;
   height: 110px;
-  margin: 18px;
+  margin: $padding-md;
   padding: 0;
 }
 
@@ -279,11 +279,11 @@ body.exhibits-menu #content-share {
 }
 
 .editions-item-group {
-  padding: 35px 0;
+  padding: $padding-lg 0;
 }
 
 .element-metadata-field {
-  margin: 12px 0 0 0;
+  margin: $margin-sm 0 0 0;
   font-size: 14px;
 }
 
@@ -305,8 +305,8 @@ body.exhibits-menu #content-share {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  margin: 10px 15px 15px 0;
-  padding: 0 0 5px 0;
+  margin: $margin-xs $margin-sm $margin-sm 0;
+  padding: 0 0 $padding-xs 0;
 }
 
 .element-text-language-selected {
@@ -322,8 +322,8 @@ body.exhibits-menu #content-share {
   background: var(--colorButton);
   font-size: 14px;
   height: 35px;
-  margin: 15px 0 25px 0;
-  padding: 6px 0 0 10px;
+  margin: $margin-sm 0 $margin-md 0;
+  padding: $padding-xs 0 0 $padding-sm;
   width: 100%;
 }
 
@@ -349,16 +349,16 @@ body.exhibits-menu #content-share {
 
 .element-map {
   border: 1px solid var(--colorBorderInput);
-  margin: 10px 0 5px 0;
+  margin: 0 0 $margin-xs 0;
 }
 
 .element {
   display: block;
-  margin: 0 0 8px 0;
+  margin: 0 0 $margin-xs 0;
 }
 
 .element-set {
-  margin: 0 0 23px 0;
+  margin: 0 0 $margin-md 0;
 }
 
 /* @end */

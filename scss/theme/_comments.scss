@@ -16,13 +16,13 @@ label[for=comment-form-body],
 label[for=author_name],
 label[for=author_url],
 label[for=author_email] {
-  margin: 10px 0 !important;
+  margin: $margin-sm 0 !important;
   width: 150px !important;
 }
 
 .commenting-field input[type="text"] {
   border-color: var(--colorBorderInput);
-  padding: 7px;
+  padding: $padding-xs;
   width: 300px !important;
 }
 
@@ -40,11 +40,11 @@ label[for=author_email] {
 }
 
 .comments {
-  padding-top: 15px !important;
+  padding-top: $padding-sm !important;
 }
 
 .comment {
-  margin-top: -10px !important;
+  margin-top: -$padding-sm !important;
   min-height: 0 !important;
   min-width: 0 !important;
   width: calc(100% - 90px) !important;
@@ -55,11 +55,11 @@ label[for=author_email] {
 }
 
 p.comment-author-name {
-  margin: 20px 0 20px 0 !important;
+  margin: $margin-md 0 !important;
 }
 
 .comment-body p {
-  margin: 14px 0 20px 0 !important;
+  margin: $margin-sm 0 $margin-md 0 !important;
 }
 
 #comments-container .comment-body {
@@ -67,13 +67,13 @@ p.comment-author-name {
 }
 
 .comments-empty {
-  margin: 25px 0 0 0;
+  margin: $margin-md 0 0 0;
 }
 
 #comment-form {
   display: none;
   border-top: 1px dashed var(--colorLineDashed);
-  padding-top: 35px !important;
+  padding-top: $padding-lg !important;
   max-width: none !important;
 }
 

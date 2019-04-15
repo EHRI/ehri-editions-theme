@@ -41,7 +41,7 @@
   font-size: 20px;
   font-weight: bold;
   height: 22px;
-  margin: 30px 0 0 295px;
+  margin: $margin-lg 0 0 295px;
   padding: 0;
   text-transform: none;
 }
@@ -51,7 +51,7 @@
   color: var(--colorLink);
   font-size: 22px;
   font-weight: bold;
-  margin: 25px 0 25px 295px;
+  margin: $margin-md 0 $margin-md 295px;
   text-transform: none;
   width: 100%;
 }
@@ -59,7 +59,7 @@
 .related-chapters p,
 .exhibit.record p {
   font-size: 17px;
-  margin: 12px 0 0 295px;
+  margin: $margin-sm 0 0 295px;
   max-width: 675px;
 }
 

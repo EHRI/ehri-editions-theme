@@ -4,7 +4,7 @@
 }
 
 .tei-note {
-  padding: 10px;
+  padding: $padding-sm;
   display: block;
   background-color: #fff3f3;;
   font-weight: bold;
@@ -13,14 +13,14 @@
 .tei > .tei-text .tei-note-ref {
   vertical-align: super;
   color: #FF6464;
-  margin-left: -5px;
+  margin-left: -$margin-xs;
   display: inline-flex;
   cursor: pointer;
 }
 
 #content-info .tei-note-num {
   color: #FF6464;
-  margin-right: 5px;
+  margin-right: $margin-xs;
   display: inline-flex;
 }
 
@@ -33,7 +33,7 @@
 .tei-note {
   background: var(--colorEntityRef) !important;
   font-weight: normal !important;
-  margin-top: 35px !important;
+  margin-top: $margin-lg !important;
   width: 265px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .tei-entity-data h5 {
-  margin: 5px 0;
+  margin: $margin-xs 0;
 }
 
 .tei > .tei-text ol, .tei > .tei-text ul {
@@ -65,6 +65,6 @@
 
 .tei > .tei-text table tr th,
 .tei > .tei-text table tr td {
-  padding: 5px;
+  padding: $padding-xs;
 }
 

@@ -121,7 +121,7 @@ header a:hover {
   font-family: var(--fontText);
   font-size: 14px;
   line-height: 1.5em;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 $margin-sm;
   max-width: 600px;
   position: relative;
   width: 75%;
@@ -140,7 +140,7 @@ header a:hover {
 
 #home #site-subtitle,
 #exhibit-home-site-subtitle {
-  margin: 30px 0 7px 10px;
+  margin: $margin-lg 0 $margin-xs $margin-sm;
   max-width: 900px;
 }
 

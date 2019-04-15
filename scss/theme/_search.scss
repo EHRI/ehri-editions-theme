@@ -1,6 +1,6 @@
 #search-container {
   display: block;
-  margin: 8px 0 10px 5px;
+  margin: $margin-xs 0 $margin-sm $margin-xs;
   padding: 10px;
   width: 270px;
 }
@@ -19,7 +19,7 @@
   box-sizing: border-box;
   color: var(--colorText);
   height: 34px;
-  padding: 10px 30px 10px 10px;
+  padding: $padding-sm $padding-lg $padding-sm $padding-sm;
   width: 100%;
 }
 
@@ -32,7 +32,8 @@
   color: var(--colorTitle);
   font-size: 20px;
   height: 46px;
-  padding: 10px 45px 10px 17px;
+  //padding: 10px 45px 10px 17px;
+  padding: $padding-sm $padding-lg $padding-sm $padding-sm;
   width: 457px;
 }
 
@@ -56,14 +57,14 @@
   font-size: 32px;
   position: relative;
   height: 32px;
-  margin: -40px 0 0 410px;
+  margin: -$margin-lg 0 0 410px;
   left: 0;
   top: 0;
   width: 32px;
 }
 
 .search-results {
-  margin: 0 0 30px 0;
+  margin: 0 0 $margin-lg 0;
 }
 
 .search-results .item-summary:last-child {
@@ -74,18 +75,12 @@
   margin: 70px 0 0 0;
 }
 
-.item-summary-wrapper {
-  margin-left: 135px;
-  padding: 5px 0 0 30px;
-
-}
-
 .search-results-pagination {
   background: var(--colorButton);
   font-size: 14px;
   height: 38px;
-  margin: 0 0 31px 0;
-  padding: 10px;
+  margin: 0 0 $margin-lg 0;
+  padding: 0.6rem; // special case
   width: 382px;
 }
 
@@ -97,8 +92,8 @@
 .search-results-pagination input[type='text'] {
   color: var(--colorText);
   height: 28px;
-  margin: -5px 9px 0 0;
-  padding: 11px 5px 10px 10px;
+  margin: -5px $margin-xs 0 0;
+  padding: $padding-sm;
   width: 43px;
 }
 

@@ -8,7 +8,7 @@
   margin: 0;
   overflow: auto;
   overflow-x: hidden;
-  padding: 30px 0 0 0;
+  padding: $padding-lg 0 0 0;
 }
 
 body.search-menu #nav-bar-search, body.exhibits-menu #nav-bar-menu {
@@ -50,7 +50,7 @@ body.search-menu #nav-bar-search, body.exhibits-menu #nav-bar-menu {
   font-weight: bold;
   height: 90px;
   letter-spacing: 0.8px;
-  padding: 0 0 12px 0;
+  padding: 0 0 $padding-sm 0;
   position: fixed;
   text-align: center;
   width: 79px;
@@ -67,7 +67,7 @@ body.search-menu #nav-bar-search, body.exhibits-menu #nav-bar-menu {
   font-weight: bold;
   height: 50px;
   letter-spacing: 0.8px;
-  padding: 0 0 12px 0;
+  padding: 0 0 $padding-sm 0;
   position: absolute;
   text-align: center;
   top: 0;
@@ -111,19 +111,19 @@ body.exhibits-menu #nav-bar-button-menu {
 #nav-bar-icon-search {
   font-size: 36px;
   margin: 0 auto;
-  padding: 14px 0 0 0;
+  padding: $padding-sm 0 0 0;
 }
 
 #nav-bar-mobile-icon-search {
   font-size: 36px;
   margin: 0 auto;
-  padding: 8px 0 0 0;
+  padding: $padding-xs 0 0 0;
 }
 
 #nav-bar-icon-menu {
   font-size: 48px;
   margin: 0 auto;
-  padding: 9px 0 0 0;
+  padding: $padding-xs 0 0 0;
 }
 
 #nav-bar-mobile-icon-menu {
@@ -137,7 +137,7 @@ body.exhibits-menu #nav-bar-button-menu {
 }
 
 #nav-bar-icon-text-menu {
-  margin: -7px 0 0 0;
+  margin: -$margin-xs 0 0 0;
 }
 
 #nav-bar-menu ul {
@@ -156,8 +156,8 @@ body.exhibits-menu #nav-bar-button-menu {
   color: var(--colorTitle);
   font-size: 22px;
   float: left;
-  margin: 0 0 15px 15px;
-  padding: 5px 0 0 0;
+  margin: 0 0 $margin-sm $margin-sm;
+  padding: $padding-xs 0 0 0;
   text-transform: none;
   width: 250px;
 }
@@ -166,7 +166,7 @@ body.exhibits-menu #nav-bar-button-menu {
   border-top: 1px dashed var(--colorLineDashed);
   float: left;
   height: 1px;
-  margin: 5px 15px 20px 15px;
+  margin: $margin-xs $margin-sm $margin-md $margin-sm;
   width: 248px;
 }
 
@@ -179,7 +179,7 @@ body.exhibits-menu #nav-bar-button-menu {
 .nav-bar-search-item {
   cursor: pointer;
   float: left;
-  margin: 0 0 15px 15px;
+  margin: 0 0 $margin-sm $margin-sm;
   width: 100%;
 }
 
@@ -200,7 +200,7 @@ a.nav-bar-search-item-close {
   float: left;
   font-size: 14px;
   letter-spacing: 1px;
-  margin: 10px 0 15px 15px;
+  margin: $margin-sm 0 $margin-sm $margin-sm;
   width: 100%;
 }
 
@@ -209,7 +209,7 @@ a.nav-bar-search-item-close {
   cursor: pointer;
   height: 39px;
   position: fixed;
-  margin: -30px 0 0 280px;
+  margin: -$margin-lg 0 0 280px;
   width: 20px;
   z-index: 9050;
 }
@@ -227,7 +227,7 @@ a.nav-bar-search-item-close {
   display: none;
   float: right;
   font-size: 36px;
-  margin: 12px -7px 0 0;
+  margin: $margin-sm -$margin-xs 0 0;
 }
 
 #nav-bar-limit-toggle {
@@ -241,7 +241,7 @@ a.nav-bar-search-item-close {
 
 #nav-bar-menu ul {
   padding: 0;
-  margin-top: 15px;
+  margin-top: $margin-sm;
 }
 
 #nav-bar-menu > ul > li > a,
@@ -249,14 +249,14 @@ a.nav-bar-search-item-close {
   cursor: pointer;
   display: block;
   font-weight: bold;
-  margin: 0 0 15px 15px;
-  padding-top: 10px;
+  margin: 0 0 $margin-sm $margin-sm;
+  padding-top: $padding-sm;
 }
 
 #nav-bar-menu > ul > li > ul > li a,
 .nav-bar-menu-subitem {
   cursor: pointer;
   display: block;
-  margin: 0 20px 15px 15px;
+  margin: 0 $margin-md $margin-sm $margin-sm;
 }
 

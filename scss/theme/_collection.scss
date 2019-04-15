@@ -5,7 +5,7 @@
   border-bottom: 1px solid #eee;
   float: left;
   width: 100%;
-  padding-top: 1.5em;
+  padding-top: $padding-md;
 }
 
 .browse .collection.record .view-items-link,
@@ -25,7 +25,7 @@
 .collection .image,
 .exhibit .image {
   display: block;
-  margin: 0 1.5em 1.5em 9px;
+  margin: 0 $margin-md $margin-md $margin-xs;
 }
 
 .browse .collection h2,
@@ -54,14 +54,14 @@
 .collection-meta {
   display: inline;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: $margin-sm;
+  margin-right: $margin-sm;
   width: 520px;
 }
 
 .collection-description p:first-of-type,
 .view-items-link:only-child {
-  margin-top: 0.75em;
+  margin-top: $margin-sm;
 }
 
 .browse .collection .element {
@@ -71,7 +71,7 @@
 /* @group ----- Collections/Show ----- */
 .collections .item-img {
   float: left;
-  margin: 0 1.5em 0 0;
+  margin: 0 $margin-md 0 0;
 }
 
 .collections .item-img a {
@@ -106,7 +106,7 @@
 
 .browse .collection .image {
   float: left;
-  margin: 1.5em 1.5em 1.5em 10px;
+  margin: $margin-md $margin-md $margin-md $margin-sm;
 }
 
 .browse .collection.record .view-items-link,

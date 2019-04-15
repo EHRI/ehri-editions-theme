@@ -14,10 +14,10 @@
   color: var(--colorText);
   display: block;
   height: 320px;
-  margin: 25px 0 0 3px;
+  margin: $margin-md 0 0 3px;
   max-height: 420px;
   overflow: hidden;
-  padding: 18px;
+  padding: $padding-md;
   position: relative;
   width: 265px;
   z-index: 20000;
@@ -28,15 +28,14 @@
   cursor: pointer;
   display: block;
   float: left;
-  margin: 5px 0 10px 3px;
-  padding: 10px 0 0 0;
+  margin: $margin-xs 0 $margin-sm 3px;
+  padding: $padding-sm 0 0 0;
   width: 100%;
 }
 
 #feedback-form h5 {
-  border-bottom: 1px solid var(--colorBorderContent);
-  margin: -18px 0 12px -18px;
-  padding: 12px 22px 12px 22px;
+  margin: -$margin-md 0 $margin-sm -$margin-md;
+  padding: $padding-sm $padding-md;
   width: 125%;
 }
 
@@ -53,7 +52,7 @@
 #feedback-form input[type="email"] {
   width: 100%;
   margin: 5px 0 5px 0;
-  padding: 7px 10px;
+  padding: $padding-xs $padding-sm;
 }
 
 #feedback-form input[name="title"],
@@ -64,14 +63,14 @@
 
 #feedback-form textarea {
   height: 138px;
-  margin: 10px 0 -3px 0;
-  padding: 7px 10px;
+  margin: $margin-sm 0 -3px 0;
+  padding: $padding-xs $padding-sm;
   width: 100%;
 }
 
 .feedback-button {
   float: right;
-  margin: 13px 0 -10px 0;
+  margin: $margin-sm 0 -$margin-sm 0;
 }
 
 #feedback-tab:hover {
@@ -86,7 +85,7 @@
   float: left;
   margin-left: 3px;
   background-color: #28a745;
-  padding: 10px;
+  padding: $padding-sm;
   color: #fff;
   font-size: 1.2em;
   display: none;

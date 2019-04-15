@@ -20,8 +20,8 @@
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  margin: 13px 2px 0 0;
-  padding: 8px 20px;
+  margin: $margin-sm $margin-xs/4 0 0;
+  padding: $padding-xs $padding-md;
 }
 
 .items-content-button:hover,
@@ -58,7 +58,7 @@
 }
 
 .fullsize {
-  margin-right: 10px;
+  margin-right: $margin-sm;
 }
 
 #primary #gallery-item img,
@@ -71,7 +71,7 @@
 }
 
 .items.show h3 {
-  margin-bottom: 25px;
+  margin-bottom: $margin-md;
   width: 100%;
 }
 
@@ -109,14 +109,14 @@
 }
 
 .featured-items {
-  margin-left: -10px;
+  margin-left: -$margin-sm;
 }
 
 .item.record {
 }
 
 .item.record .item-container {
-  margin: 10px;
+  margin: $margin-sm;
   position: relative;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .item.record .item-title {
-  padding: 10px;
+  padding: $padding-sm;
   /*font-size: 1.2vw;*/
   font-size: 16px;
 }
@@ -146,8 +146,8 @@
 .browse .item-meta .item-img {
   display: inline;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: $margin-sm;
+  margin-right: $margin-sm;
   width: 220px;
 }
 
@@ -181,7 +181,7 @@
 }
 
 .browse .item-meta .item-description {
-  margin-bottom: 1.5em;
+  margin-bottom: $padding-md;
 }
 
 .browse .item-meta .item-description:only-of-type {
@@ -201,7 +201,7 @@
 
 #sort-links ul li {
   display: inline-block;
-  padding-left: 10px;
+  padding-left: $padding-sm;
 }
 
 #outputs {
@@ -215,15 +215,15 @@
 /* @end */
 /* @group ----- Items/Search ----- */
 .field {
-  margin-bottom: 1.5em;
+  margin-bottom: $margin-md;
   overflow: hidden;
 }
 
 .search h1 {
-  margin: 35px 0 0 0;
+  margin: $margin-lg 0 0 0;
   min-width: 470px;
   max-width: 850px;
-  padding-bottom: 20px;
+  padding-bottom: $padding-md;
   width: calc(100% - 250px);
 }
 
@@ -259,17 +259,17 @@
 
 /* @group ----- Items/Browse ----- */
 .browse .item img {
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
+  margin-bottom: $margin-md;
+  margin-top: $margin-md;
 }
 
 .browse .item.record h2 {
-  margin-bottom: 0.75em;
+  margin-bottom: $margin-sm;
 }
 
 .browse .item-meta .item-img {
   float: left;
-  margin: 0 1.5em 0 0;
+  margin: 0 $margin-md 0 0;
   width: auto;
 }
 
@@ -278,7 +278,7 @@
 }
 
 .browse .item {
-  padding: 1.5em 0;
+  padding: $padding-md 0;
 }
 
 .browse .item-meta > div {
@@ -294,12 +294,17 @@
 .item-summary {
   border-bottom: 1px dashed var(--colorLineDashed);
   color: var(--colorText);
-  cursor: pointer;
-  margin: -1px 0 0 0;
+  //cursor: pointer;
+  margin: -1px 0 $margin-lg 0;
   max-width: 960px;
   min-height: 197px;
   width: calc(100% - 250px);
-  padding: 30px;
+}
+
+.item-summary-wrapper {
+  margin-left: 135px;
+  padding-left: $padding-lg;
+  padding-bottom: $padding-md;
 }
 
 .item-summary:hover.item-summary-title {
@@ -318,7 +323,7 @@
   background: #c2c2c2;
   float: left;
   height: 135px;
-  margin: 0 30px 0 0;
+  margin: 0 $margin-lg 0 0;
   text-align: center;
   width: 135px;
 }
@@ -328,7 +333,7 @@
   display: block;
   float: left;
   height: 135px;
-  margin: 0 30px 0 0;
+  margin: 0 $margin-lg 0 0;
   text-align: center;
   width: 135px;
 }
@@ -337,13 +342,13 @@
   color: var(--colorLink);
   font-size: 22px;
   line-height: 1.25;
-  margin: 0;
+  margin-bottom: $margin-xs;
   text-transform: none;
 }
 
 .item-summary p {
   font-size: 14px;
-  margin: 12px 0 0 0;
+  margin: $margin-sm 0 0 0;
 }
 
 

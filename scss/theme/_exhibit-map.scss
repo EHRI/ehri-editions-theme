@@ -1,12 +1,12 @@
 .exhibit-map-default {
   height: 410px;
-  margin-bottom: 15px;
+  margin-bottom: $margin-sm;
 }
 
 .exhibit-map-default iframe {
   border: 0;
   height: 410px;
-  margin-top: 5px;
+  //margin-top: 5px;
   width: 100%;
 }
 
@@ -19,14 +19,14 @@
 .exhibit-map-wide iframe {
   border: 0;
   height: 410px;
-  margin: 10px 0 0 -110px;
+  margin: $margin-sm 0 0 -110px;
   width: calc(100% + 571px);
 }
 
 .exhibit-map-wide-resized iframe {
   border: 0;
   height: 410px;
-  margin: 10px 0 0 -70px;
+  margin: $margin-sm 0 0 -70px;
   width: calc(100% + 320px);
 }
 
@@ -39,14 +39,14 @@
 .exhibit-map-large iframe {
   border: 0;
   height: 600px;
-  margin: 10px 0 0 -110px;
+  margin: $margin-sm 0 0 -110px;
   width: calc(100% + 571px);
 }
 
 .exhibit-map-large-resized iframe {
   border: 0;
   height: 600px;
-  margin: 10px 0 0 -70px;
+  margin: $margin-sm 0 0 -70px;
   width: calc(100% + 320px);
 }
 

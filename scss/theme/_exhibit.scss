@@ -36,7 +36,7 @@
   color: var(--colorTitle);
   font-size: 20px;
   line-height: 1.5em;
-  margin: 15px 0 30px 0;
+  margin: $margin-sm 0 $margin-lg 0;
   max-width: 850px;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .exhibits #content-share {
-  margin: -20px -242px 0 0;
+  margin: -$margin-md -242px 0 0;
   position: relative;
   top: 20px;
   width: 210px;
@@ -91,19 +91,19 @@
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
-  padding-top: 1.41667em;
+  padding-top: $padding-md;
 }
 
 #exhibit-pages > ul > li {
   border-bottom-style: solid;
   border-bottom-width: 0.08333em;
   border-color: #eee;
-  margin-bottom: 1.5em;
-  padding-bottom: 1.41667em;
+  margin-bottom: $margin-md;
+  padding-bottom: $padding-md;
 }
 
 #exhibit-pages ul li > ul {
-  padding-left: 1.5em;
+  padding-left: $padding-md;
   margin-left: 0;
 }
 
@@ -158,7 +158,7 @@
   color: var(--colorText);
   font-size: 17px;
   line-height: 1.5em;
-  margin: 0 0 15px 0;
+  margin: 0 0 $margin-sm 0;
 }
 
 #exhibit-blocks p.footnote {
@@ -178,13 +178,13 @@
   font-size: 22px;
   letter-spacing: 1px;
   line-height: 1.35em;
-  margin: 50px 0 0 0;
+  margin: $margin-lg 0 0 0;
 }
 
 #exhibit-blocks h3 {
   float: left;
-  padding: 25px 0 10px 0;
-  margin-top: 15px;
+  padding: $padding-md 0 $padding-sm 0;
+  margin-top: $margin-sm;
   width: 100%;
 }
 
@@ -193,19 +193,19 @@
 }
 
 #exhibit-blocks #map-toggle-fullscreen {
-  margin: -50px 0 0 0;
+  margin: -$margin-xl 0 0 0;
 }
 
 .exhibit-block {
   clear: both;
-  margin-bottom: 1.5em;
+  margin-bottom: $margin-md;
 }
 
 .exhibit-block .exhibit-subtitle {
   color: var(--colorTitle);
   font-size: 20px;
   line-height: 1.5em;
-  margin: -10px 0 15px 0;
+  margin: -$margin-xs 0 $margin-sm 0;
 }
 
 #exhibit-blocks .exhibit-strong-title {
@@ -213,13 +213,13 @@
   color: var(--colorTitle);
   letter-spacing: 1px;
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 $margin-sm 0;
 }
 
 .exhibit-item-caption {
   float: left;
   font-size: 14px;
-  padding: 10px 0 15px 0;
+  padding: $padding-xs 0 $padding-sm 0;
 }
 
 #exhibit-blocks .exhibit-item-caption p {
@@ -246,8 +246,8 @@
 .exhibit .description ~ * {
   display: inline;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: $margin-sm;
+  margin-right: $margin-sm;
   width: 100%;
 }
 
@@ -255,7 +255,7 @@
   display: block;
   float: none;
   margin: 0 auto;
-  padding: 0 40px 0 80px;
+  padding: 0 $padding-lg 0 $padding-lg*2;
 }
 
 .exhibit-items img:first-of-type {

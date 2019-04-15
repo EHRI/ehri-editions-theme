@@ -4,12 +4,12 @@
   #home #site-title,
   #exhibit-home-site-title {
 
-    margin: 5.5% 0 0 7px;
+    margin: 5.5% 0 0 $margin-xs;
     width: 70%;
   }
   #home #site-subtitle,
   #exhibit-home-site-subtitle {
-    margin: 15px 0 7px 10px;
+    margin: $margin-sm 0 $margin-xs $margin-sm;
   }
   header,
   .exhibit-home-header {
@@ -18,7 +18,7 @@
 
   #site-title {
     line-height: 30px;
-    margin: 6% 0 10px 11px;
+    margin: 6% 0 $margin-xs $margin-sm;
     max-width: 480px;
   }
 
@@ -639,7 +639,6 @@
     display: none;
   }
 
-
   .navigation {
     width: 100%;
   }
@@ -664,7 +663,7 @@
   #home #site-subtitle,
   #exhibit-home-site-subtitle {
     width: 90%;
-    margin-top: 8px;
+    margin-top: $margin-xs;
   }
 
   #home #site-title,
