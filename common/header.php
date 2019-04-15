@@ -102,8 +102,8 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
     </div>
 
     <!-- Applied facets. -->
-    <h2 class="nav-bar-search-category"><?php echo __('Applied facets'); ?></h2>
-    <div id="solr-applied-facets">
+    <div id="solr-applied-facets" class="clearfix">
+        <h2 class="nav-bar-search-category"><?php echo __('Applied facets'); ?></h2>
 
         <!-- Get the applied facets. -->
         <?php $facets = SolrSearch_Helpers_Facet::parseFacets(); ?>
@@ -124,7 +124,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 
     <!-- Facets. -->
     <?php $counts = isset($results) ? $results->facet_counts->facet_fields : array(); ?>
-    <div id="solr-facets">
+    <div id="solr-facets" class="clearfix">
         <div id="nav-bar-limit-toggle" data-target="#nav-bar-limit-search">
             <h2 class="nav-bar-search-category"><?php echo __('Limit your search'); ?></h2>
             <div id="nav-bar-limit-expand">keyboard_arrow_down</div>

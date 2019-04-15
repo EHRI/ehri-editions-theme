@@ -66,8 +66,9 @@
   }
 
   .items #content {
-    min-width: 0;
-    width: 90%;
+    //min-width: 0;
+    width: 100%;
+    padding: 0 $padding-sm;
   }
 
   .items-content-button {
@@ -131,7 +132,7 @@
     left: 0;
     margin: 0;
     overflow: auto;
-    padding: 15px 2.5% 2.5% 2.5%;
+    padding: $padding-sm 2.5% 2.5% 2.5%;
     position: relative;
     top: 50px;
     width: 100%;
@@ -149,17 +150,16 @@
 
   #nav-bar-menu > ul > li > a,
   .nav-bar-menu-item {
-    margin: 0 0 15px 0;
+    margin: 0 0 $margin-sm 0;
   }
 
   #nav-bar-menu > ul > li > ul > li a,
   .nav-bar-menu-subitem {
-    margin: 0 0 15px 0;
+    margin: 0 0 $margin-sm 0;
   }
 
   .nav-bar-search-category {
     margin-left: 0;
-    padding: 20px 0 0 0;
   }
 
   .nav-bar-search-group {
@@ -176,8 +176,8 @@
   }
 
   #content {
-    margin-left: 5%;
-    width: 90%;
+    margin-left: 0;
+    padding: 0 $padding-sm;
   }
 
   .content-info-annotation {
@@ -187,16 +187,11 @@
   footer {
     border-left: 0;
     border-right: 0;
-    padding: 0 0 10px 0;
-  }
-
-  footer p {
-    margin-left: 5%;
-
+    padding: 0 $padding-sm;
   }
 
   .footer-logo {
-    margin-right: 15px;
+    margin-right: $margin-sm;
     height: 57px;
   }
 
@@ -268,23 +263,23 @@
   }
 
   .homepage-text {
-    margin: 0 0 15px 0;
+    margin: 0 0 $margin-sm 0;
   }
 
   .exhibit-home-homepage-text {
-    margin: -30px 0 15px 0;
+    margin: -$margin-lg 0 $margin-sm 0;
   }
 
   .featured,
   .exhibits .featured {
-    margin: 30px 0 0 0;
+    margin: $margin-lg 0 0 0;
     padding: 0 0 1px 0;
     width: calc(100% + 10px)
   }
 
   .item.record {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: $margin-sm;
+    margin-bottom: $margin-sm;
   }
 
   .featured-carousel {
@@ -300,7 +295,7 @@
   }
 
   .exhibit-pagination {
-    margin: 20px 0 0 0;
+    margin: $margin-md 0 0 0;
   }
 
   #site-logo {
@@ -352,7 +347,7 @@
   .exhibit-map-wide-resized,
   .exhibit-map-large,
   .exhibit-map-large-resized {
-    height: 410px;
+    height: $map-md;
     margin: 0 0 -35px -5.5%;
     max-width: 1000px;
     width: 111.25%;
@@ -363,7 +358,7 @@
   .exhibit-map-large iframe,
   .exhibit-map-large-resized iframe,
   #exhibit-home-primary .exhibit-block.layout-neatline iframe {
-    height: 410px;
+    height: $map-md;
     margin: 0;
     width: 100%;
   }
@@ -373,7 +368,7 @@
   }
 
   #exhibit-blocks .exhibit-subtitle {
-    margin: -30px 0 15px 0;
+    margin: -$margin-lg 0 $margin-sm 0;
   }
 
   #exhibit-blocks p {
@@ -383,21 +378,21 @@
   }
 
   #exhibit-blocks h3 {
-    margin: 25px 0 20px 0;
+    margin: $margin-md 0;
   }
 
   #exhibit-home-primary .related-chapters-box {
-    margin: 0 0 20px 0;
+    margin: 0 0 $margin-md 0;
   }
 
   .exhibits.summary h1 {
-    margin: 25px 0 0 -1px;
+    margin: $margin-md 0 0 -1px;
     min-height: 0;
   }
 
   .exhibits.summary #content-share-mobile {
     margin-top: -10px;
-    padding: 0 0 20px 0;
+    padding: 0 0 $padding-md 0;
   }
 
   #header-search {
@@ -414,21 +409,24 @@
   #search-container button {
 
     float: right;
-    margin-right: 20px;
+    margin-right: $margin-md;
     width: 24px;
   }
 
   #search-container {
-
     width: 100%;
     margin: 0;
     padding: 0;
-
   }
 
   .search-button-solr {
     right: 10px;
     top: 3px;
+  }
+
+  #solr-applied-facets,
+  #solr-facets {
+    display: block;
   }
 
   .item-summary {
@@ -457,7 +455,7 @@
   .item-summary p {
     display: inline-block;
     float: none;
-    margin: 12px 0 0 0;
+    margin: $margin-sm 0 0 0;
     width: 100%;
   }
 
@@ -473,7 +471,7 @@
   }
 
   #search-container input[type=text] {
-    padding: 10px;
+    padding: $padding-xs;
     width: 100%;
   }
 
@@ -504,7 +502,7 @@
   }
 
   .exhibit-home-related-chapters-box {
-    margin: 0 0 15px 0;
+    margin: 0 0 $margin-sm 0;
     width: 100%;
   }
 
@@ -512,7 +510,7 @@
   .exhibit.record h3 {
     font-size: $font-size-lg;
     font-weight: bold;
-    margin: 0 0 15px 0;
+    margin: 0 0 $margin-sm 0;
     text-transform: none;
   }
 
@@ -527,12 +525,12 @@
 
 
   #home .related-chapters-box {
-    margin-bottom: 40px;
+    margin-bottom: $margin-lg;
   }
 
   #home .related-chapters-title {
     font-size: $font-size-xl;
-    margin: 0 0 25px 0;
+    margin: 0 0 $margin-md 0;
   }
 
   #home .related-chapters p {
@@ -612,9 +610,9 @@
     line-height: 1.5em;
     margin: 0 5%;
     max-width: 715px;
-    padding: 0;
+    padding: 0 $padding-sm;
     position: relative;
-    width: 90%;
+    width: 100%;
   }
 
 
@@ -628,7 +626,6 @@
 
   #nav-bar-limit-toggle {
     cursor: pointer;
-    overflow: hidden;
   }
 
 }
@@ -642,7 +639,6 @@
   .navigation {
     width: 100%;
   }
-
 }
 
 
