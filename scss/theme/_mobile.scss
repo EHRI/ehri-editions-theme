@@ -28,7 +28,7 @@
   }
 
   .item.record .item-title {
-    font-size: 14px;
+    font-size: $font-size-sm;
   }
 }
 
@@ -126,7 +126,7 @@
     bottom: auto;
     color: var(--colorText);
     display: none;
-    font-size: 14px;
+    font-size: $font-size-sm;
     height: auto;
     left: 0;
     margin: 0;
@@ -344,7 +344,7 @@
   }
 
   #exhibit-blocks p.footnote {
-    font-size: 12px;
+    font-size: $font-size-xs;
   }
 
   .exhibit-map-default,
@@ -377,7 +377,7 @@
   }
 
   #exhibit-blocks p {
-    font-size: 14px;
+    font-size: $font-size-sm;
     margin: 0;
 
   }
@@ -510,7 +510,7 @@
 
   .related-chapters-title,
   .exhibit.record h3 {
-    font-size: 20px;
+    font-size: $font-size-lg;
     font-weight: bold;
     margin: 0 0 15px 0;
     text-transform: none;
@@ -531,12 +531,12 @@
   }
 
   #home .related-chapters-title {
-    font-size: 22px;
+    font-size: $font-size-xl;
     margin: 0 0 25px 0;
   }
 
   #home .related-chapters p {
-    font-size: 14px;
+    font-size: $font-size-sm;
   }
 
   #item-pagination-desktop {

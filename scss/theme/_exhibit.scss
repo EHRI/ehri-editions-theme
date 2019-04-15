@@ -34,14 +34,14 @@
 
 .exhibits.summary .exhibit-description p {
   color: var(--colorTitle);
-  font-size: 20px;
+  font-size: $font-size-lg;
   line-height: 1.5em;
   margin: $margin-sm 0 $margin-lg 0;
   max-width: 850px;
 }
 
 .exhibits.summary #exhibit-pages ul {
-  font-size: 17px;
+  font-size: $font-size-base;
   margin: 0;
 }
 
@@ -156,14 +156,14 @@
 
 #exhibit-blocks p {
   color: var(--colorText);
-  font-size: 17px;
+  font-size: $font-size-base;
   line-height: 1.5em;
   margin: 0 0 $margin-sm 0;
 }
 
 #exhibit-blocks p.footnote {
   color: var(--colorBorderInput);
-  font-size: 14px;
+  font-size: $font-size-sm;
 }
 
 .footnote-ref {
@@ -175,7 +175,7 @@
 }
 
 #exhibit-blocks h2 {
-  font-size: 22px;
+  font-size: $font-size-xl;
   letter-spacing: 1px;
   line-height: 1.35em;
   margin: $margin-lg 0 0 0;
@@ -203,7 +203,7 @@
 
 .exhibit-block .exhibit-subtitle {
   color: var(--colorTitle);
-  font-size: 20px;
+  font-size: $font-size-lg;
   line-height: 1.5em;
   margin: -$margin-xs 0 $margin-sm 0;
 }
@@ -218,12 +218,12 @@
 
 .exhibit-item-caption {
   float: left;
-  font-size: 14px;
+  font-size: $font-size-sm;
   padding: $padding-xs 0 $padding-sm 0;
 }
 
 #exhibit-blocks .exhibit-item-caption p {
-  font-size: 14px;
+  font-size: $font-size-sm;
 }
 
 .exhibit-page-nav a:hover,

@@ -17,7 +17,7 @@
   color: var(--colorLink);
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
+  font-size: $font-size-sm;
   font-weight: bold;
   letter-spacing: 1px;
   margin: $margin-sm $margin-xs/4 0 0;
@@ -136,7 +136,7 @@
 .item.record .item-title {
   padding: $padding-sm;
   /*font-size: 1.2vw;*/
-  font-size: 16px;
+  font-size: $font-size-base;
 }
 
 /* @end */
@@ -340,14 +340,14 @@
 
 .item-summary-title {
   color: var(--colorLink);
-  font-size: 22px;
+  font-size: $font-size-xl;
   line-height: 1.25;
   margin-bottom: $margin-xs;
   text-transform: none;
 }
 
 .item-summary p {
-  font-size: 14px;
+  font-size: $font-size-sm;
   margin: $margin-sm 0 0 0;
 }
 

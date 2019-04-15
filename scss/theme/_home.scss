@@ -16,7 +16,7 @@
 }
 
 #exhibit-blocks > .exhibit-block .item-summary > .item-summary-wrapper > .record-metadata > p {
-  font-size: 14px;
+  font-size: $font-size-sm;
   margin-bottom: $margin-xs;
 
 }
@@ -24,7 +24,7 @@
 .homepage-text,
 #exhibit-home-primary .homepage-text {
   color: var(--colorTitle);
-  font-size: 20px;
+  font-size: $font-size-lg;
   line-height: 1.4;
   margin: -30px 0 20px 0;
   max-width: 850px;
@@ -35,7 +35,7 @@
 }
 
 .homepage-project {
-  font-size: 14px;
+  font-size: $font-size-sm;
   margin: 20px 0 0 0;
 }
 

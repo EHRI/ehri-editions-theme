@@ -4,7 +4,7 @@
   bottom: 0;
   color: var(--colorText);
   display: none;
-  font-size: 14px;
+  font-size: $font-size-sm;
   margin: 0;
   overflow: auto;
   overflow-x: hidden;
@@ -46,7 +46,7 @@ body.search-menu #nav-bar-search, body.exhibits-menu #nav-bar-menu {
   border-top: 1px solid var(--colorLine);
   color: var(--colorLink);
   cursor: pointer;
-  font-size: 14px;
+  font-size: $font-size-sm;
   font-weight: bold;
   height: 90px;
   letter-spacing: 0.8px;
@@ -63,7 +63,7 @@ body.search-menu #nav-bar-search, body.exhibits-menu #nav-bar-menu {
   border-top: none;
   color: var(--colorLink);
   cursor: pointer;
-  font-size: 14px;
+  font-size: $font-size-sm;
   font-weight: bold;
   height: 50px;
   letter-spacing: 0.8px;
@@ -154,7 +154,7 @@ body.exhibits-menu #nav-bar-button-menu {
 
 .nav-bar-search-category {
   color: var(--colorTitle);
-  font-size: 22px;
+  font-size: $font-size-xl;
   float: left;
   margin: 0 0 $margin-sm $margin-sm;
   padding: $padding-xs 0 0 0;
@@ -188,7 +188,7 @@ body.exhibits-menu #nav-bar-button-menu {
   clear: both;
   cursor: pointer;
   display: inline;
-  font-size: 14px;
+  font-size: $font-size-sm;
   margin: 5px 0 0 5px;
 }
 
@@ -198,7 +198,7 @@ a.nav-bar-search-item-close {
 
 .nav-bar-search-group {
   float: left;
-  font-size: 14px;
+  font-size: $font-size-sm;
   letter-spacing: 1px;
   margin: $margin-sm 0 $margin-sm $margin-sm;
   width: 100%;
