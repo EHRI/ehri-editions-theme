@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var del = require( 'del' );
 
 var paths = {
     js: "javascripts",
@@ -44,7 +45,14 @@ function watchFiles() {
     ], js);
 }
 
-gulp.task("dist", gulp.parallel(css, js));
+function clean() {
+    return del([
+        paths.js + "/theme.*",
+        paths.css + "/theme.*"
+    ]);
+}
+
+gulp.task("dist", gulp.series(clean, gulp.parallel(css, js)));
 
 // Run:
 // gulp
