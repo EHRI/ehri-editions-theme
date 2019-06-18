@@ -1,0 +1,12 @@
+
+// Hack to default carousels to be
+// aligned left when there are fewer
+// than a full set of items.
+.related-documents,
+.recent-items,
+.featured-items
+{
+  > .slick-list > .slick-track {
+    margin-left: 0;
+  }
+}

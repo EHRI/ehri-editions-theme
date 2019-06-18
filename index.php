@@ -29,11 +29,14 @@
     <?php endif; ?>
 
     <?php if (($recent = get_theme_option('Homepage Recent Items')) > 0): ?>
-        <div id="recent-items" class="recent">
+        <div id="recent-items-container" class="recent">
             <h4><?php echo __("Recently Added Items"); ?></h4>
-            <?php foreach (get_recent_items($recent) as $item): ?>
-                <?php echo tei_editions_render_search_item($item); ?>
-            <?php endforeach; ?>
+            <div class="recent-items">
+                <?php foreach (get_recent_items($recent) as $item): ?>
+                    <?php echo $this->partial('items/single.php', array("item" => $item)); ?>
+                    <?php release_object($item); ?>
+                <?php endforeach; ?>
+            </div>
         </div>
     <?php endif; ?>
 </div><!-- end secondary -->

@@ -158,19 +158,33 @@ function theme_header_image_url()
     return $headerImage;
 }
 
-function recent_items_custom($count = 10)
+/**
+ * Fetch a list of items (documents) related to this one.
+ *
+ * This uses the 'ItemRelations' plugin and considers any
+ * type of relationship of both subject and object to be
+ * a related item.
+ *
+ * @param Item $item
+ * @return array an array of related items.
+ */
+function get_related_item_documents($item)
 {
-    $items = get_recent_items($count);
-    if ($items) {
-        $html = '';
-        foreach ($items as $item) {
-            $html .= get_view()->partial('items/single-recent.php', array('item' => $item));
-            release_object($item);
+    if (plugin_is_active('ItemRelations')) {
+        $related = [];
+        foreach (ItemRelationsPlugin::prepareSubjectRelations($item) as $so) {
+            if ($other = get_record_by_id('item', $so['object_item_id'])) {
+                $related[] = $other;
+            }
         }
-    } else {
-        $html = '<p>' . __('No recent items available.') . '</p>';
+        foreach (ItemRelationsPlugin::prepareObjectRelations($item) as $oo) {
+            if ($other = get_record_by_id('item', $oo['subject_item_id'])) {
+                $related[] = $other;
+            }
+        }
+        return $related;
     }
-    return $html;
+    return [];
 }
 
 /**

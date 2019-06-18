@@ -338,7 +338,7 @@
 <script type="text/javascript">
   jQuery(function ($) {
     // slick
-    $(".featured-items").slick({
+    $(".featured-items, .related-documents, .recent-items").slick({
       dots: true,
       arrows: true,
       slidesToShow: 4,
