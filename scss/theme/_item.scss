@@ -4,9 +4,22 @@
   font-size: var(--fontDocumentSize);
   line-height: 1.5em;
   //max-width: 850px;
-  padding: 0;
+  //padding: 0;
   //position: relative;
   //width: calc(100% - 540px);
+
+  display: flex;
+  flex-direction: row;
+
+  > #sidebar {
+    flex-basis: 35%;
+    padding-left: $margin-lg;
+    position: relative;
+  }
+
+  > #primary {
+    flex-basis: 75%;
+  }
 }
 
 .items-content-button,

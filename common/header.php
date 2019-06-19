@@ -189,7 +189,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 
 <!-- / mobile navbar -->
 
-<div id="container" style='overflow:hidden;min-height: 100%;'>
+<div id="container">
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
     <div class="header-image" id="header-image"

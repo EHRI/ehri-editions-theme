@@ -1,27 +1,27 @@
 #content {
   border: 0;
   margin: 0 $margin-lg $margin-lg 190px;
-  padding: 0;
+  padding: $margin-lg 0;
 }
 
 #content-share {
   background: var(--colorBackground);
   color: var(--colorLink);
-  float: right;
-  height: 0;
+  //float: right;
+  //height: 0;
   padding: 0;
-  position: relative;
-  top: 0;
+  //position: relative;
+  //top: 0;
 }
 
 body.items.show #content-share {
-  margin: 0 -235px 0 0;
-  width: 200px;
+  //margin: 0 -235px 0 0;
+  //width: 200px;
 }
 
 /* FIXME: content-share positioning hacks */
 body.exhibits-menu #content-share {
-  margin-right: 0;
+  //margin-right: 0;
 }
 
 #content-share-mobile {
@@ -86,12 +86,15 @@ body.exhibits-menu #content-share {
 #content-files {
   background: var(--colorBackground);
   color: var(--colorText);
-  float: right;
-  height: 215px;
-  margin: -82px -300px -150px 0;
+  //float: right;
+  //height: 215px;
+  //margin: -82px -300px -150px 0;
   padding: 0;
-  position: relative;
-  width: 265px;
+  //position: relative;
+  //width: 265px;
+  > #photogallery > figure {
+    margin: 0;
+  }
 }
 
 #content-files-mobile {
@@ -145,14 +148,14 @@ body.exhibits-menu #content-share {
 #content-info {
   background: var(--colorBackground);
   color: var(--colorText);
-  float: right;
+  //float: right;
   //height: 0;
-  margin: 0 -300px 0 0;
+  //margin: 0 -300px 0 0;
   padding: 0;
   //position: relative;
-  width: 265px;
+  //width: 265px;
   position: sticky;
-  top: 20px;
+  top: 1rem;
 }
 
 .content-info-annotation {
