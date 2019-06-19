@@ -23,7 +23,8 @@ function css() {
 // gulp scripts.
 // Uglifies and concat all JS files into one
 function js() {
-    var scriptPaths = [paths.js + "/*.js"];
+    var scriptPaths = [paths.js + "/*.js", '!' + paths.js + '/theme.*.js'];
+    // del(paths.js + "/theme.*");
     return gulp.src(scriptPaths)
         .pipe(concat("theme.min.js"))
         .pipe(uglify())

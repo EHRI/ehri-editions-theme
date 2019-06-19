@@ -146,11 +146,13 @@ body.exhibits-menu #content-share {
   background: var(--colorBackground);
   color: var(--colorText);
   float: right;
-  height: 0;
+  //height: 0;
   margin: 0 -300px 0 0;
   padding: 0;
-  position: relative;
+  //position: relative;
   width: 265px;
+  position: sticky;
+  top: 20px;
 }
 
 .content-info-annotation {
@@ -177,16 +179,16 @@ body.exhibits-menu #content-share {
 }
 
 .content-info-entity {
+  background-color: var(--white);
   border: 1px solid var(--colorBorderContent);
   color: var(--colorText);
   display: block;
-  margin: $margin-sm 0 0 0;
   max-height: 420px;
   overflow: hidden;
   padding: 0;
   position: relative;
-  width: 265px;
-  margin-top: $margin-lg !important;
+  width: 16rem;
+  box-shadow: $box-shadow;
 }
 
 .content-info-entity-body, .content-info-entity-footer {
@@ -244,10 +246,6 @@ body.exhibits-menu #content-share {
 .content-info-entity-body .content-info-entity-footer a:hover {
   background-color: var(--colorEntityRef) !important;
   text-decoration: none;
-}
-
-.content-info-entity.affixed, #content-info .tei-note.affixed {
-  top: 0 !important;
 }
 
 #language-selector {

@@ -21,8 +21,11 @@
 </script>
 
 <?php
+    $meta = '';
+    $entities = '';
+
     $item = get_view()->{'item'};
-    $texts = tei_editions_render_document_texts($item);
+    $texts = tei_editions_render_document_texts($item, $meta, $entities);
     $images = tei_editions_render_document_images($item);
     $related = get_related_item_documents($item);
     $refs = tei_editions_render_document_references($item);
@@ -54,9 +57,10 @@
 <!-- METADATA -->
 <div id="document-metadata" class="document-section">
     <?php echo $images; ?>
+    <?php echo $entities; ?>
 
     <h3><?php echo __('Metadata'); ?></h3>
-    <?php echo tei_editions_render_item_metadata($item); ?>
+    <?php echo $meta; ?>
 </div>
 
 <?php if ($texts): ?>

@@ -5,18 +5,27 @@
 
 set -e
 
+MODE=$1
+
 # source the config file
 . ./release-config.sh
 
 node ./node_modules/gulp/bin/gulp.js dist
 
-for site in ${STAGE_SITES[@]} ; do
-    for host in ${STAGE_HOSTS[@]} ; do
-        rsync -avlz --exclude .idea --exclude node_modules --exclude release.sh --exclude .git --exclude test . $host:/var/www/$site.$STAGE_DOMAIN/themes/ehri/
+if [ "$MODE" == "stage" ]; then
+    for site in ${STAGE_SITES[@]} ; do
+        for host in ${STAGE_HOSTS[@]} ; do
+            echo "Releasing to $site.$STAGE_DOMAIN"
+            rsync -avlz --exclude .idea --exclude node_modules --exclude release.sh --exclude .git --exclude test . $host:/var/www/$site.$STAGE_DOMAIN/themes/ehri/
+        done
     done
-done
-for site in ${PROD_SITES[@]} ; do
-    for host in ${PROD_HOSTS[@]} ; do
-        rsync -avlz --exclude .idea --exclude node_modules --exclude release.sh --exclude .git --exclude test . $host:/var/www/$site.$PROD_DOMAIN/themes/ehri/
+elif [ "$MODE" == "prod" ]; then
+    for site in ${PROD_SITES[@]} ; do
+        for host in ${PROD_HOSTS[@]} ; do
+            echo "Releasing to $site.$PROD_DOMAIN"
+            rsync -avlz --exclude .idea --exclude node_modules --exclude release.sh --exclude .git --exclude test . $host:/var/www/$site.$PROD_DOMAIN/themes/ehri/
+        done
     done
-done
+else
+    echo "No mode given!"
+fi

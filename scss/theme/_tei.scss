@@ -1,5 +1,5 @@
 /* TEI */
-.tei > .tei-text .tei-note {
+.tei-text .tei-note {
   display: none;
 }
 
@@ -10,7 +10,7 @@
   font-weight: bold;
 }
 
-.tei > .tei-text .tei-note-ref {
+.tei-text .tei-note-ref {
   vertical-align: super;
   color: #FF6464;
   margin-left: -$margin-xs;
@@ -42,7 +42,7 @@
   font-weight: bold;
 }
 
-.tei > .tei-entities > .tei-entity {
+.tei-entities > .tei-entity {
   float: left;
   display: none;
 }
@@ -51,20 +51,20 @@
   margin: $margin-xs 0;
 }
 
-.tei > .tei-text ol, .tei > .tei-text ul {
+.tei-text ol, .tei > .tei-text ul {
   list-style-type: none;
 }
 
-.tei > .tei-text table {
+.tei-text table {
   width: 100%;
 }
 
-.tei > .tei-text table tr th {
+.tei-text table tr th {
   text-align: left;
 }
 
-.tei > .tei-text table tr th,
-.tei > .tei-text table tr td {
+.tei-text table tr th,
+.tei-text table tr td {
   padding: $padding-xs;
 }
 

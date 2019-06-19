@@ -1,3 +1,9 @@
+
+/* Non-theme variables */
+:root {
+  --white: #fff;
+}
+
 /*! DEFAULT FONT */
 h1, h2, h3, h4, h5, h6,
 #content-share-report,
@@ -53,6 +59,7 @@ label {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
+
 
 /* -- Misc Block elements -- */
 p, ul, ol, dl {
