@@ -1,136 +1,205 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
 .nav-bar {
   background: var(--colorBackground);
-  border-right: 1px solid var(--colorLine);
-  bottom: 0;
+  //border-right: 1px solid var(--colorLine);
+  //border-bottom: 1px solid var(--colorLine);
+  //bottom: 0;
   color: var(--colorText);
   display: none;
   font-size: $font-size-sm;
   margin: 0;
-  overflow: auto;
-  overflow-x: hidden;
-  padding: $padding-lg 0 0 0;
+  //overflow: auto;
+  //overflow-x: hidden;
+  //padding: $margin-lg 0 0 0;
+  padding: $margin-md;
+
+  @include media-breakpoint-up(md) {
+    border-right: 1px solid var(--colorLine);
+    width: 280px;
+    min-width: 280px;
+    position: relative;
+  }
 }
 
 body.search-menu #nav-bar-search, body.exhibits-menu #nav-bar-menu {
   display: block;
 }
 
-#nav-bar-buttons {
-  background: var(--colorBackground);
-  border-right: 1px solid var(--colorLine);
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-}
-
-#nav-bar-mobile-buttons {
-  background: var(--colorBackground);
-  border-bottom: 1px solid var(--colorLine);
+.nav-bar-button-text {
   display: none;
-  margin: 0;
-  padding: 0;
-}
+  float: left;
 
-/* ONLY SAFARI */
-/* z-index fix */
-@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
-  #nav-bar-buttons {
-    -webkit-transform: translate3d(0, 0, 0);
+  @include media-breakpoint-up(md) {
+    display: block;
   }
 }
+
+#nav-bar-buttons {
+  background: var(--colorBackground);
+  border-bottom: 1px solid var(--colorLine);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  //margin: 0;
+  //overflow: hidden;
+  //padding: 0;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: column;
+
+    border-bottom: 0;
+    border-right: 1px solid var(--colorLine);
+
+    display: inline-block;
+    width: 80px;
+  }
+}
+
+//#nav-bar-mobile-buttons {
+//  background: var(--colorBackground);
+//  border-bottom: 1px solid var(--colorLine);
+//  display: none;
+//  margin: 0;
+//  padding: 0;
+//}
+//
+///* ONLY SAFARI */
+///* z-index fix */
+//@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
+//  #nav-bar-buttons {
+//    -webkit-transform: translate3d(0, 0, 0);
+//  }
+//}
 
 .nav-bar-button {
   text-decoration: none !important;
   background: var(--colorBackground);
-  border-bottom: 1px solid var(--colorLine);
-  border-top: 1px solid var(--colorLine);
   color: var(--colorLink);
   cursor: pointer;
   font-size: $font-size-sm;
   font-weight: bold;
-  height: 90px;
   letter-spacing: 0.8px;
-  padding: 0 0 $padding-sm 0;
-  position: fixed;
   text-align: center;
-  width: 79px;
-  z-index: 9050;
+  display: flex;
+  flex-direction: column;
+
+  padding: $margin-xs $margin-sm;
+
+  .material-icons {
+    float: left;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: $margin-sm $margin-md;
+    border-right: 0;
+    //border-bottom: 1px solid var(--colorLine);
+    align-items: center;
+
+    .material-icons {
+      float: unset;
+    }
+  }
+
+  &#nav-bar-button-menu {
+    border-right: 1px solid var(--colorLine);
+    border-left: 1px solid var(--colorLine);
+
+    @include media-breakpoint-up(md) {
+      border: 0;
+      border-top: 1px solid var(--colorLine);
+      border-bottom: 1px solid var(--colorLine);
+
+      // Hack to account for additional height
+      // of the menu icon
+      padding-top: $margin-xs;
+    }
+  }
 }
 
-.nav-bar-mobile-button {
-  background: var(--colorBackground);
-  border: 1px solid var(--colorLine);
-  border-top: none;
-  color: var(--colorLink);
-  cursor: pointer;
-  font-size: $font-size-sm;
-  font-weight: bold;
-  height: 50px;
-  letter-spacing: 0.8px;
-  padding: 0 0 $padding-sm 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 68px;
-  z-index: 9050;
-}
+//.nav-bar-mobile-button {
+//  background: var(--colorBackground);
+//  border: 1px solid var(--colorLine);
+//  border-top: none;
+//  color: var(--colorLink);
+//  cursor: pointer;
+//  font-size: $font-size-sm;
+//  font-weight: bold;
+//  height: 50px;
+//  letter-spacing: 0.8px;
+//  padding: 0 0 $margin-sm 0;
+//  position: absolute;
+//  text-align: center;
+//  top: 0;
+//  width: 68px;
+//  z-index: 9050;
+//}
 
 body.search-menu #nav-bar-button-search,
 body.exhibits-menu #nav-bar-button-menu {
   color: var(--colorTitle);
-  border-right: 1px solid var(--colorBackground);
-  width: 80px;
-  z-index: 9080;
+  //border-right: 1px solid var(--colorBackground);
+  //width: 80px;
+  //z-index: 9080;
 }
 
 .nav-bar-mobile-button.selected {
   color: var(--colorTitle);
-  border-bottom: 1px solid var(--colorBackground);
-  height: 50px;
-  z-index: 9080;
+  //border-bottom: 1px solid var(--colorBackground);
+  //height: 50px;
+  //z-index: 9080;
 }
 
 #nav-bar-button-search {
-  border-top: 1px solid var(--colorBackground);
-  top: 0;
+  //border-top: 1px solid var(--colorBackground);
+  //top: 0;
 }
 
-#nav-bar-mobile-button-search {
-  left: 67px;
-}
+//#nav-bar-mobile-button-search {
+//  left: 67px;
+//}
 
-#nav-bar-button-menu {
-  top: 89px;
-}
+//#nav-bar-button-menu {
+//  top: 89px;
+//}
 
-#nav-bar-mobile-button-menu {
-  border-left: 1px solid var(--colorBackground);
-  left: 0;
-}
+//#nav-bar-mobile-button-menu {
+//  border-left: 1px solid var(--colorBackground);
+//  left: 0;
+//}
 
 #nav-bar-icon-search {
   font-size: 36px;
-  margin: 0 auto;
-  padding: $padding-sm 0 0 0;
+  //margin: 0 auto;
+  //padding: $margin-sm 0 0 0;
 }
 
-#nav-bar-mobile-icon-search {
-  font-size: 36px;
-  margin: 0 auto;
-  padding: $padding-xs 0 0 0;
-}
+//#nav-bar-mobile-icon-search {
+//  font-size: 36px;
+//  margin: 0 auto;
+//  padding: $margin-xs 0 0 0;
+//}
 
 #nav-bar-icon-menu {
   font-size: 48px;
-  margin: 0 auto;
-  padding: $padding-xs 0 0 0;
+  //margin: 0 auto;
+  //padding: $margin-xs 0 0 0;
 }
 
-#nav-bar-mobile-icon-menu {
-  font-size: 48px;
-  margin: 0 auto;
-  padding: 1px 0 0 0;
-}
+//#nav-bar-mobile-icon-menu {
+//  font-size: 48px;
+//  margin: 0 auto;
+//  padding: 1px 0 0 0;
+//}
 
 #nav-bar-icon-text-search {
   margin: -1px 0 0 0;
@@ -148,26 +217,22 @@ body.exhibits-menu #nav-bar-button-menu {
   color: var(--colorText);
 }
 
-#nav-bar-search {
-  padding: 0;
-}
-
 .nav-bar-search-category {
   color: var(--colorTitle);
   font-size: $font-size-xl;
-  float: left;
-  margin: 0 0 $margin-sm $margin-sm;
-  padding: $padding-xs 0 0 0;
-  text-transform: none;
-  width: 250px;
+  //float: left;
+  //margin: 0 0 $margin-sm $margin-sm;
+  //padding: $margin-xs 0 0 0;
+  //text-transform: none;
+  //width: 250px;
 }
 
 .nav-bar-search-line {
   border-top: 1px dashed var(--colorLineDashed);
-  float: left;
+  //float: left;
   height: 1px;
-  margin: $margin-xs $margin-sm $margin-md $margin-sm;
-  width: 248px;
+  //margin: $margin-xs $margin-sm $margin-md $margin-sm;
+  //width: 248px;
 }
 
 .nav-bar-search-items {
@@ -178,9 +243,9 @@ body.exhibits-menu #nav-bar-button-menu {
 
 .nav-bar-search-item {
   cursor: pointer;
-  float: left;
-  margin: 0 0 $margin-sm $margin-sm;
-  width: 100%;
+  //float: left;
+  //margin: 0 0 $margin-sm $margin-sm;
+  //width: 100%;
 }
 
 .nav-bar-search-item-close {
@@ -189,7 +254,7 @@ body.exhibits-menu #nav-bar-button-menu {
   cursor: pointer;
   display: inline;
   font-size: $font-size-sm;
-  margin: 5px 0 0 5px;
+  //margin: 5px 0 0 5px;
 }
 
 a.nav-bar-search-item-close {
@@ -205,20 +270,28 @@ a.nav-bar-search-item-close {
 }
 
 .nav-bar-back {
+  display: none;
   background: var(--colorButtonBack);
   cursor: pointer;
   height: 39px;
-  position: fixed;
-  margin: -$margin-lg 0 0 280px;
-  width: 20px;
-  z-index: 9050;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    width: 20px;
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 0;
+  }
 }
 
 .nav-bar-back-icon {
   color: var(--colorBackground);
   display: block;
   font-size: 24px;
-  margin: 6px 0 0 -2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #nav-bar-limit-expand,
@@ -250,7 +323,7 @@ a.nav-bar-search-item-close {
   display: block;
   font-weight: bold;
   margin: 0 0 $margin-sm $margin-sm;
-  padding-top: $padding-sm;
+  padding-top: $margin-sm;
 }
 
 #nav-bar-menu > ul > li > ul > li a,

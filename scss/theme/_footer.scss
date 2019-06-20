@@ -1,51 +1,57 @@
 /* @group ----- Footer ----- */
-footer {
+#footer {
   background: var(--colorBackground);
-  border: 1px solid var(--colorLine);
+  border-top: 1px solid var(--colorLine);
   color: var(--colorText);
   display: block;
   font-size: $font-size-sm;
-  float: left;
-  margin: 0;
-  overflow: hidden;
-  padding: $margin-lg 0 $margin-lg 190px;
-  width: 100%;
+  //float: left;
+  //margin: 0;
+  //overflow: hidden;
+  //padding: $margin-lg 0 $margin-lg 190px;
+  //width: 100%;
+  margin-top: auto;
 }
 
-footer a {
+#footer-content {
+  @include make-container();
+  @extend .container;
+}
+
+#footer a {
   text-decoration: none;
 }
 
-footer .navigation {
+#footer .navigation {
   float: none;
   text-align: left;
   width: 100%;
   font-weight: bold;
 }
 
-footer .navigation li {
+#footer .navigation li {
   display: inline;
 }
 
-footer .navigation li:after {
+#footer .navigation li:after {
   content: " \00B7";
   margin: 0 10px 0 5px;
 }
 
-footer .navigation li:last-child {
+#footer .navigation li:last-child {
   margin: 0;
 }
 
-footer .navigation li:last-child:after {
+#footer .navigation li:last-child:after {
   content: "\00A0";
   display: none;
 }
 
-footer .navigation a {
+#footer .navigation a {
   white-space: nowrap;
 }
 
-footer nav + p {
+#footer nav + p {
   text-align: right;
 }
 

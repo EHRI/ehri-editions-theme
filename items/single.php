@@ -6,7 +6,6 @@
                 <div class="item-title">
                     <?php echo metadata($item, 'display_title'); ?>
                 </div>
-
             </div>
         </a>
     </div>

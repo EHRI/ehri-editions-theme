@@ -22,10 +22,10 @@
 /* @group ----- Exhibit Builder ----- */
 .exhibit-pagination {
   clear: both;
-  margin: 30px 0 15px 0;
-  max-width: 550px;
-  overflow: hidden;
-  width: 80%;
+  //margin: 30px 0 15px 0;
+  //max-width: 550px;
+  //overflow: hidden;
+  //width: 80%;
 }
 
 .exhibits.summary h1 {
@@ -37,7 +37,7 @@
   font-size: $font-size-lg;
   line-height: 1.5em;
   margin: $margin-sm 0 $margin-lg 0;
-  max-width: 850px;
+  //max-width: 850px;
 }
 
 .exhibits.summary #exhibit-pages ul {
@@ -54,16 +54,16 @@
   clear: both;
   font-size: var(--fontDocumentSize);
   line-height: 1.5em;
-  max-width: 715px;
+  //max-width: 715px;
   padding: 0;
-  width: calc(100% - 440px);
+  //width: calc(100% - 440px);
 }
 
 .exhibits #content-share {
-  margin: -$margin-md -242px 0 0;
+  //margin: -$margin-md -242px 0 0;
   position: relative;
-  top: 20px;
-  width: 210px;
+  //top: 20px;
+  //width: 210px;
 }
 
 .pagination + .exhibit {
@@ -71,7 +71,7 @@
 }
 
 #exhibit-pages {
-  width: 220px;
+  //width: 220px;
   display: inline-block;
 }
 
@@ -91,7 +91,7 @@
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
-  padding-top: $padding-md;
+  padding-top: $margin-md;
 }
 
 #exhibit-pages > ul > li {
@@ -99,11 +99,11 @@
   border-bottom-width: 0.08333em;
   border-color: #eee;
   margin-bottom: $margin-md;
-  padding-bottom: $padding-md;
+  padding-bottom: $margin-md;
 }
 
 #exhibit-pages ul li > ul {
-  padding-left: $padding-md;
+  padding-left: $margin-md;
   margin-left: 0;
 }
 
@@ -183,7 +183,7 @@
 
 #exhibit-blocks h3 {
   float: left;
-  padding: $padding-md 0 $padding-sm 0;
+  padding: $margin-md 0 $margin-sm 0;
   margin-top: $margin-sm;
   width: 100%;
 }
@@ -219,7 +219,7 @@
 .exhibit-item-caption {
   float: left;
   font-size: $font-size-sm;
-  padding: $padding-xs 0 $padding-sm 0;
+  padding: $margin-xs 0 $margin-sm 0;
 }
 
 #exhibit-blocks .exhibit-item-caption p {
@@ -248,18 +248,18 @@
   float: left;
   margin-left: $margin-sm;
   margin-right: $margin-sm;
-  width: 100%;
+  //width: 100%;
 }
 
 .exhibit .description ~ * {
   display: block;
   float: none;
   margin: 0 auto;
-  padding: 0 $padding-lg 0 $padding-lg*2;
+  padding: 0 $margin-lg 0 $margin-lg*2;
 }
 
 .exhibit-items img:first-of-type {
-  width: 100%;
+  //width: 100%;
 }
 
 .exhibit-examples {
@@ -267,8 +267,8 @@
 }
 
 .layout-gallery .gallery {
-  overflow: hidden;
-  width: 110%;
+  //overflow: hidden;
+  //width: 110%;
 }
 
 .layout-gallery .gallery .exhibit-item,

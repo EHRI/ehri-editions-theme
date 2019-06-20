@@ -1,7 +1,7 @@
 #content {
-  border: 0;
-  margin: 0 $margin-lg $margin-lg 190px;
-  padding: $margin-lg 0;
+  //border: 0;
+  //margin: 0 $margin-lg $margin-lg 190px;
+  //padding: $margin-lg;
 }
 
 #content-share {
@@ -12,6 +12,11 @@
   padding: 0;
   //position: relative;
   //top: 0;
+}
+
+#content-share-with {
+  display: flex;
+  justify-content: flex-start;
 }
 
 body.items.show #content-share {
@@ -28,7 +33,7 @@ body.exhibits-menu #content-share {
   display: none;
   height: auto;
   margin: 0;
-  padding: $padding-sm 0 $padding-md 0;
+  padding: $margin-sm 0 $margin-md 0;
   position: relative;
   width: 100%;
 }
@@ -43,9 +48,8 @@ body.exhibits-menu #content-share {
 
 #content-share-subtitle {
   display: block;
-  float: left;
   margin: $margin-sm 0 $margin-sm 0;
-  padding: $padding-sm 0 0 0;
+  padding: $margin-sm 0 0 0;
   width: 100%;
 }
 
@@ -59,24 +63,21 @@ body.exhibits-menu #content-share {
 }
 
 .content-share-item {
-  float: left;
-  cursor: pointer;
   font-weight: normal;
-  margin: 0 $margin-md 0 0;
-  padding: 0;
+  vertical-align: middle;
+}
+
+.content-share-item+.content-share-item {
+  margin-left: $margin-md;
 }
 
 .content-share-item-icon {
-  float: left;
   font-size: $font-size-sm;
-  margin: 4px 7px 0 0;
 }
 
 .content-share-icon {
   cursor: pointer;
-  display: inline;
-  margin: 0 2px 0 0;
-  padding: 0;
+  vertical-align: middle;
 }
 
 .content-share-icon:hover {
@@ -87,10 +88,10 @@ body.exhibits-menu #content-share {
   background: var(--colorBackground);
   color: var(--colorText);
   //float: right;
-  //height: 215px;
+  height: 215px;
   //margin: -82px -300px -150px 0;
   padding: 0;
-  //position: relative;
+  position: relative;
   //width: 265px;
   > #photogallery > figure {
     margin: 0;
@@ -103,7 +104,7 @@ body.exhibits-menu #content-share {
   float: left;
   height: 265px;
   margin: 25px 0 0 0;
-  padding: $padding-md 0;
+  padding: $margin-md 0;
   width: 100%;
 }
 
@@ -191,7 +192,7 @@ body.exhibits-menu #content-share {
   padding: 0;
   position: relative;
   width: 16rem;
-  box-shadow: $box-shadow;
+  box-shadow: $box-shadow-sm;
 }
 
 .content-info-entity-body, .content-info-entity-footer {
@@ -199,14 +200,14 @@ body.exhibits-menu #content-share {
   /*height: 373px;*/
   margin: 0;
   overflow: auto;
-  padding: 0 $padding-md $padding-sm $padding-md;
+  padding: 0 $margin-md $margin-sm $margin-md;
   width: 100%;
 }
 
 .content-info-entity-body img {
   display: block;
   height: 110px;
-  margin: $padding-md;
+  margin: $margin-md;
   padding: 0;
 }
 
@@ -277,12 +278,12 @@ body.exhibits-menu #content-share {
   border-bottom: none;
 }
 
-#document-metadata #content-files {
-  position: relative;
-  right: 0;
-  float: right;
-  margin: 0 -300px 0 0;
-}
+//#document-metadata #content-files {
+//  position: relative;
+//  right: 0;
+//  float: right;
+//  margin: 0 -300px 0 0;
+//}
 
 .content-info-entity {
   margin: 0;
@@ -294,7 +295,7 @@ body.exhibits-menu #content-share {
 }
 
 .editions-item-group {
-  padding: $padding-lg 0;
+  padding: $margin-lg 0;
 }
 
 .element-text-document {
@@ -316,7 +317,7 @@ body.exhibits-menu #content-share {
   font-weight: bold;
   letter-spacing: 1px;
   margin: $margin-xs $margin-sm $margin-sm 0;
-  padding: 0 0 $padding-xs 0;
+  padding: 0 0 $margin-xs 0;
 }
 
 .element-text-language-selected {
@@ -332,7 +333,7 @@ body.exhibits-menu #content-share {
   background: var(--colorButton);
   font-size: $font-size-sm;
   margin: $margin-sm 0 $margin-md 0;
-  padding: $padding-xs;
+  padding: $margin-xs;
   width: 100%;
 }
 

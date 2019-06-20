@@ -1,23 +1,24 @@
-</div><!-- end content -->
+        </div><!-- end main -->
+    </div><!-- end content -->
+    <footer id="footer" role="contentinfo">
+
+        <div id="footer-content">
+            <p>
+                <?php echo footer_logo(1); ?>
+                <?php echo footer_logo(2); ?>
+                <?php echo footer_logo(3); ?>
+            </p>
+            <?php if ($footerText = get_theme_option('Footer Text')): ?>
+                <p><?php echo get_theme_option('Footer Text'); ?></p>
+            <?php endif; ?>
+
+            <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
+
+        </div><!-- end footer-content -->
+    </footer>
+
 <!-- end of container -->
 </div>
-
-<footer id="footer" role="contentinfo">
-
-    <div id="footer-content" class="center-div">
-        <p>
-            <?php echo footer_logo(1); ?>
-            <?php echo footer_logo(2); ?>
-            <?php echo footer_logo(3); ?>
-        </p>
-        <?php if ($footerText = get_theme_option('Footer Text')): ?>
-            <p><?php echo get_theme_option('Footer Text'); ?></p>
-        <?php endif; ?>
-    </div><!-- end footer-content -->
-
-    <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
-
-</footer>
 
 <!-- PhotoSwipe html -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -217,7 +218,7 @@
           // parse real index when custom PIDs are used
           // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
           for (var j = 0; j < items.length; j++) {
-            if (items[j].pid == index) {
+            if (items[j].pid === index) {
               options.index = j;
               break;
             }
@@ -343,9 +344,28 @@
       arrows: true,
       slidesToShow: 4,
       slidesToScroll: 4,
+      mobileFirst: true,
       responsive: [
         {
-          breakpoint: 1300,
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 720,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -354,16 +374,7 @@
           }
         },
         {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 500,
+          breakpoint: 540,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1

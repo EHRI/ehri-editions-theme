@@ -74,9 +74,9 @@ ul ul, ul ol, ol ol, ol ul {
 // NB: removing this really messes up
 // the display of the left menu
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  //-moz-box-sizing: border-box;
+  //-webkit-box-sizing: border-box;
+  //box-sizing: border-box;
 }
 
 
@@ -100,10 +100,10 @@ body {
   color: var(--colorText);
   font-family: var(--fontText);
   font-size: $font-size-sm;
-  height: 100%;
+  //height: 100%;
   line-height: 18px;
   margin: 0;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 /* -- Headings -- */
@@ -214,7 +214,7 @@ img a {
   color: var(--colorText);
   float: left;
   margin: $margin-lg 0 0 0;
-  width: 100%;
+  //width: 100%;
 }
 
 .exhibit.record {
@@ -323,7 +323,7 @@ nav + .exhibit {
 .exhibits .featured {
   display: block;
   margin: $margin-xl 0 0 0;
-  max-width: 1170px;
+  //max-width: 1170px;
   padding: 0 0 1px 0;
   width: 100%;
 }
@@ -336,25 +336,25 @@ nav + .exhibit {
   display: block;
   height: 320px;
   margin: $margin-md 0 0 0;
-  max-width: 1170px;
+  //max-width: 1170px;
   padding: 0;
   width: calc(100% + 30px);
 }
 
 .exhibits .featured-carousel {
   position: absolute;
-  max-width: 1170px;
-  width: calc(100% - 230px);
+  //max-width: 1170px;
+  //width: calc(100% - 230px);
 }
 
 .exhibits .home-exhibit-featured-carousel {
-  width: calc(100% - 270px);
+  //width: calc(100% - 270px);
 }
 
 .carousel-item {
   display: block;
   overflow: hidden;
-  width: 100%;
+  //width: 100%;
 }
 
 #recent-items .item {

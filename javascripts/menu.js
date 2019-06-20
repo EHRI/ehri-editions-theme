@@ -29,7 +29,7 @@ jQuery(function ($) {
     var $this = $(this),
         cls = $this.data("class"),
         $target = $($this.data("target"));
-    $body.toggleClass(cls, 400);
+    $body.toggleClass(cls);
     $(".nav-bar-button").not($this).each(function (i, elem) {
       $body.removeClass($(elem).data("class"));
     })

@@ -7,7 +7,7 @@
   border: 0;
   height: $map-md;
   //margin-top: 5px;
-  width: 100%;
+  //width: 100%;
 }
 
 .exhibit-map-wide,
@@ -19,15 +19,15 @@
 .exhibit-map-wide iframe {
   border: 0;
   height: $map-md;
-  margin: $margin-sm 0 0 -110px;
-  width: calc(100% + 571px);
+  //margin: $margin-sm 0 0 -110px;
+  //width: calc(100% + 571px);
 }
 
 .exhibit-map-wide-resized iframe {
   border: 0;
   height: $map-md;
-  margin: $margin-sm 0 0 -70px;
-  width: calc(100% + 320px);
+  //margin: $margin-sm 0 0 -70px;
+  //width: calc(100% + 320px);
 }
 
 .exhibit-map-large,
@@ -40,13 +40,13 @@
   border: 0;
   height: $map-lg;
   margin: $margin-sm 0 0 -110px;
-  width: calc(100% + 571px);
+  //width: calc(100% + 571px);
 }
 
 .exhibit-map-large-resized iframe {
   border: 0;
   height: $map-lg;
   margin: $margin-sm 0 0 -70px;
-  width: calc(100% + 320px);
+  //width: calc(100% + 320px);
 }
 

@@ -1,13 +1,5 @@
 /* FEEDBACK */
 
-#feedback {
-  right: 0;
-  top: 0;
-  height: 250px;
-  margin-left: -3px;
-  margin-bottom: -3px;
-}
-
 #feedback-form {
   background: var(--colorBackground);
   border: 1px solid var(--colorBorderContent);
@@ -17,10 +9,11 @@
   margin: $margin-md 0 0 3px;
   max-height: 420px;
   overflow: hidden;
-  padding: $padding-md;
+  padding: $margin-md;
   position: relative;
   width: 265px;
   z-index: 20000;
+  box-shadow: $box-shadow-sm;
 }
 
 #feedback-tab {
@@ -29,13 +22,13 @@
   display: block;
   float: left;
   margin: $margin-xs 0 $margin-sm 3px;
-  padding: $padding-sm 0 0 0;
+  padding: $margin-sm 0 0 0;
   width: 100%;
 }
 
 #feedback-form h5 {
   margin: -$margin-md 0 $margin-sm -$margin-md;
-  padding: $padding-sm $padding-md;
+  padding: $margin-sm $margin-md;
   width: 125%;
 }
 
@@ -52,7 +45,7 @@
 #feedback-form input[type="email"] {
   width: 100%;
   margin: 5px 0 5px 0;
-  padding: $padding-xs $padding-sm;
+  padding: $margin-xs $margin-sm;
 }
 
 #feedback-form input[name="title"],
@@ -64,7 +57,7 @@
 #feedback-form textarea {
   height: 138px;
   margin: $margin-sm 0 -3px 0;
-  padding: $padding-xs $padding-sm;
+  padding: $margin-xs $margin-sm;
   width: 100%;
 }
 
@@ -85,7 +78,7 @@
   float: left;
   margin-left: 3px;
   background-color: #28a745;
-  padding: $padding-sm;
+  padding: $margin-sm;
   color: #fff;
   font-size: 1.2em;
   display: none;

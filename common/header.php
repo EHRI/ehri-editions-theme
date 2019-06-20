@@ -85,11 +85,11 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 <div id="nav-bar-buttons">
     <a href="/search" class="nav-bar-button" id="nav-bar-button-search" data-target="#nav-bar-search" data-class="search-menu">
         <div id="nav-bar-icon-search" class="material-icons">search</div>
-        <div id="nav-bar-icon-text-search"><?php echo __('Search'); ?></div>
+        <div id="nav-bar-icon-text-search" class="nav-bar-button-text"><?php echo __('Search'); ?></div>
     </a>
     <a href="/exhibits" class="nav-bar-button" id="nav-bar-button-menu" data-target="#nav-bar-menu" data-class="exhibits-menu">
         <div id="nav-bar-icon-menu" class="material-icons">menu</div>
-        <div id="nav-bar-icon-text-menu"><?php echo __('Menu'); ?></div>
+        <div id="nav-bar-icon-text-menu" class="nav-bar-button-text"><?php echo __('Menu'); ?></div>
     </a>
 </div>
 
@@ -178,31 +178,32 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 <!-- / desktop navbar -->
 
 <!-- mobile navbar -->
-<div id="nav-bar-mobile-buttons">
-        <a href="/search" class="nav-bar-mobile-button" id="nav-bar-mobile-button-search" data-target="#nav-bar-search" data-class="search-menu">
-            <div id="nav-bar-mobile-icon-search" data-text="search" class="material-icons">search</div>
-        </a>
-        <a href="/exhibits" class="nav-bar-mobile-button" id="nav-bar-mobile-button-menu" data-target="#nav-bar-menu" data-class="exhibits-menu">
-            <div id="nav-bar-mobile-icon-menu" data-text="menu" class="material-icons">menu</div>
-        </a>
-</div>
+<!--<div id="nav-bar-mobile-buttons">-->
+<!--        <a href="/search" class="nav-bar-mobile-button" id="nav-bar-mobile-button-search" data-target="#nav-bar-search" data-class="search-menu">-->
+<!--            <div id="nav-bar-mobile-icon-search" data-text="search" class="material-icons">search</div>-->
+<!--        </a>-->
+<!--        <a href="/exhibits" class="nav-bar-mobile-button" id="nav-bar-mobile-button-menu" data-target="#nav-bar-menu" data-class="exhibits-menu">-->
+<!--            <div id="nav-bar-mobile-icon-menu" data-text="menu" class="material-icons">menu</div>-->
+<!--        </a>-->
+<!--</div>-->
 
 <!-- / mobile navbar -->
 
 <div id="container">
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
-    <div class="header-image" id="header-image"
-         style="background: url('<?php echo theme_header_image_url(); ?>') no-repeat center left; background-size: cover;"></div>
-    <div class="header-overlay"></div>
-    <header role="banner">
-        <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
-        <a href="<?php echo WEB_ROOT ?>">
-            <div id="site-title" style="<?php echo $textTransform; ?>"><?php echo option('site_title'); ?></div>
-        </a>
-        <div id="site-subtitle"><?php echo $description; ?></div>
+    <header id="header" role="banner" style="background-image: url('<?php echo theme_header_image_url(); ?>');">
+        <div id="header-overlay"></div>
+        <div id="header-text">
+            <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
+            <a href="<?php echo WEB_ROOT ?>">
+                <div id="site-title" style="<?php echo $textTransform; ?>"><?php echo option('site_title'); ?></div>
+            </a>
+            <div id="site-subtitle"><?php echo $description; ?></div>
+            <div id="site-logo"><?php echo link_to_home_page(theme_logo()); ?></div>
+        </div>
     </header>
-    <div id="site-logo"><?php echo link_to_home_page(theme_logo()); ?></div>
-    <div id="content" role="main" tabindex="-1">
 
-        <?php fire_plugin_hook('public_content_top', array('view' => $this)); ?>
+    <div id="content" role="main" tabindex="-1">
+        <div id="main">
+            <?php fire_plugin_hook('public_content_top', array('view' => $this)); ?>
