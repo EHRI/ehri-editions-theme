@@ -30,7 +30,8 @@ body {
   }
 }
 
-body.search-menu #nav-bar-search, body.exhibits-menu #nav-bar-menu {
+body.search-menu #nav-bar-search,
+body.exhibits-menu #nav-bar-menu {
   display: block;
 }
 
@@ -262,11 +263,9 @@ a.nav-bar-search-item-close {
 }
 
 .nav-bar-search-group {
-  float: left;
   font-size: $font-size-sm;
   letter-spacing: 1px;
-  margin: $margin-sm 0 $margin-sm $margin-sm;
-  width: 100%;
+  margin: $margin-sm 0;
 }
 
 .nav-bar-back {
@@ -282,6 +281,7 @@ a.nav-bar-search-item-close {
     position: absolute;
     right: -20px;
     top: 0;
+    z-index: 2;
   }
 }
 
@@ -322,8 +322,7 @@ a.nav-bar-search-item-close {
   cursor: pointer;
   display: block;
   font-weight: bold;
-  margin: 0 0 $margin-sm $margin-sm;
-  padding-top: $margin-sm;
+  margin-bottom: $margin-sm;
 }
 
 #nav-bar-menu > ul > li > ul > li a,
