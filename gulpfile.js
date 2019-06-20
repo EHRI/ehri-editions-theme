@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
 var del = require( 'del' );
 
 var paths = {
@@ -15,7 +16,9 @@ var paths = {
 //compile
 function css() {
     return gulp.src(paths.sass + "/*.scss")
+        .pipe(sourcemaps.init())
         .pipe(sass().on("error", sass.logError))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.css));
 }
 
@@ -24,7 +27,6 @@ function css() {
 // Uglifies and concat all JS files into one
 function js() {
     var scriptPaths = [paths.js + "/*.js", '!' + paths.js + '/theme.*.js'];
-    // del(paths.js + "/theme.*");
     return gulp.src(scriptPaths)
         .pipe(concat("theme.min.js"))
         .pipe(uglify())
