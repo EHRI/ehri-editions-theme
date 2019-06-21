@@ -346,15 +346,15 @@
       slidesToScroll: 4,
       mobileFirst: true,
       responsive: [
-        {
-            breakpoint: 1300,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                infinite: true,
-                dots: true
-            }
-        },
+        // {
+        //     breakpoint: 1300,
+        //     settings: {
+        //         slidesToShow: 4,
+        //         slidesToScroll: 4,
+        //         infinite: true,
+        //         dots: true
+        //     }
+        // },
         {
           breakpoint: 900,
           settings: {

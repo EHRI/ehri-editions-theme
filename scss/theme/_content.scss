@@ -24,9 +24,8 @@ body.items.show #content-share {
   //width: 200px;
 }
 
-/* FIXME: content-share positioning hacks */
-body.exhibits-menu #content-share {
-  //margin-right: 0;
+body.exhibit #content-share {
+  float: right;
 }
 
 #content-share-mobile {

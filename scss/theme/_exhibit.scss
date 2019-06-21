@@ -21,11 +21,13 @@
 
 /* @group ----- Exhibit Builder ----- */
 .exhibit-pagination {
-  clear: both;
-  //margin: 30px 0 15px 0;
-  //max-width: 550px;
-  //overflow: hidden;
-  //width: 80%;
+  @include clearfix();
+  float: left;
+  margin-bottom: $margin-md;
+}
+
+#exhibit-title {
+  clear: left;
 }
 
 .exhibits.summary h1 {
