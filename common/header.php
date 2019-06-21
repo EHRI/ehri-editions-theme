@@ -128,8 +128,9 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
     <?php $counts = isset($results) ? $results->facet_counts->facet_fields : array(); ?>
     <div id="solr-facets" class="clearfix">
         <div id="nav-bar-limit-toggle" data-target="#nav-bar-limit-search">
-            <h2 class="nav-bar-search-category"><?php echo __('Limit your search'); ?></h2>
             <div id="nav-bar-limit-expand">keyboard_arrow_down</div>
+            <div id="nav-bar-limit-shrink">keyboard_arrow_up</div>
+            <h2 class="nav-bar-search-category"><?php echo __('Limit your search'); ?></h2>
         </div>
         <div id="nav-bar-limit-search">
             <?php foreach ($counts as $name => $facets): ?>
@@ -198,12 +199,20 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
         <div id="header-overlay"></div>
         <div id="header-text">
             <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
-            <a href="<?php echo WEB_ROOT ?>">
-                <div id="site-title" style="<?php echo $textTransform; ?>"><?php echo option('site_title'); ?></div>
+            <a href="<?php echo WEB_ROOT; ?>">
+                <h1 id="site-title" style="<?php echo $textTransform; ?>"><?php echo option('site_title'); ?></h1>
             </a>
             <div id="site-subtitle"><?php echo $description; ?></div>
             <div id="site-logo"><?php echo link_to_home_page(theme_logo()); ?></div>
         </div>
+        <?php if ($bodyid === 'home'): ?>
+            <div class="header-search-background"></div>
+            <div id="header-search">
+                <div id="search-container" role="search">
+                    <?php echo search_form(array('submit_value' => 'search')); ?>
+                </div>
+            </div>
+        <?php endif; ?>
     </header>
 
     <div id="content" role="main" tabindex="-1">

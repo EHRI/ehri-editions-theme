@@ -1,11 +1,4 @@
-<?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-
-<div class="header-search-background"></div>
-	<div id="header-search">
-		<div id="search-container" role="search">
-			<?php echo search_form(array('submit_value' => 'search')); ?>
-		</div>
-	</div>
+<?php echo head(array('bodyid'=>'home', 'bodyclass' =>'one-col')); ?>
 
 <div id="primary">
     <?php if ($homepageText = get_theme_option('Homepage Text')): ?>

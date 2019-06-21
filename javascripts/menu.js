@@ -27,9 +27,10 @@ jQuery(function ($) {
     var $this = $(this),
         $target = $($this.data("target")),
         active = $target.is(":visible");
-    $this
-        .find("#nav-bar-limit-expand")
-        .text(active ? "keyboard_arrow_down" : "keyboard_arrow_up");
-    $target.toggle(!active);
+    $this.toggleClass("collapse", active);
+    $this.toggleClass("expand", !active);
+        // .find("#nav-bar-limit-expand, #nav-bar-limit-shrink").toggle();
+        // .text(active ? "keyboard_arrow_down" : "keyboard_arrow_up");
+    $target.toggleClass("expand", !active);
   });
 });

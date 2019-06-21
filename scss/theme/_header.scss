@@ -1,13 +1,21 @@
 
 #header {
   position: relative;
-  height: 80px;
+  //height: 80px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center left;
 
+  //box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+
   @include media-breakpoint-up(md) {
-    height: 180px;
+    //height: 180px;
+  }
+}
+
+body#home #header-text {
+  @include media-breakpoint-up(md) {
+    //height: 300px;
   }
 }
 
@@ -15,25 +23,46 @@
   position: absolute;
   background: var(--colorTitle);
   opacity: .41;
-
-  padding: $margin-sm;
-
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%
-}
-
-#header-text {
-  position: absolute;
+  //
+  //padding: $margin-sm;
+  //
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: $margin-md;
+  z-index: 0;
+}
+
+#header-text * {
+  z-index: 2;
+}
+
+#header-text {
+  @extend .container;
+
+  padding-top: $margin-sm;
+  padding-bottom: $margin-sm;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+}
+
+#header-search {
+  background-color: rgba(255, 255, 255, .5);
+  padding-top: $margin-md;
+  padding-bottom: $margin-md;
+  z-index: 2;
+}
+
+#header-search #search-container {
+  @extend .container;
 }
 
 #site-logo {

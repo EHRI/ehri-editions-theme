@@ -195,22 +195,26 @@ body.search-menu #nav-bar-icon-search {
   color: var(--colorText);
 }
 
+#nav-bar-search #search-container #query {
+  width: 100%;
+  margin-bottom: $margin-md;
+}
+
 .nav-bar-search-category {
   color: var(--colorTitle);
   font-size: $font-size-xl;
-  //float: left;
-  //margin: 0 0 $margin-sm $margin-sm;
-  //padding: $margin-xs 0 0 0;
-  //text-transform: none;
-  //width: 250px;
+  margin-bottom: $margin-xs;
 }
 
 .nav-bar-search-line {
   border-top: 1px dashed var(--colorLineDashed);
-  //float: left;
   height: 1px;
-  //margin: $margin-xs $margin-sm $margin-md $margin-sm;
+  margin: $margin-md 0;
   //width: 248px;
+}
+
+.nav-bar-search-item {
+  margin-bottom: 5px;
 }
 
 .nav-bar-search-items {
@@ -219,20 +223,14 @@ body.search-menu #nav-bar-icon-search {
   list-style: none;
 }
 
-.nav-bar-search-item {
-  cursor: pointer;
-  //float: left;
-  //margin: 0 0 $margin-sm $margin-sm;
-  //width: 100%;
-}
-
 .nav-bar-search-item-close {
   color: var(--colorLink);
   clear: both;
   cursor: pointer;
   display: inline;
   font-size: $font-size-sm;
-  //margin: 5px 0 0 5px;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 a.nav-bar-search-item-close {
@@ -274,15 +272,69 @@ a.nav-bar-search-item-close {
 #nav-bar-limit-expand,
 #nav-bar-limit-shrink {
   color: var(--colorLink);
-  display: none;
+  //display: none;
   float: right;
   font-size: 36px;
-  margin: $margin-sm -$margin-xs 0 0;
+  //margin: $margin-sm -$margin-xs 0 0;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+// By default, facets are hidden in mobile view
+#nav-bar-limit-search{
+  display: none;
+
+  &.expand {
+    display: block;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
 }
 
 #nav-bar-limit-toggle {
   cursor: pointer;
+
+  @include media-breakpoint-up(md) {
+    cursor: unset;
+    pointer-events: none;
+  }
 }
+
+// By default, shrink icon is hidden
+#nav-bar-limit-shrink {
+  display: none;
+}
+
+#nav-bar-limit-toggle.collapse {
+  #nav-bar-limit-shrink {
+    display: none;
+  }
+  #nav-bar-limit-expand {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}
+
+#nav-bar-limit-toggle.expand {
+  #nav-bar-limit-expand {
+    display: none;
+  }
+  #nav-bar-limit-shrink {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}
+
 
 #nav-bar-search-back {
   margin: 0 0 0 280px;
