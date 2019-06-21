@@ -205,7 +205,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
             <div id="site-subtitle"><?php echo $description; ?></div>
             <div id="site-logo"><?php echo link_to_home_page(theme_logo()); ?></div>
         </div>
-        <?php if ($bodyid === 'home'): ?>
+        <?php if (isset($bodyid) && $bodyid === 'home'): ?>
             <div class="header-search-background"></div>
             <div id="header-search">
                 <div id="search-container" role="search">

@@ -210,7 +210,6 @@ body.search-menu #nav-bar-icon-search {
   border-top: 1px dashed var(--colorLineDashed);
   height: 1px;
   margin: $margin-md 0;
-  //width: 248px;
 }
 
 .nav-bar-search-item {
@@ -272,10 +271,8 @@ a.nav-bar-search-item-close {
 #nav-bar-limit-expand,
 #nav-bar-limit-shrink {
   color: var(--colorLink);
-  //display: none;
   float: right;
   font-size: 36px;
-  //margin: $margin-sm -$margin-xs 0 0;
 
   @include media-breakpoint-up(md) {
     display: none;
