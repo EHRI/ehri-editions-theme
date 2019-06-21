@@ -85,10 +85,12 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 <div id="nav-bar-buttons">
     <a href="/search" class="nav-bar-button" id="nav-bar-button-search" data-target="#nav-bar-search" data-class="search-menu">
         <div id="nav-bar-icon-search" class="material-icons">search</div>
+        <div id="nav-bar-icon-close-search" class="material-icons">close</div>
         <div id="nav-bar-icon-text-search" class="nav-bar-button-text"><?php echo __('Search'); ?></div>
     </a>
     <a href="/exhibits" class="nav-bar-button" id="nav-bar-button-menu" data-target="#nav-bar-menu" data-class="exhibits-menu">
         <div id="nav-bar-icon-menu" class="material-icons">menu</div>
+        <div id="nav-bar-icon-close-menu" class="material-icons">close</div>
         <div id="nav-bar-icon-text-menu" class="nav-bar-button-text"><?php echo __('Menu'); ?></div>
     </a>
 </div>

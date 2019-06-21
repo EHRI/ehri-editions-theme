@@ -14,6 +14,7 @@ body {
   //bottom: 0;
   color: var(--colorText);
   width: 0;
+  min-width: 0;
   height: 0;
   visibility: collapse;
   flex-basis: 0;
@@ -29,8 +30,10 @@ body.exhibits-menu #nav-bar-menu {
   display: block;
   visibility: visible;
   padding: $margin-md;
+
+  // FIXME: bad animation?
   min-width: 280px;
-  transition: min-width .5s;
+  //transition: min-width .5s;
 
   @include media-breakpoint-up(md) {
     border-right: 1px solid var(--colorLine);
@@ -50,9 +53,9 @@ body.exhibits-menu #nav-bar-menu {
   background: var(--colorBackground);
   border-bottom: 1px solid var(--colorLine);
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: stretch;
   //margin: 0;
   //overflow: hidden;
   //padding: 0;
@@ -69,6 +72,7 @@ body.exhibits-menu #nav-bar-menu {
 }
 
 .nav-bar-button {
+  min-width: 80px;
   text-decoration: none !important;
   background: var(--colorBackground);
   color: var(--colorLink);
@@ -79,17 +83,26 @@ body.exhibits-menu #nav-bar-menu {
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   padding: $margin-xs $margin-sm;
+
+  //margin-bottom: -1px; // to hide border...
+  //border-bottom: 1px solid var(--colorLine);
+
+  border-right: 1px solid var(--colorLine);
+  border-bottom: 1px solid var(--colorLine);
+  margin-bottom: -1px;
 
   .material-icons {
     float: left;
   }
 
   @include media-breakpoint-up(md) {
+    margin-bottom: unset;
+    margin-right: -1px;
     padding: $margin-sm $margin-md;
-    border-right: 0;
-    //border-bottom: 1px solid var(--colorLine);
     align-items: center;
 
     .material-icons {
@@ -97,14 +110,15 @@ body.exhibits-menu #nav-bar-menu {
     }
   }
 
-  &#nav-bar-button-menu {
-    border-right: 1px solid var(--colorLine);
-    border-left: 1px solid var(--colorLine);
+  &#nav-bar-button-menu,
+  &#nav-bar-button-search {
+    //border-right: 1px solid var(--colorLine);
+    //border-left: 1px solid var(--colorLine);
 
     @include media-breakpoint-up(md) {
-      border: 0;
-      border-top: 1px solid var(--colorLine);
-      border-bottom: 1px solid var(--colorLine);
+      //border: 0;
+      //border-top: 1px solid var(--colorLine);
+      //border-bottom: 1px solid var(--colorLine);
 
       // Hack to account for additional height
       // of the menu icon
@@ -112,6 +126,49 @@ body.exhibits-menu #nav-bar-menu {
     }
   }
 }
+
+#nav-bar-icon-close-menu,
+#nav-bar-icon-close-search {
+  font-size: 48px;
+  display: none;
+  float: left;
+}
+
+#nav-bar-icon-close-search {
+  // FIXME: this matches the search icon but
+  // is inconsistent with the other close button!
+  //font-size: 36px;
+}
+
+body.exhibits-menu #nav-bar-button-menu,
+body.search-menu #nav-bar-button-search {
+  border-bottom: 1px solid transparent;
+
+  @include media-breakpoint-up(md) {
+    border-bottom: 1px solid var(--colorLine);
+    border-right: 1px solid transparent;
+  }
+}
+
+body.exhibits-menu #nav-bar-icon-close-menu,
+body.search-menu #nav-bar-icon-close-search {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+body.exhibits-menu #nav-bar-icon-menu,
+body.search-menu #nav-bar-icon-search {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+
 
 //.nav-bar-mobile-button {
 //  background: var(--colorBackground);
@@ -166,6 +223,7 @@ body.exhibits-menu #nav-bar-button-menu {
 
 #nav-bar-icon-search {
   font-size: 36px;
+  //font-size: 48px;
   //margin: 0 auto;
   //padding: $margin-sm 0 0 0;
 }
