@@ -10,29 +10,31 @@ body {
 
 .nav-bar {
   background: var(--colorBackground);
-  //border-right: 1px solid var(--colorLine);
   //border-bottom: 1px solid var(--colorLine);
   //bottom: 0;
   color: var(--colorText);
-  display: none;
+  width: 0;
+  height: 0;
+  visibility: collapse;
+  flex-basis: 0;
   font-size: $font-size-sm;
   margin: 0;
-  //overflow: auto;
-  //overflow-x: hidden;
-  //padding: $margin-lg 0 0 0;
-  padding: $margin-md;
-
-  @include media-breakpoint-up(md) {
-    border-right: 1px solid var(--colorLine);
-    width: 280px;
-    min-width: 280px;
-    position: relative;
-  }
+  position: relative;
 }
 
 body.search-menu #nav-bar-search,
 body.exhibits-menu #nav-bar-menu {
+  height: unset;
+  width: unset;
   display: block;
+  visibility: visible;
+  padding: $margin-md;
+  min-width: 280px;
+  transition: min-width .5s;
+
+  @include media-breakpoint-up(md) {
+    border-right: 1px solid var(--colorLine);
+  }
 }
 
 .nav-bar-button-text {
@@ -65,22 +67,6 @@ body.exhibits-menu #nav-bar-menu {
     width: 80px;
   }
 }
-
-//#nav-bar-mobile-buttons {
-//  background: var(--colorBackground);
-//  border-bottom: 1px solid var(--colorLine);
-//  display: none;
-//  margin: 0;
-//  padding: 0;
-//}
-//
-///* ONLY SAFARI */
-///* z-index fix */
-//@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
-//  #nav-bar-buttons {
-//    -webkit-transform: translate3d(0, 0, 0);
-//  }
-//}
 
 .nav-bar-button {
   text-decoration: none !important;
