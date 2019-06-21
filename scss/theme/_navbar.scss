@@ -10,8 +10,6 @@ body {
 
 .nav-bar {
   background: var(--colorBackground);
-  //border-bottom: 1px solid var(--colorLine);
-  //bottom: 0;
   color: var(--colorText);
   width: 0;
   min-width: 0;
@@ -55,10 +53,6 @@ body.exhibits-menu #nav-bar-menu {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  align-items: stretch;
-  //margin: 0;
-  //overflow: hidden;
-  //padding: 0;
 
   @include media-breakpoint-up(md) {
     flex-direction: column;
@@ -81,15 +75,14 @@ body.exhibits-menu #nav-bar-menu {
   font-weight: bold;
   letter-spacing: 0.8px;
   text-align: center;
+
+  // Flex display to correctly stack icon and label.
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   padding: $margin-xs $margin-sm;
-
-  //margin-bottom: -1px; // to hide border...
-  //border-bottom: 1px solid var(--colorLine);
 
   border-right: 1px solid var(--colorLine);
   border-bottom: 1px solid var(--colorLine);
@@ -108,18 +101,7 @@ body.exhibits-menu #nav-bar-menu {
     .material-icons {
       float: unset;
     }
-  }
-
-  &#nav-bar-button-menu,
-  &#nav-bar-button-search {
-    //border-right: 1px solid var(--colorLine);
-    //border-left: 1px solid var(--colorLine);
-
-    @include media-breakpoint-up(md) {
-      //border: 0;
-      //border-top: 1px solid var(--colorLine);
-      //border-bottom: 1px solid var(--colorLine);
-
+    &#nav-bar-button-menu {
       // Hack to account for additional height
       // of the menu icon
       padding-top: $margin-xs;
@@ -134,17 +116,13 @@ body.exhibits-menu #nav-bar-menu {
   float: left;
 }
 
-#nav-bar-icon-close-search {
-  // FIXME: this matches the search icon but
-  // is inconsistent with the other close button!
-  //font-size: 36px;
-}
-
 body.exhibits-menu #nav-bar-button-menu,
 body.search-menu #nav-bar-button-search {
+  // The menu is open: hide it's bottom border...
   border-bottom: 1px solid transparent;
 
   @include media-breakpoint-up(md) {
+    // ... or in wide view, it's right border
     border-bottom: 1px solid var(--colorLine);
     border-right: 1px solid transparent;
   }
@@ -152,99 +130,37 @@ body.search-menu #nav-bar-button-search {
 
 body.exhibits-menu #nav-bar-icon-close-menu,
 body.search-menu #nav-bar-icon-close-search {
+  // The menu is open: close the close icon
   display: block;
 
   @include media-breakpoint-up(md) {
+    // ... except in wide view.
     display: none;
   }
 }
 
 body.exhibits-menu #nav-bar-icon-menu,
 body.search-menu #nav-bar-icon-search {
+  // Meny is open, change the color...
+  color: var(--colorTitle);
+
+  // and hide the regular icon.
   display: none;
 
   @include media-breakpoint-up(md) {
+    // Except in wide view.
     display: block;
   }
 }
 
-
-
-//.nav-bar-mobile-button {
-//  background: var(--colorBackground);
-//  border: 1px solid var(--colorLine);
-//  border-top: none;
-//  color: var(--colorLink);
-//  cursor: pointer;
-//  font-size: $font-size-sm;
-//  font-weight: bold;
-//  height: 50px;
-//  letter-spacing: 0.8px;
-//  padding: 0 0 $margin-sm 0;
-//  position: absolute;
-//  text-align: center;
-//  top: 0;
-//  width: 68px;
-//  z-index: 9050;
-//}
-
-body.search-menu #nav-bar-button-search,
-body.exhibits-menu #nav-bar-button-menu {
-  color: var(--colorTitle);
-  //border-right: 1px solid var(--colorBackground);
-  //width: 80px;
-  //z-index: 9080;
-}
-
-.nav-bar-mobile-button.selected {
-  color: var(--colorTitle);
-  //border-bottom: 1px solid var(--colorBackground);
-  //height: 50px;
-  //z-index: 9080;
-}
-
-#nav-bar-button-search {
-  //border-top: 1px solid var(--colorBackground);
-  //top: 0;
-}
-
-//#nav-bar-mobile-button-search {
-//  left: 67px;
-//}
-
-//#nav-bar-button-menu {
-//  top: 89px;
-//}
-
-//#nav-bar-mobile-button-menu {
-//  border-left: 1px solid var(--colorBackground);
-//  left: 0;
-//}
-
 #nav-bar-icon-search {
+  // Hack: the search icon is too big
   font-size: 36px;
-  //font-size: 48px;
-  //margin: 0 auto;
-  //padding: $margin-sm 0 0 0;
 }
-
-//#nav-bar-mobile-icon-search {
-//  font-size: 36px;
-//  margin: 0 auto;
-//  padding: $margin-xs 0 0 0;
-//}
 
 #nav-bar-icon-menu {
   font-size: 48px;
-  //margin: 0 auto;
-  //padding: $margin-xs 0 0 0;
 }
-
-//#nav-bar-mobile-icon-menu {
-//  font-size: 48px;
-//  margin: 0 auto;
-//  padding: 1px 0 0 0;
-//}
 
 #nav-bar-icon-text-search {
   margin: -1px 0 0 0;
