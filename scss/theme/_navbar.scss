@@ -12,13 +12,32 @@ body {
   background: var(--colorBackground);
   color: var(--colorText);
   width: 0;
-  min-width: 0;
+
   height: 0;
   visibility: collapse;
   flex-basis: 0;
   font-size: $font-size-sm;
   margin: 0;
   position: relative;
+}
+
+#nav-bar-search,
+#nav-bar-menu {
+  min-width: 0;
+  transition-timing-function: linear;
+  transition: min-width .4s;
+}
+
+// When the other menu(s) are open, disable
+// the transition on this one
+body.search-menu #nav-bar-menu {
+  min-width: unset;
+  transition: unset;
+}
+
+body.exhibits-menu #nav-bar-search {
+  min-width: unset;
+  transition: unset;
 }
 
 body.search-menu #nav-bar-search,
@@ -29,9 +48,7 @@ body.exhibits-menu #nav-bar-menu {
   visibility: visible;
   padding: $margin-md;
 
-  // FIXME: bad animation?
   min-width: 280px;
-  //transition: min-width .5s;
 
   @include media-breakpoint-up(md) {
     border-right: 1px solid var(--colorLine);
@@ -118,6 +135,9 @@ body.exhibits-menu #nav-bar-menu {
 
 body.exhibits-menu #nav-bar-button-menu,
 body.search-menu #nav-bar-button-search {
+  // Menu is open, change the color...
+  color: var(--colorTitle);
+
   // The menu is open: hide it's bottom border...
   border-bottom: 1px solid transparent;
 
@@ -141,9 +161,6 @@ body.search-menu #nav-bar-icon-close-search {
 
 body.exhibits-menu #nav-bar-icon-menu,
 body.search-menu #nav-bar-icon-search {
-  // Meny is open, change the color...
-  color: var(--colorTitle);
-
   // and hide the regular icon.
   display: none;
 
