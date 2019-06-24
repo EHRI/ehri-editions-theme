@@ -69,12 +69,8 @@
 #primary #gallery-item,
 #primary #gallery-item-mobile, // FIXME???
 #sidebar #photogallery {
-  //height: 100%;
-  max-width: 150px;
-  margin: 0;
-  //overflow: hidden;
-  padding: 0;
-  //width: 100%;
+  max-width: 200px;
+  overflow: hidden;
 }
 
 .fullsize {
@@ -83,16 +79,10 @@
 
 #sidebar #gallery-item img,
 #primary #gallery-item-mobile img { // FIXME???
-  //height: 100%;
-  margin: 0;
-  //max-height: 225px;
-  padding: 0;
-  //width: auto;
 }
 
 .items.show h3 {
   margin-bottom: $margin-md;
-  //width: 100%;
 }
 
 /* Items Classes*/
@@ -103,10 +93,7 @@
 
 .browse .item {
   border-bottom: 1px solid #eee;
-  //clear: both;
-  //float: left;
   padding: 3em 0;
-  //width: 100%;
 }
 
 .item .tags {

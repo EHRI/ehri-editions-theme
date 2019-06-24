@@ -89,8 +89,18 @@ body.exhibit #content-share {
   margin-bottom: $margin-lg;
 
   //width: 265px;
-  > #photogallery > figure {
-    margin: 0;
+  #photogallery-container {
+    float: left;
+    position: relative;
+
+    > #photogallery > figure {
+      margin: 0;
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
   }
 }
 
@@ -108,21 +118,21 @@ body.exhibit #content-share {
   color: var(--colorLink);
   float: left;
   font-size: 56px;
-  left: 50px;
-  padding: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
   pointer-events: none;
   position: absolute;
-  top: 82px;
 }
 
 #content-files-zoom-icon {
   color: var(--colorLink);
   float: left;
-  left: 115px;
-  padding: 0;
+  right: 10px;
+  top: 10px;
   pointer-events: none;
   position: absolute;
-  top: 10px;
 }
 
 #content-files-counter {
@@ -131,10 +141,10 @@ body.exhibit #content-share {
   font-family: var(--fontText);
   font-size: $font-size-sm;
   font-weight: bold;
-  left: 73px;
-  padding: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-20%);
   position: absolute;
-  top: 107px;
 }
 
 #content-files img,
