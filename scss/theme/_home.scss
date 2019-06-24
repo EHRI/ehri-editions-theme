@@ -38,7 +38,8 @@
 
 #home .related-chapters-box {
   display: block;
-  margin-bottom: 75px;
+  //margin-bottom: 75px;
+  @include clearfix();
 }
 
 #homepage-exhibit .exhibit-block.layout-neatline > iframe,

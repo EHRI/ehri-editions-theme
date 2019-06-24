@@ -21,7 +21,7 @@
   border: 0;
   font-size: $font-size-lg;
   font-weight: bold;
-  margin: 0 0 $margin-lg 295px;
+  margin: 0 0 $margin-lg 16 + $margin-md;
   padding: 0;
   text-transform: none;
 }
@@ -31,7 +31,7 @@
   color: var(--colorLink);
   font-size: $font-size-xl;
   font-weight: bold;
-  margin: $margin-md 0 $margin-md 295px;
+  margin: $margin-md 0 $margin-md 16 + $margin-md;
   text-transform: none;
   width: 100%;
 }
@@ -39,7 +39,7 @@
 .related-chapters p,
 .exhibit.record p {
   font-size: $font-size-base;
-  margin: $margin-sm 0 0 295px;
+  margin: $margin-sm 0 0 16 + $margin-md;
   max-width: 675px;
 }
 

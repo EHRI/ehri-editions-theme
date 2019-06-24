@@ -1,5 +1,6 @@
 <?php if (plugin_is_active('Feedback')): ?>
     <div id="feedback">
+        <div id="feedback-tab"><?php echo __('Feedback'); ?></div>
         <div id="feedback-form" style='display:none;' class="panel panel-default">
             <h5><?php echo __('Feedback'); ?></h5>
             <div id="feedback-close" class="material-icons">close</div>
@@ -17,7 +18,6 @@
                 <button class="feedback-button" type="submit"><?php echo __('Send'); ?></button>
             </form>
         </div>
-        <div id="feedback-tab"><?php echo __('Feedback'); ?></div>
         <div id="feedback-thanks"><?php echo __('Thanks for your feedback!'); ?></div>
     </div>
 <?php endif; ?>

@@ -1,17 +1,22 @@
 /* FEEDBACK */
 
+#feedback {
+  position: relative;
+  @include clearfix();
+}
+
 #feedback-form {
   background: var(--colorBackground);
   border: 1px solid var(--colorBorderContent);
   color: var(--colorText);
-  display: block;
   height: 320px;
-  margin: $margin-md 0 0 3px;
+  //margin: $margin-md 0 0 3px;
   max-height: 420px;
   overflow: hidden;
   padding: $margin-md;
-  position: relative;
+  position: absolute;
   width: 265px;
+  float: left;
   z-index: 20000;
   box-shadow: $box-shadow-sm;
 }
@@ -20,10 +25,8 @@
   color: var(--colorLink);
   cursor: pointer;
   display: block;
-  float: left;
   margin: $margin-xs 0 $margin-sm 3px;
   padding: $margin-sm 0 0 0;
-  width: 100%;
 }
 
 #feedback-form h5 {
@@ -76,11 +79,13 @@
 
 #feedback-thanks {
   float: left;
-  margin-left: 3px;
   background-color: #28a745;
   padding: $margin-sm;
   color: #fff;
   font-size: 1.2em;
   display: none;
+  z-index: 20000;
+  position: absolute;
+  box-shadow: $box-shadow-sm;
 }
 

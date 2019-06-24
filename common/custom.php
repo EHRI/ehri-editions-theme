@@ -110,7 +110,7 @@ function item_image_gallery_custom($attrs = array(), $imageType = 'square_thumbn
 
     $defaultAttrs = array(
         'wrapper' => array('id' => 'item-images'),
-        'linkWrapper' => array(),
+        'linkWrapper' => array('class' => 'gallery-item'),
         'figure' => array(),
         'link' => array(),
         'image' => array()

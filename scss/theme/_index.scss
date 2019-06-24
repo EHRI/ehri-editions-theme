@@ -223,25 +223,25 @@ a:hover, a:active {
 .related-chapters img,
 .exhibit.record img {
   border: 0;
-  height: 176px;
+  height: 11rem;
   float: left;
   margin: 0 $margin-lg $margin-sm 0;
-  width: 265px;
+  width: 16rem;
 }
 
 .exhibit.record img {
   border: 0;
   margin-top: -45px;
-  height: 265px;
-  width: 265px;
+  height: 16rem;
+  width: 16rem;
 }
 
 .exhibit.record .image {
-  height: 176px;
+  height: 11rem;
   float: left;
   overflow: hidden;
-  margin: -$margin-xl $margin-lg $margin-sm 0;
-  width: 265px;
+  margin: -2.5rem 0 0 0;
+  width: 16rem;
 }
 
 #skipnav {

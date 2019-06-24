@@ -18,7 +18,7 @@ echo head(array(
 
 <h1 id="exhibit-title"><?php echo $title; ?></h1>
 
-<div id="exhibit-blocks" class="clearfix">
+<div id="exhibit-blocks">
     <?php exhibit_builder_render_exhibit_page(); ?>
 </div>
 

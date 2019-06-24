@@ -299,12 +299,10 @@
   jQuery(function ($) {
     $("#feedback-tab").click(function () {
       $("#feedback-form").show(400);
-      $("#feedback-tab").hide(0);
     });
 
     $("#feedback-close").click(function () {
       $("#feedback-form").hide(400);
-      $("#feedback-tab").show(400);
     });
 
     $("#feedback-form").find("form").on("submit", function (e) {
@@ -315,7 +313,7 @@
         data: $form.serialize(),
         success: function () {
           $("#feedback-form").hide(400);
-          $("#feedback-tab").show(400);
+          // $("#feedback-tab").show(400);
           $("#feedback-thanks").show(400);
           setTimeout(function () {
             $("#feedback-thanks").hide(400);

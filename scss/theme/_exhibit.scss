@@ -26,6 +26,17 @@
   margin-bottom: $margin-md;
 }
 
+.exhibit-block {
+  margin-bottom: $margin-lg;
+
+  // If a header is the only text, give it a negative
+  // bottom margin to sit next to the next block.
+  > h3:last-child,
+  > h4:last-child {
+    margin-bottom: -($margin-md - ($margin-lg - $margin-md));
+  }
+}
+
 #exhibit-title {
   clear: left;
 }
@@ -155,6 +166,10 @@
   width: 100%;
 }
 
+#exhibit-blocks {
+  @include clearfix();
+}
+
 #exhibit-blocks p {
   color: var(--colorText);
   font-size: $font-size-base;
@@ -191,11 +206,6 @@
 
 #exhibit-blocks #map-toggle-fullscreen {
   margin: -$margin-xl 0 0 0;
-}
-
-.exhibit-block {
-  clear: both;
-  margin: $margin-lg 0;
 }
 
 .exhibit-block .exhibit-subtitle {
