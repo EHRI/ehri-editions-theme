@@ -326,70 +326,56 @@
   });
 </script>
 
-<!-- Comments js -->
-<script type="text/javascript">
-  jQuery(function ($) {
-    if ($(".comment").length) {
-      $("#comments-empty").hide(0);
-    }
-  });
-</script>
-
 <script type="text/javascript" src="<?php echo WEB_ROOT . "/themes/ehri/slick/slick.js" ?>"></script>
 <script type="text/javascript">
   jQuery(function ($) {
-    // slick
-    $(".featured-items, .related-documents, .recent-items").slick({
-      dots: true,
-      arrows: true,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      mobileFirst: true,
-      responsive: [
-        // {
-        //     breakpoint: 1300,
-        //     settings: {
-        //         slidesToShow: 4,
-        //         slidesToScroll: 4,
-        //         infinite: true,
-        //         dots: true
-        //     }
-        // },
-        {
-          breakpoint: 900,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 720,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 540,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
+      // slick
+      var $carousels = $(".featured-items, .related-documents, .recent-items");
 
-    // Disable pointer events on homepage maps until clicked
-    $(".layout-neatline")
-        .find("iframe").css({pointerEvents: "none"})
-        .end()
-        .click(function (e) {
-          $(this).find("iframe").css({pointerEvents: "auto"});
-        });
+      $carousels.slick({
+          dots: true,
+          arrows: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          mobileFirst: true,
+          responsive: [
+              // {
+              //     breakpoint: 1300,
+              //     settings: {
+              //         slidesToShow: 4,
+              //         slidesToScroll: 4,
+              //         infinite: true,
+              //         dots: true
+              //     }
+              // },
+              {
+                  breakpoint: 900,
+                  settings: {
+                      slidesToShow: 4,
+                      slidesToScroll: 4,
+                      infinite: true,
+                      dots: true
+                  }
+              },
+              {
+                  breakpoint: 720,
+                  settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: true,
+                      dots: true
+                  }
+              },
+              {
+                  breakpoint: 540,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+          ]
+      });
+
   });
 </script>
 <!-- addThis -->
