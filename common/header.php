@@ -180,18 +180,6 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 </div>
 <!-- / desktop navbar -->
 
-<!-- mobile navbar -->
-<!--<div id="nav-bar-mobile-buttons">-->
-<!--        <a href="/search" class="nav-bar-mobile-button" id="nav-bar-mobile-button-search" data-target="#nav-bar-search" data-class="search-menu">-->
-<!--            <div id="nav-bar-mobile-icon-search" data-text="search" class="material-icons">search</div>-->
-<!--        </a>-->
-<!--        <a href="/exhibits" class="nav-bar-mobile-button" id="nav-bar-mobile-button-menu" data-target="#nav-bar-menu" data-class="exhibits-menu">-->
-<!--            <div id="nav-bar-mobile-icon-menu" data-text="menu" class="material-icons">menu</div>-->
-<!--        </a>-->
-<!--</div>-->
-
-<!-- / mobile navbar -->
-
 <div id="container">
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>

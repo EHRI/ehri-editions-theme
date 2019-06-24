@@ -7,25 +7,25 @@
 //  display: none;
 //}
 //
-//#map-toggle-fullscreen,
-//.exhibit-map-toggle {
-//  color: var(--colorLink);
-//  cursor: pointer;
-//  display: inline;
-//  float: right;
-//  font-size: $font-size-base;
-//  margin: -47px 0 0 0;
-//  text-transform: none;
-//}
-//
-//.exhibit-map-toggle {
-//  margin-top: -19px;
-//}
-//
-//#map-toggle-fullscreen-icon,
-//.exhibit-map-toggle-icon {
-//  float: right;
-//  margin: 0 0 0 8px;
-//}
-//
+#map-toggle-fullscreen,
+.exhibit-map-toggle {
+  color: var(--colorLink);
+  cursor: pointer;
+  display: inline;
+  float: right;
+  font-size: $font-size-base;
+  margin-top: -$margin-lg;
+  text-transform: none;
+}
+
+.exhibit-map-toggle {
+  margin-top: -$margin-lg;
+}
+
+#map-toggle-fullscreen-icon,
+.exhibit-map-toggle-icon {
+  float: right;
+  margin-left: $margin-xs;
+}
+
 

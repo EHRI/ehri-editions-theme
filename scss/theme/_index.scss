@@ -163,23 +163,23 @@ h1 a, h2 a, h3 a {
 }
 
 /* -- Misc Inline elements -- */
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-abbr, acronym {
-  border: none;
-  font-style: normal;
-}
-
-blockquote {
-  margin: 0 3em;
-  font-style: italic;
-}
+//em, i {
+//  font-style: italic;
+//}
+//
+//strong, b {
+//  font-weight: bold;
+//}
+//
+//abbr, acronym {
+//  border: none;
+//  font-style: normal;
+//}
+//
+//blockquote {
+//  margin: 0 3em;
+//  font-style: italic;
+//}
 
 dt {
   font-weight: bold;
@@ -205,21 +205,15 @@ a:hover, a:active {
   color: var(--colorLinkHover);
 }
 
-img a {
-  border: none;
-}
+//img a {
+//  border: none;
+//}
 
 /* @end */
 .related-chapters,
 .exhibit.record {
-  color: var(--colorText);
-  float: left;
-  margin: $margin-lg 0 0 0;
-  //width: 100%;
-}
-
-.exhibit.record {
-  margin: 0;
+  @include clearfix();
+  max-width: 80%;
 }
 
 #home .related-chapters {

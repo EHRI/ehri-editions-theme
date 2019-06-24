@@ -321,7 +321,8 @@
   border-bottom: 1px dashed var(--colorLineDashed);
   color: var(--colorText);
   //cursor: pointer;
-  margin: -1px 0 $margin-lg 0;
+  margin-bottom: $margin-lg;
+  padding-bottom: $margin-lg;
   //max-width: 960px;
   //min-height: 197px;
   //width: calc(100% - 250px);

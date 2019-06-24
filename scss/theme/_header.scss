@@ -49,10 +49,18 @@ body#home #header-text {
   z-index: 2;
 
   @include media-breakpoint-up(md) {
+    padding-top: $margin-lg;
+    padding-bottom: $margin-lg;
+  }
+}
+
+#home #header-text {
+  @include media-breakpoint-up(md) {
     padding-top: 100px;
     padding-bottom: 60px;
   }
 }
+
 
 #header-search {
   background-color: rgba(255, 255, 255, .5);

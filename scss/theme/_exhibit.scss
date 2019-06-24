@@ -53,11 +53,10 @@
 }
 
 .exhibits #content {
-  clear: both;
   font-size: var(--fontDocumentSize);
   line-height: 1.5em;
   //max-width: 715px;
-  padding: 0;
+  //padding: 0;
   //width: calc(100% - 440px);
 }
 
@@ -69,7 +68,7 @@
 }
 
 .pagination + .exhibit {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--colorLine);
 }
 
 #exhibit-pages {
@@ -190,17 +189,13 @@
   width: 100%;
 }
 
-.related-chapters-box-exhibit {
-  margin-bottom: 75px;
-}
-
 #exhibit-blocks #map-toggle-fullscreen {
   margin: -$margin-xl 0 0 0;
 }
 
 .exhibit-block {
   clear: both;
-  margin-bottom: $margin-md;
+  margin: $margin-lg 0;
 }
 
 .exhibit-block .exhibit-subtitle {
