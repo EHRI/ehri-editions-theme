@@ -274,6 +274,14 @@ body.exhibit #content-share {
   margin-bottom: $margin-lg;
 }
 
+.document-section-tabs a {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+  }
+}
+
 .document-section {
   padding-bottom: $margin-lg;
   border-bottom: 1px dashed var(--colorLineDashed);
