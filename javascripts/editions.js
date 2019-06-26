@@ -14,24 +14,45 @@ jQuery(function ($) {
     var $entities = $(".tei-entities");
     var $infoPanel = $("#content-info");
 
-    function showInPanel($elem) {
-        if ($elem.length && $infoPanel.length) {
-            var $clone = $elem.clone().css({display: "block"});
-            $infoPanel
-                .children()
-                .remove()
-                .end()
-                .append($clone);
+    function showInPanel($elem, ref) {
+        if ($(window).width() < 720) {
+            console.log("Pop", $elem.prop('outerHTML'));
+            // FIXME: mobile popup...
+            // $(ref).popover({
+            //     content: $elem.get(0).outerHTML,
+            //     html: true
+            // }).popover('show');
+        } else {
+            if ($elem.length && $infoPanel.length) {
+                var $clone = $elem.clone().css({display: "block"});
+                $infoPanel
+                    .children()
+                    .remove()
+                    .end()
+                    .append($clone);
+            }
         }
     }
 
+    // Close popovers on mouseup...
+    $("html").on("mouseup", function (e) {
+        var l = $(e.target);
+        if (l[0].className.indexOf("popover") === -1) {
+            $(".popover").each(function () {
+                $(this).popover("hide");
+            });
+        }
+    });
+
     $(".tei-entity-ref").hoverIntent(function () {
         var url = $(this).data("ref");
-        showInPanel($entities.find(".content-info-entity[data-ref='" + url + "']").last());
+        var $elem = $entities.find(".content-info-entity[data-ref='" + url + "']").last();
+        showInPanel($elem, this);
     });
 
     $(".tei-note-ref").hoverIntent(function () {
-        showInPanel($(this).next(".tei-note"));
+        var $elem = $(this).next(".tei-note");
+        showInPanel($elem, this);
     });
 
 

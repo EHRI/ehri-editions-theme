@@ -1,6 +1,6 @@
 <?php if (plugin_is_active('Feedback')): ?>
-    <div id="feedback">
-        <div id="feedback-tab"><?php echo __('Feedback'); ?></div>
+    <div id="feedback" class="sidebar-section">
+        <h4 id="feedback-tab"><?php echo __('Feedback'); ?></h4>
         <div id="feedback-form" style='display:none;' class="panel panel-default">
             <h5><?php echo __('Feedback'); ?></h5>
             <div id="feedback-close" class="material-icons">close</div>

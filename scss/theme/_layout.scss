@@ -5,6 +5,38 @@
   flex-direction: column;
 }
 
+#content {
+  clear: both;
+  font-size: var(--fontDocumentSize);
+  line-height: 1.5em;
+  padding: $margin-lg 0;
+
+  @include make-container();
+  @extend .container;
+}
+
+// Main sidebar view
+.two-columns #content {
+
+  @include media-breakpoint-up(md) {
+
+    > #main {
+      @include make-row();
+
+      > #primary {
+        @include make-col-ready();
+        @include make-col(9);
+      }
+
+      > #sidebar {
+        @include make-col-ready();
+        @include make-col(3);
+      }
+    }
+  }
+}
+
+
 //#container {
 //  clear: both;
 //  display: block;

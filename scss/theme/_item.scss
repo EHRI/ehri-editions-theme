@@ -1,34 +1,4 @@
 /* @group ----- Items ----- */
-#content {
-  clear: both;
-  font-size: var(--fontDocumentSize);
-  line-height: 1.5em;
-  padding: $margin-lg 0;
-
-  @include make-container();
-  @extend .container;
-}
-
-.two-columns #content {
-
-  @include media-breakpoint-up(lg) {
-
-    > #main {
-      @include make-row();
-
-      > #primary {
-        @include make-col-ready();
-        @include make-col(9);
-      }
-
-      > #sidebar {
-        @include make-col-ready();
-        @include make-col(3);
-      }
-    }
-  }
-}
-
 .items-content-button,
 #comment-form input[type="submit"],
 .feedback-button {

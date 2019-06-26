@@ -55,6 +55,11 @@
             <?php echo $meta; ?>
         </div>
 
+        <!-- Files, hidden in non-mobile view -->
+        <div id="content-files-mobile" class="document-section">
+            <?php echo $images; ?>
+        </div>
+
         <?php if ($texts): ?>
             <div id="document-text" class="document-text document-section">
                 <h3><?php echo __('Document Text');?></h3>
@@ -118,7 +123,9 @@
         <?php echo $this->partial('common/feedback.php', array("item" => $item)); ?>
     </div>
 
-    <?php echo $images; ?>
+    <div class="sidebar-section" id="content-files">
+        <?php echo $images; ?>
+    </div>
     <div id="content-info"></div>
     <?php echo $entities; ?>
 
