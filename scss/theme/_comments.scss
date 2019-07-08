@@ -49,9 +49,9 @@ label[for=author_email] {
 
 .comment {
   margin-top: -$margin-sm !important;
-  min-height: 0 !important;
-  min-width: 0 !important;
-  width: calc(100% - 90px) !important;
+  //min-height: 0 !important;
+  //min-width: 0 !important;
+  //width: calc(100% - 90px) !important;
 }
 
 #comments-container .comment-body {
@@ -67,7 +67,7 @@ p.comment-author-name {
 }
 
 #comments-container .comment-body {
-  min-height: 0 !important;
+  //min-height: 0 !important;
 }
 
 .comments-empty {

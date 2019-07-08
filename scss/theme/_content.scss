@@ -1,3 +1,7 @@
+#item-texts {
+  font-size: var(--fontDocumentSize);
+}
+
 #content-share {
   background: var(--colorBackground);
   color: var(--colorLink);
@@ -11,15 +15,12 @@
 #content-share-with {
   display: flex;
   justify-content: flex-start;
-}
-
-body.items.show #content-share {
-  //margin: 0 -235px 0 0;
-  //width: 200px;
+  font-size: $font-size-sm;
 }
 
 body.exhibit #content-share {
   float: right;
+  margin-left: $margin-sm;
 }
 
 #content-share-mobile {

@@ -20,8 +20,7 @@
 }
 
 #exhibit-title {
-  margin: $margin-md 0 $margin-md -1px;
-  min-height: 0;
+  margin: $margin-md 0;
 }
 
 /* @group ----- Exhibit Builder ----- */
@@ -69,7 +68,7 @@
 }
 
 .exhibits #content {
-  font-size: var(--fontDocumentSize);
+  //font-size: var(--fontDocumentSize);
   line-height: 1.5em;
   //max-width: 715px;
   //padding: 0;
@@ -177,7 +176,6 @@
 
 #exhibit-blocks p {
   color: var(--colorText);
-  font-size: $font-size-base;
   line-height: 1.5em;
   margin: 0 0 $margin-sm 0;
 }

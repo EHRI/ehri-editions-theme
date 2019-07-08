@@ -1,85 +1,52 @@
 #search-container > #search-form {
-  //display: block;
-  //margin: $margin-xs 0 $margin-sm $margin-xs;
-  //padding: 10px;
-  //width: 270px;
   display: flex;
   flex-wrap: nowrap;
   position: relative;
-  //border: 1px solid var(--colorBorderInput);
-  //align-items: center;
 }
 
 #search-container #query,
 #search-container button {
-  //-moz-appearance: none;
-  //-webkit-appearance: none;
   background: var(--colorBackground);
-  //border: 1px solid var(--colorBorderInput);
   border: 1px solid var(--colorBorderInput);
 }
 
-#search-container #query {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-shadow: inset 0 1px 1px var(--colorLine);
-  box-sizing: border-box;
-  color: var(--colorText);
-  height: 34px;
-  padding: $margin-sm;
-  border-right: 0;
+#search-container {
+  #query {
+    box-shadow: inset 0 1px 1px var(--colorLine);
+    color: var(--colorText);
+    height: 2rem;
+    padding: $margin-sm;
+    border-right: 0;
+  }
+
+  button {
+    color: var(--colorLink);
+    background: var(--colorBackground);
+    font-size: $font-size-lg;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: inset 0 1px 0 var(--colorLine);
+    height: 2rem;
+    width: 3rem;
+    margin-left: -1px;
+    border-left: 0;
+  }
 }
 
-#header-search #query {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-shadow: inset 0 1px 1px var(--colorLine);
-  box-sizing: border-box;
-  color: var(--colorTitle);
-  font-size: $font-size-lg;
-  height: 46px;
-  //padding: 10px 45px 10px 17px;
-  padding: $margin-sm;
-  width: 457px;
-  border: 1px solid var(--colorBorderInput);
-  border-right: 0;
-}
+// Style overrides for large search box on
+// home page...
+#header-search {
+  #query {
+    font-size: $font-size-lg;
+    height: 3rem;
+    width: 30rem;
+  }
 
-#search-container button {
-  color: var(--colorLink);
-  background: var(--colorBackground);
-  font-size: $font-size-lg;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-shadow: inset 0 1px 0 var(--colorLine);
-  box-sizing: border-box;
-  //height: 28px;
-  height: 34px;
-  //position: absolute;
-
-  //right: 23px;
-  //top: 21px;
-  //width: 24px;
-  width: 3rem;
-  margin-left: -1px;
-  border-left: 0;
-}
-//
-#header-search button {
-  color: var(--colorLink);
-  background: var(--colorBackground);
-  //float: left;
-  font-size: 32px;
-  position: relative;
-  //height: 32px;
-  //margin: -2.5rem 0 0 410px;
-  //left: 0;
-  //top: 0;
-  width: 4rem;
-  margin-left: -1px;
-  height: 46px;
-  border: 1px solid var(--colorBorderInput);
-  border-left: 0;
+  button {
+    font-size: 2rem;
+    width: 4rem;
+    height: 3rem;
+  }
 }
 
 .search-results {
@@ -151,17 +118,3 @@
   text-align: center;
   width: 33.33%;
 }
-
-.search-button-solr {
-  color: var(--colorLink);
-  background: rgba(0, 0, 0, 0);
-  border: 0;
-  font-size: $font-size-lg;
-  height: 28px;
-  position: absolute;
-  right: 23px;
-  top: 21px;
-  width: 24px;
-}
-
-
