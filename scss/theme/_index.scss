@@ -267,6 +267,7 @@ a:active {
 //}
 
 .exhibit.record,
+.item.record,
 .item-summary {
   display: grid;
 
@@ -286,12 +287,17 @@ a:active {
 
 .related-chapters-title,
 .exhibit.record h3,
+.item.record > h2,
 .item-summary-title {
   grid-area: title;
   margin-bottom: 0;
+  font-size: $font-size-xl;
+  line-height: 1.25;
+  text-transform: none;
 }
 
 .exhibit.record .image,
+.item.record > .item-img,
 .item-summary .image {
   grid-area: thumb;
   margin: 0;
@@ -300,8 +306,9 @@ a:active {
   overflow: hidden;
 }
 
-// Item summary image is less wide than exhibit
+// Item browse/summary image is less wide than exhibit
 // images
+.item.record > .item-img,
 .item-summary .image {
   width: 9rem;
   height: 9rem;
@@ -311,6 +318,7 @@ a:active {
   }
 }
 
+.item+.item,
 .item-summary+.item-summary,
 .editions-item+.editions-item {
   padding-top: $margin-lg;
@@ -319,6 +327,7 @@ a:active {
 }
 
 .exhibit.record p,
+.item.record > .item-meta,
 .item-summary > .record-metadata {
   grid-area: text;
   font-size: $font-size-sm;
@@ -327,12 +336,6 @@ a:active {
   p {
     margin: 0 0 $margin-sm 0;
   }
-}
-
-.item-summary-title {
-  font-size: $font-size-xl;
-  line-height: 1.25;
-  text-transform: none;
 }
 
 p+.editions-item {

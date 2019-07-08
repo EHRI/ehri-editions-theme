@@ -51,8 +51,8 @@
 #primary #gallery-item-mobile img { // FIXME???
 }
 
-.items.show h3 {
-  margin-bottom: $margin-md;
+.items-list {
+  @include list-unstyled();
 }
 
 /* Items Classes*/
@@ -61,14 +61,9 @@
   position: relative;
 }
 
-.browse .item {
-  border-bottom: 1px solid #eee;
-  padding: 3em 0;
-}
-
 .item .tags {
   clear: left;
-  margin-left: 216px;
+  //margin-left: 216px;
 }
 
 .item .item-file a {
@@ -104,11 +99,7 @@
 }
 
 .item.record .item-title-overlay {
-  display: block;
   background-color: rgba(0,0,0,.5);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   color: #fff;
 }
 
@@ -121,53 +112,68 @@
 /* @end */
 
 /* @group ----- Items/Browse ----- */
-.browse .item h2,
-.browse .item-meta .item-img {
-  display: inline;
-  float: left;
-  margin-left: $margin-sm;
-  margin-right: $margin-sm;
-  //width: 220px;
+.items-nav {
+  margin-bottom: $margin-md;
+
+  > ul {
+    > li {
+      display: inline;
+      margin-right: $margin-xs;
+    }
+
+    > li+li:before {
+      content: '/';
+      margin-right: $margin-xs;
+    }
+  }
 }
 
-.browse .item h2 {
-  margin-bottom: 0;
-  margin-left: 0;
-}
+//.browse .item h2,
+//.browse .item-meta .item-img {
+//  display: inline;
+//  float: left;
+//  margin-left: $margin-sm;
+//  margin-right: $margin-sm;
+//}
+//
+//.browse .item h2 {
+//  margin-bottom: 0;
+//  margin-left: 0;
+//}
 
-.browse .item-meta .item-img {
-  margin-right: 0;
-  float: right;
-  text-align: right;
-}
+//.browse .item-meta .item-img {
+//  margin-right: 0;
+//  float: right;
+//  text-align: right;
+//}
 
-.browse .item-img img {
-  height: 10.5em;
-}
+//.browse .item-img img {
+//  height: 10.5em;
+//}
 
-.browse .item-meta,
-.browse .item-meta > div {
-  display: inline;
-  margin: 0;
-}
+//.browse .item-meta,
+//.browse .item-meta > div {
+//  display: inline;
+//  margin: 0;
+//}
 
-.browse .item-meta .item-description {
+//.browse .item-meta .item-description {
+//  margin-bottom: $margin-md;
+//}
+//
+//.browse .item-meta .item-description:only-of-type {
+//  margin-bottom: 0;
+//}
+
+#sort-links {
   margin-bottom: $margin-md;
 }
 
-.browse .item-meta .item-description:only-of-type {
-  margin-bottom: 0;
-}
-
-#sort-links {
-  display: block;
-  float: right;
-  list-style-type: none;
-  padding: 0;
-}
-
 #sort-links ul {
+  display: inline;
+  margin: 0;
   padding-left: 0;
+  list-style-type: none;
 }
 
 #sort-links ul li {
@@ -226,36 +232,36 @@
 /* @end */
 
 /* @group ----- Items/Browse ----- */
-.browse .item img {
-  margin-bottom: $margin-md;
-  margin-top: $margin-md;
-}
+//.browse .item img {
+//  margin-bottom: $margin-md;
+//  margin-top: $margin-md;
+//}
+//
+//.browse .item.record h2 {
+//  margin-bottom: $margin-sm;
+//}
 
-.browse .item.record h2 {
-  margin-bottom: $margin-sm;
-}
-
-.browse .item-meta .item-img {
-  float: left;
-  margin: 0 $margin-md 0 0;
-  width: auto;
-}
-
-.browse .item-meta .item-img img {
-  margin-top: 0;
-}
-
-.browse .item {
-  padding: $margin-md 0;
-}
-
-.browse .item-meta > div {
-  float: none;
-}
-
-#sort-links {
-  float: left;
-}
+//.browse .item-meta .item-img {
+//  float: left;
+//  margin: 0 $margin-md 0 0;
+//  width: auto;
+//}
+//
+//.browse .item-meta .item-img img {
+//  margin-top: 0;
+//}
+//
+//.browse .item {
+//  padding: $margin-md 0;
+//}
+//
+//.browse .item-meta > div {
+//  float: none;
+//}
+//
+//#sort-links {
+//  float: left;
+//}
 
 /* @end */
 
