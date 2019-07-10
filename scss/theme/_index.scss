@@ -25,8 +25,7 @@ h1, h2, h3, h4, h5, h6,
 .search-results-previous,
 .search-results-next,
 #site-title,
-#exhibit-home-site-title,
-label {
+#exhibit-home-site-title {
   font-family: var(--fontTitle);
   color: var(--colorTitle);
   font-weight: bold;
@@ -140,8 +139,7 @@ h4 {
   font-size: $font-size-xl;
 }
 
-h5,
-label {
+h5 {
   font-size: $font-size-sm;
   letter-spacing: 1px;
   margin: $margin-sm $margin-md;
@@ -266,6 +264,10 @@ a:active {
 //  max-width: 675px;
 //}
 
+// This code tries to impose consistent styling and layout
+// on three types of list item (thumbnail, title, text).
+// They are: exhibit records, item records, and the item-summary
+// rendered in search lists.
 .exhibit.record,
 .item.record,
 .item-summary {
@@ -285,6 +287,7 @@ a:active {
   }
 }
 
+// List item title/heading
 .related-chapters-title,
 .exhibit.record h3,
 .item.record > h2,
@@ -296,6 +299,7 @@ a:active {
   text-transform: none;
 }
 
+// List item thumbnail
 .exhibit.record .image,
 .item.record > .item-img,
 .item-summary .image {
@@ -304,6 +308,20 @@ a:active {
   height: 11rem;
   width: 16rem;
   overflow: hidden;
+}
+
+// The list item details/text
+.exhibit.record p,
+.item.record > .item-meta,
+.item-summary > .record-metadata {
+  grid-area: text;
+  font-size: $font-size-sm;
+  margin: 0 0 $margin-sm 0;
+
+  p,
+  .item-description {
+    margin: 0 0 $margin-sm 0;
+  }
 }
 
 // Item browse/summary image is less wide than exhibit
@@ -318,30 +336,23 @@ a:active {
   }
 }
 
-.item+.item,
+// Add a border between list items...
 .item-summary+.item-summary,
+.item-list > li + li,
+.item.record+.item.record,
 .editions-item+.editions-item {
   padding-top: $margin-lg;
   border-top: 1px dashed var(--colorLine);
   margin-top: $margin-lg;
 }
 
-.exhibit.record p,
-.item.record > .item-meta,
-.item-summary > .record-metadata {
-  grid-area: text;
-  font-size: $font-size-sm;
-  margin: 0 0 $margin-sm 0;
-
-  p {
-    margin: 0 0 $margin-sm 0;
-  }
-}
-
+// Apply some spacing between a item embedded within
+// an exhibit and the text before it.
 p+.editions-item {
   margin-top: $margin-md;
 }
 
+// TODO: fix this MS grid stuff...
 @media all and (-ms-high-contrast:none) {
   .exhibit.record {
     display: -ms-grid;
@@ -370,6 +381,52 @@ p+.editions-item {
     -ms-grid-column-span: 1;
   }
 }
+
+// Restyle the featured items carousel so only the image
+// and title display, with the title overlaid on a semi-
+// transparent background
+.featured-items {
+  width: 90%;
+
+  .item.record {
+    padding-right: $margin-sm;
+    position: relative;
+    width: 100%;
+  }
+
+  h2 {
+    display: block;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 0;
+    right: $margin-sm;
+    float: left;
+    a {
+      display: block;
+      padding: $margin-sm;
+      font-size: $font-size-base;
+      color: var(--white);
+      font-weight: normal;
+    }
+  }
+
+  .item.record > .item-img,
+  .item.record > .item-img > a > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .item-meta {
+    display: none;
+  }
+}
+
+#featured-items-container,
+#recent-items
+{
+  border-top: 1px solid var(--colorLine);
+}
+
 
 #home .related-chapters p,
 .exhibit.record p {
@@ -410,6 +467,7 @@ p+.editions-item {
     margin-left: 0;
   }
 }
+
 #skipnav {
   border: 0;
   clip: rect(0, 0, 0, 0);

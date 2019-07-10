@@ -1,3 +1,64 @@
+label,
+.field > .label {
+  margin-bottom: $margin-sm;
+  font-weight: bold;
+}
+
+.field {
+  margin-bottom: $margin-md;
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-items: flex-start;
+
+    .columns {
+      margin: 0;
+    }
+
+    label,
+    .label,
+    .two.columns {
+      flex-basis: 40%;
+      flex-shrink: 0;
+    }
+
+    .inputs {
+      * {
+        height: unset;
+        width: unset;
+      }
+    }
+  }
+
+  .search-entry {
+    flex-basis: 40%;
+    flex-grow: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    * {
+      height: unset;
+    }
+  }
+
+}
+
+#search-narrow-by-fields {
+  @include media-breakpoint-up(md) {
+    button {
+      height: min-content;
+      margin-left: $margin-sm;
+    }
+  }
+}
+
+#advanced-search-form {
+  div > input[type=submit] {
+    margin-top: $margin-md;
+  }
+}
+
 form,
 fieldset {
   border: 0;

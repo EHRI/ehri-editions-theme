@@ -24,30 +24,10 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
         <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
     </div>
 
-    <ol class="items-list">
+    <ol class="item-list">
         <?php foreach (loop('items') as $item): ?>
-            <li class="item record">
-                <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class' => 'permalink')); ?></h2>
-                <?php if (metadata('item', 'has files')): ?>
-                    <div class="item-img">
-                        <?php echo link_to_item(item_image()); ?>
-                    </div>
-                <?php endif; ?>
-                <div class="item-meta">
-                    <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet' => 250))): ?>
-                        <div class="item-description">
-                            <?php echo $description; ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (metadata('item', 'has tags')): ?>
-                        <div class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
-                                <?php echo tag_string('items'); ?></p>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' => $item)); ?>
-                </div>
+            <li>
+                <?php echo get_view()->partial('items/single.php', array('item' => $item)); ?>
             </li>
         <?php endforeach; ?>
     </ol>

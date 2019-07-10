@@ -11,13 +11,16 @@ $searchQuery = array_key_exists('q', $_GET) ? trim($_GET['q']) : '';
 
 	<?php echo pagination_links(); ?>
 
-	<div class="search-results">
+	<ol class="item-list search-results">
 		<?php foreach ($results->response->docs as $doc): ?>
-            <?php if ($item = get_db()->getTable("Item")->find($doc->modelid)): ?>
-                <?php echo tei_editions_render_item_summary($item); ?>
+        <?php $item = get_db()->getTable("Item")->find($doc->modelid); ?>
+            <?php if ($item): ?>
+            <li>
+                <?php echo get_view()->partial('items/single.php', array('item' => $item)); ?>
+            </li>
             <?php endif; ?>
 		<?php endforeach; ?>
-	</div>
+	</ol>
 
 	<?php echo pagination_links(); ?>
 

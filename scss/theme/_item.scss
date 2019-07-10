@@ -14,19 +14,19 @@
   padding: $margin-xs $margin-md;
 }
 
-.items-content-button:hover,
-#comment-form input[type="submit"]:hover,
-.feedback-button:hover {
-  opacity: 0.8
-}
+//.items-content-button:hover,
+//#comment-form input[type="submit"]:hover,
+//.feedback-button:hover {
+//  opacity: 0.8
+//}
 
-.items #content:after {
-  clear: both;
-  content: "\0020";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
+//.items #content:after {
+//  clear: both;
+//  content: "\0020";
+//  display: block;
+//  height: 0;
+//  visibility: hidden;
+//}
 
 #next-item {
   float: right;
@@ -47,24 +47,20 @@
   margin-right: $margin-sm;
 }
 
-#sidebar #gallery-item img,
-#primary #gallery-item-mobile img { // FIXME???
-}
-
-.items-list {
+.item-list {
   @include list-unstyled();
 }
 
 /* Items Classes*/
-.element {
-  clear: both;
-  position: relative;
-}
+//.element {
+//  clear: both;
+//  position: relative;
+//}
 
-.item .tags {
-  clear: left;
-  //margin-left: 216px;
-}
+//.item .tags {
+//  clear: left;
+//  //margin-left: 216px;
+//}
 
 .item .item-file a {
   display: block;
@@ -75,41 +71,6 @@
   height: 100%;
   width: auto;
 }
-
-.item h2 {
-  margin-top: 0;
-}
-
-.featured-items {
-  margin-left: -$margin-sm;
-}
-
-#featured-items-container,
-#recent-items
-{
-  border-top: 1px solid var(--colorLine);
-}
-.item.record .item-container {
-  margin: $margin-sm;
-  position: relative;
-}
-
-.item.record img {
-  width: 100%;
-}
-
-.item.record .item-title-overlay {
-  background-color: rgba(0,0,0,.5);
-  color: #fff;
-}
-
-.item.record .item-title {
-  padding: $margin-sm;
-  /*font-size: 1.2vw;*/
-  font-size: $font-size-base;
-}
-
-/* @end */
 
 /* @group ----- Items/Browse ----- */
 .items-nav {
@@ -191,23 +152,18 @@
 
 /* @end */
 /* @group ----- Items/Search ----- */
-.field {
-  margin-bottom: $margin-md;
-  overflow: hidden;
-}
+//.search h1 {
+//  margin: $margin-lg 0 0 0;
+//  padding-bottom: $margin-md;
+//}
 
-.search h1 {
-  margin: $margin-lg 0 0 0;
-  padding-bottom: $margin-md;
-}
-
-.search-entry:first-child .advanced-search-joiner {
-  display: none;
-}
-
-.search-entry select {
-  margin-bottom: 0.75em;
-}
+//.search-entry:first-child .advanced-search-joiner {
+//  display: none;
+//}
+//
+//.search-entry select {
+//  margin-bottom: 0.75em;
+//}
 
 .remove_search {
   color: #666;
