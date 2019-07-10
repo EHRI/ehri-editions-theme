@@ -12,7 +12,6 @@ body {
   background: var(--colorBackground);
   color: var(--colorText);
   width: 0;
-
   height: 0;
   visibility: collapse;
   flex-basis: 0;
@@ -23,9 +22,7 @@ body {
 
 #nav-bar-search,
 #nav-bar-menu {
-  min-width: 0;
-  transition-timing-function: linear;
-  transition: min-width .4s;
+  display: none;
 }
 
 // When the other menu(s) are open, disable
