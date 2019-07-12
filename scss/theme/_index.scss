@@ -21,7 +21,6 @@ h1, h2, h3, h4, h5, h6,
 .nav-bar-search-category,
 .nav-bar-search-group,
 .related-chapters-title,
-.item-summary-title,
 .search-results-previous,
 .search-results-next,
 #site-title,
@@ -69,17 +68,6 @@ ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0;
 }
 
-/* @group ----- Generic ----- */
-// NB: removing this really messes up
-// the display of the left menu
-* {
-  //-moz-box-sizing: border-box;
-  //-webkit-box-sizing: border-box;
-  //box-sizing: border-box;
-}
-
-
-
 *:focus {
   outline: none;
 }
@@ -98,12 +86,9 @@ body {
   background: var(--colorBackground);
   color: var(--colorText);
   font-family: var(--fontText);
-  //font-size: $font-size-sm;
-  //height: 100%;
   min-height: 100%;
   line-height: 18px;
   margin: 0;
-  //overflow-x: hidden;
 }
 
 /* -- Headings -- */
@@ -158,25 +143,6 @@ h1 a, h2 a, h3 a {
   text-decoration: none;
 }
 
-/* -- Misc Inline elements -- */
-//em, i {
-//  font-style: italic;
-//}
-//
-//strong, b {
-//  font-weight: bold;
-//}
-//
-//abbr, acronym {
-//  border: none;
-//  font-style: normal;
-//}
-//
-//blockquote {
-//  margin: 0 3em;
-//  font-style: italic;
-//}
-
 dt {
   font-weight: bold;
 }
@@ -203,6 +169,8 @@ a:active {
 }
 
 /* @end */
+
+
 .related-chapters,
 .exhibit.record {
   @include clearfix();
@@ -213,64 +181,11 @@ a:active {
   margin: $margin-md 0 0 0;
 }
 
-//.related-chapters img,
-//.exhibit.record img {
-//  border: 0;
-//  height: 11rem;
-//  float: left;
-//  margin: 0 $margin-lg $margin-sm 0;
-//  width: 16rem;
-//}
-//
-//.exhibit.record img {
-//  border: 0;
-//  margin-top: -45px;
-//  height: 16rem;
-//  width: 16rem;
-//}
-//
-//.exhibit.record .image {
-//  height: 11rem;
-//  float: left;
-//  overflow: hidden;
-//  margin: -2.5rem 0 0 0;
-//  width: 16rem;
-//}
-
-//.related-chapters-title,
-//.exhibit.record h3 {
-//  border: 0;
-//  font-size: $font-size-lg;
-//  font-weight: bold;
-//  margin: 0 0 $margin-lg 16 + $margin-md;
-//  padding: 0;
-//  text-transform: none;
-//}
-//
-//#home .related-chapters-title,
-//.exhibit.record h3 {
-//  color: var(--colorLink);
-//  font-size: $font-size-xl;
-//  font-weight: bold;
-//  margin: $margin-md 0 $margin-md 16 + $margin-md;
-//  text-transform: none;
-//  width: 100%;
-//}
-//
-//.related-chapters p,
-//.exhibit.record p {
-//  font-size: $font-size-base;
-//  margin: $margin-sm 0 0 16 + $margin-md;
-//  max-width: 675px;
-//}
-
 // This code tries to impose consistent styling and layout
-// on three types of list item (thumbnail, title, text).
-// They are: exhibit records, item records, and the item-summary
-// rendered in search lists.
+// on two types of list item (thumbnail, title, text):
+// exhibit records and item records.
 .exhibit.record,
-.item.record,
-.item-summary {
+.item.record {
   display: grid;
 
   grid-template-areas: "thumb title" "text text";
@@ -290,8 +205,7 @@ a:active {
 // List item title/heading
 .related-chapters-title,
 .exhibit.record h3,
-.item.record > h2,
-.item-summary-title {
+.item.record > h2 {
   grid-area: title;
   margin-bottom: 0;
   font-size: $font-size-xl;
@@ -301,8 +215,7 @@ a:active {
 
 // List item thumbnail
 .exhibit.record .image,
-.item.record > .item-img,
-.item-summary .image {
+.item.record > .item-img {
   grid-area: thumb;
   margin: 0;
   height: 11rem;
@@ -312,8 +225,7 @@ a:active {
 
 // The list item details/text
 .exhibit.record p,
-.item.record > .item-meta,
-.item-summary > .record-metadata {
+.item.record > .item-meta {
   grid-area: text;
   font-size: $font-size-sm;
   margin: 0 0 $margin-sm 0;
@@ -326,8 +238,7 @@ a:active {
 
 // Item browse/summary image is less wide than exhibit
 // images
-.item.record > .item-img,
-.item-summary .image {
+.item.record > .item-img {
   width: 9rem;
   height: 9rem;
 
@@ -337,7 +248,6 @@ a:active {
 }
 
 // Add a border between list items...
-.item-summary+.item-summary,
 .item-list > li + li,
 .item.record+.item.record,
 .editions-item+.editions-item {
