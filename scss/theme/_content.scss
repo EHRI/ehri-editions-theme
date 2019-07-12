@@ -1,3 +1,28 @@
+/*
+ * Styling related to the content on item pages.
+ */
+
+.items-content-button,
+#comment-form input[type="submit"],
+.feedback-button {
+  background: var(--colorButton);
+  border: 0;
+  color: var(--colorLink);
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-sm;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: $margin-sm $margin-xs/4 0 0;
+  padding: $margin-xs $margin-md;
+}
+
+.items-content-button:hover,
+#comment-form input[type="submit"]:hover,
+.feedback-button:hover {
+  opacity: 0.8
+}
+
 #item-texts {
   font-size: var(--fontDocumentSize);
 }
@@ -156,6 +181,7 @@ body.exhibit #content-share {
   top: 50%;
   transform: translateX(-50%) translateY(-20%);
   position: absolute;
+  pointer-events: none;
 }
 
 #content-files img,
@@ -401,6 +427,11 @@ body.exhibit #content-share {
 .element-set {
   margin: 0 0 $margin-md 0;
 }
+
+.fullsize {
+  margin-right: $margin-sm;
+}
+
 
 /* @end */
 

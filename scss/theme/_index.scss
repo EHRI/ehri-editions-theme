@@ -528,16 +528,72 @@ p+.editions-item {
   z-index: 50;
 }
 
-.item-file img {
+.item .item-file img {
   max-width: 100%;
 }
 
+.item .item-file a {
+  display: block;
+  height: 9em;
+}
+
+.item .item-file a img {
+  height: 100%;
+  width: auto;
+}
+
+// Items/browse page
 #sort-links + .item,
 #sort-links + .collection,
 nav + .exhibit {
   border-top: 1px solid #eee;
 }
 
+#sort-links {
+  margin-bottom: $margin-md;
+}
+
+#sort-links ul {
+  display: inline;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#sort-links ul li {
+  display: inline-block;
+  padding-left: $margin-sm;
+}
+
+.item-list {
+  @include list-unstyled();
+}
+
+.items-nav {
+  margin-bottom: $margin-md;
+
+  > ul {
+    > li {
+      display: inline;
+      margin-right: $margin-xs;
+    }
+
+    > li+li:before {
+      content: '/';
+      margin-right: $margin-xs;
+    }
+  }
+}
+
+#next-item {
+  float: right;
+}
+
+.sort-label {
+  display: inline-block;
+}
+
+// Feature exhibits
 .featured,
 .exhibits .featured {
   display: block;
@@ -606,3 +662,9 @@ nav + .exhibit {
 }
 /* @end */
 
+/* @group ---- Shortcode styles ----- */
+.shortcode-error {
+  padding: $margin-sm;
+  background-color: #ededed;
+  margin: $margin-md 0;
+}

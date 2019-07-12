@@ -118,3 +118,25 @@
   text-align: center;
   width: 33.33%;
 }
+
+.remove_search {
+  color: #666;
+  height: 18px;
+  position: relative;
+  text-indent: -9999px;
+  width: 18px;
+}
+
+.remove_search:after {
+  content: "\f00d";
+  font-family: "FontAwesome", sans-serif;
+  left: 0;
+  line-height: 18px;
+  position: absolute;
+  text-align: center;
+  text-indent: 0;
+  top: 0;
+  width: 100%;
+}
+
+

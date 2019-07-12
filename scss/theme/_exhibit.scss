@@ -16,6 +16,12 @@
 
 .exhibit-block.layout-text {
   font-size: $font-size-sm;
+
+  // Inside blocks, add a bit of spacing between a header
+  // and the preceding paragraph.
+  p+h4 {
+    margin-top: $margin-md;
+  }
 }
 
 /* @group ----- Exhibits/Show ----- */
@@ -270,19 +276,6 @@
   padding: 0 $margin-lg 0 $margin-lg*2;
 }
 
-.exhibit-items img:first-of-type {
-  //width: 100%;
-}
-
-.exhibit-examples {
-
-}
-
-.layout-gallery .gallery {
-  //overflow: hidden;
-  //width: 110%;
-}
-
 .layout-gallery .gallery .exhibit-item,
 .layout-gallery .gallery .exhibit-item:nth-of-type(2n),
 .layout-gallery .gallery .exhibit-item:nth-of-type(4n) {
@@ -292,5 +285,4 @@
   width: 27.72%;
 }
 
-/* ?????? */
 
