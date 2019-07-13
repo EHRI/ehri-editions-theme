@@ -1,3 +1,8 @@
+body.neatline {
+  // Prevent theme flexbox layout from messing
+  // up the iframe maps
+  display: block;
+}
 
 /** Neatline overrides **/
 .content > .content-info-entity-body {
@@ -67,5 +72,3 @@
 .neatline-control {
   display: none;
 }
-
-
