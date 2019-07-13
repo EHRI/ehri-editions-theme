@@ -82,13 +82,11 @@
         <?php if ($related): ?>
             <div id="document-related" class="document-section">
                 <h3><?php echo __('Related Documents'); ?></h3>
-                <ul class="related-documents">
+                <div class="related-documents">
                     <?php foreach ($related as $rel_item): ?>
-                        <li>
-                            <?php echo $this->partial('items/single.php', array("item" => $rel_item)); ?>
-                        </li>
+                        <?php echo $this->partial('items/single.php', array("item" => $rel_item)); ?>
                     <?php endforeach; ?>
-                </ul>
+                </div>
             </div>
         <?php endif; ?>
 

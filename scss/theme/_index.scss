@@ -292,10 +292,11 @@ p+.editions-item {
   }
 }
 
-// Restyle the featured items carousel so only the image
-// and title display, with the title overlaid on a semi-
-// transparent background
-.featured-items {
+// Restyle the featured or related items carousel so only the image
+// and title display, with the title overlaid on a semi-transparent
+// background.
+.featured-items,
+.related-documents {
   width: 90%;
 
   .item.record {
