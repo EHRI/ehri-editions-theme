@@ -58,6 +58,11 @@ h1, h2, h3, h4, h5, h6,
   font-feature-settings: 'liga';
 }
 
+body {
+  // Override reboot so dir="auto" or dir="rtl"
+  // work correctly.
+  text-align: unset;
+}
 
 /* -- Misc Block elements -- */
 p, ul, ol, dl {
