@@ -1,13 +1,3 @@
-
-body {
-  display: flex;
-  flex-direction: column;
-
-  @include media-breakpoint-up(md) {
-    flex-direction: row;
-  }
-}
-
 .nav-bar {
   background: var(--colorBackground);
   color: var(--colorText);

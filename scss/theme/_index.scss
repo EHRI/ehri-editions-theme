@@ -58,12 +58,6 @@ h1, h2, h3, h4, h5, h6,
   font-feature-settings: 'liga';
 }
 
-body {
-  // Override reboot so dir="auto" or dir="rtl"
-  // work correctly.
-  text-align: unset;
-}
-
 /* -- Misc Block elements -- */
 p, ul, ol, dl {
   margin: 1.5em 0;
@@ -94,6 +88,10 @@ body {
   min-height: 100%;
   line-height: 18px;
   margin: 0;
+
+  // Override reboot so dir="auto" or dir="rtl"
+  // work correctly.
+  text-align: unset;
 }
 
 /* -- Headings -- */
@@ -102,20 +100,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.03em;
   line-height: 1.25em;
   text-transform: none;
 
   @include media-breakpoint-up(md) {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
 }
 
 h2 {
   font-size: $font-size-xl;
-  line-height: 36px;
+  line-height: 1.75rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.25rem;
+  }
 }
 
 h3,
@@ -144,7 +146,9 @@ h6 {
   color: #666;
 }
 
-h1 a, h2 a, h3 a {
+h1 a,
+h2 a,
+h3 a {
   text-decoration: none;
 }
 

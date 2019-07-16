@@ -34,7 +34,7 @@
 
     <!-- css -->
     <?php if (!$colorScheme = get_theme_option('Color scheme')) { $colorScheme = 'wine-violet'; } ?>
-    <?php queue_css_file(array('iconfonts', 'skeleton', 'normalize', 'theme', "color-schemes/$colorScheme")); ?>
+    <?php queue_css_file(array('iconfonts', 'skeleton', 'theme', "color-schemes/$colorScheme")); ?>
     <?php echo head_css(); ?>
     
     <!-- javascripts -->

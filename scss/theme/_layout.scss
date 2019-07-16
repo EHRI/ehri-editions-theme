@@ -11,6 +11,18 @@
   @extend .container;
 }
 
+// This sets up the sidebar buttons, content
+// layout, which with the buttons on top at
+// narrow widths but on the left otherwise.
+body {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
 // Main sidebar view
 .two-columns #content {
 
