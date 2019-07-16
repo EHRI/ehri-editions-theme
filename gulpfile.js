@@ -51,7 +51,8 @@ function watchFiles() {
 function clean() {
     return del([
         paths.js + "/theme.*",
-        paths.css + "/theme.*"
+        paths.css + "/theme.css",
+        paths.css + "/print.css"
     ]);
 }
 

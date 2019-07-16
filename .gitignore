@@ -5,6 +5,7 @@ build.xml
 node_modules
 
 css/theme.css
+css/print.css
 javascripts/theme.min.js
 
 release-config.sh

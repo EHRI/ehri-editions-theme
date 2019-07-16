@@ -1,0 +1,61 @@
+@import "theme/variables";
+
+// Hide various elements in print mode
+#admin-bar,
+#content-files-mobile,
+#content-share-mobile,
+#content-share,
+#content-info,
+#item-pagination-mobile,
+#map-toggle-fullscreen-icon,
+#nav-bar-menu,
+#nav-bar-search,
+#nav-bar-buttons,
+#nav-bar-menu-back,
+#nav-bar-search-back,
+#photogallery,
+#site-logo,
+#header-search,
+#document-map,
+.item-pagination,
+.element-text-language,
+.element-text-language-selected,
+.element-text-page,
+.exhibit-map-toggle-icon,
+.exhibit-pagination,
+.exhibits .featured,
+.featured,
+//.header-image,
+//.header-overlay,
+.items-content-button,
+.map-document-mobile,
+.nav-bar,
+.nav-bar-menu,
+.nav-bar-search,
+.pagination-nav,
+#outputs {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+// Override sidebar layout in print view
+.two-columns #content {
+
+  @media print {
+
+    > #main {
+
+      > #primary {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+
+      > #sidebar {
+        display: none;
+      }
+    }
+  }
+}
+

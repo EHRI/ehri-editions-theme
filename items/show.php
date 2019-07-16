@@ -13,7 +13,7 @@
 ?>
 
 <div id="primary">
-	<div id="item-pagination-desktop" class="item-pagination navigation">
+	<div class="item-pagination navigation">
         <div class="item-pagination-previous"><?php echo link_to_previous_item_show_custom(); ?></div>
         <div class="item-pagination-next"><?php echo link_to_next_item_show_custom(); ?></div>
     </div>
