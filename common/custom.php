@@ -81,7 +81,7 @@ function link_to_next_item_show_custom($text = null, $props = array())
     $item = get_current_record('item');
     if($next = $item->next()) {
 		$next_item = metadata($item->next(), array('Dublin Core', 'Title'), array('snippet' => 40));
-        return link_to($next, 'show', $text . $next_item, $props);
+        return link_to($next, 'show', $next_item . $text, $props);
     }
 }
 
@@ -93,7 +93,7 @@ function link_to_previous_item_show_custom($text = null, $props = array())
     $item = get_current_record('item');
     if($previous = $item->previous()) {
 		$previous_item = metadata($item->previous(), array('Dublin Core', 'Title'), array('snippet' => 40));
-        return link_to($previous, 'show', $previous_item . $text, $props);
+        return link_to($previous, 'show', $text . $previous_item  , $props);
     }
 }
 

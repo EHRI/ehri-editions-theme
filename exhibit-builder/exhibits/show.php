@@ -11,15 +11,17 @@ echo head(array(
     <div class="item-pagination-next"><?php echo exhibit_builder_link_to_next_page_custom();?></div>
 </div>
 
-<div id="content-share">
-    <div id="content-share-subtitle"><?php echo __('Share'); ?></div>
-    <div class="addthis_inline_share_toolbox"></div>
+<div id="primary">
+    <h1 id="exhibit-title"><?php echo $title; ?></h1>
+
+    <div id="exhibit-blocks">
+        <?php exhibit_builder_render_exhibit_page(); ?>
+    </div>
+
+    <div id="content-share">
+        <?php echo $this->partial('common/content_share.php'); ?>
+    </div>
 </div>
 
-<h1 id="exhibit-title"><?php echo $title; ?></h1>
-
-<div id="exhibit-blocks">
-    <?php exhibit_builder_render_exhibit_page(); ?>
-</div>
 
 <?php echo foot(); ?>
