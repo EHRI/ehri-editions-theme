@@ -15,12 +15,10 @@
   letter-spacing: 1px;
   margin: $margin-sm $margin-xs/4 0 0;
   padding: $margin-xs $margin-md;
-}
 
-.items-content-button:hover,
-#comment-form input[type="submit"]:hover,
-.feedback-button:hover {
-  opacity: 0.8
+  &:hover {
+    opacity: 0.8
+  }
 }
 
 #item-texts {
@@ -93,10 +91,10 @@
 .content-share-icon {
   cursor: pointer;
   vertical-align: middle;
-}
 
-.content-share-icon:hover {
-  opacity: 0.8
+  &:hover {
+    opacity: 0.8
+  }
 }
 
 #content-files,
@@ -359,8 +357,7 @@
   font-feature-settings: 'liga';
 }
 
-.element-text-language,
-.element-text-language-selected {
+.element-text-language {
   color: var(--colorLink);
   cursor: pointer;
   display: inline-block;
@@ -369,15 +366,15 @@
   letter-spacing: 1px;
   margin: $margin-xs $margin-sm $margin-sm 0;
   padding: 0 0 $margin-xs 0;
-}
 
-.element-text-language-selected {
-  border-bottom: 1px solid var(--colorLink);
-  cursor: default;
-}
+  &.selected {
+    border-bottom: 1px solid var(--colorLink);
+    cursor: default;
+  }
 
-.element-text-language:hover {
-  color: var(--colorLinkHover);
+  &:hover {
+    color: var(--colorLinkHover);
+  }
 }
 
 .element-text-page {
@@ -386,16 +383,16 @@
   margin: $margin-sm 0 $margin-md 0;
   padding: $margin-xs;
   width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 #element-text-page-icon {
   float: left;
   font-size: $font-size-base;
   margin: 3px 6px 0 3px;
-}
-
-.element-text-page:hover {
-  cursor: pointer;
 }
 
 .element-text-page:hover.element-text-page a {

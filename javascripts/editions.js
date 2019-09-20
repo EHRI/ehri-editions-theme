@@ -4,10 +4,8 @@ jQuery(function ($) {
             show: false,
             active: 0,
             activate: function (e, ui) {
-                ui.oldTab.find("a")
-                    .toggleClass("element-text-language-selected element-text-language");
-                ui.newTab.find("a")
-                    .toggleClass("element-text-language-selected element-text-language");
+                ui.oldTab.find("a").removeClass("selected");
+                ui.newTab.find("a").addClass("selected");
             }
         });
 
