@@ -45,6 +45,7 @@
     <?php queue_js_file('vendor/respond'); ?>
     <?php queue_js_file('photoswipe.min', 'photoswipe/dist'); ?>
     <?php queue_js_file('photoswipe-ui-default.min', 'photoswipe/dist'); ?>
+    <?php queue_js_file('vendor/css-vars-ponyfill.min'); ?>
     <?php echo head_js(); ?>
     
     <!-- print -->
@@ -72,6 +73,10 @@
 		$textTransform = 'font-variant: normal; text-transform:'.$textTransform;
 	}
 	?>
+    <script>
+      // Polyfill CSS variables for older browsers.
+      cssVars();
+    </script>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
