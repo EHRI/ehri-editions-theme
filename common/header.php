@@ -6,9 +6,13 @@
         //Zend_Translate::removeCache(); ?>
     <?php add_translation_source(dirname(dirname(__FILE__)) . '/languages');?>
     <meta charset="utf-8">
+    <meta name="copyright" content="EHRI Consortium 2015-<?php echo date("Y"); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
-    <?php if ($description = option('description')): ?>
+    <?php if ($description = trim(option('description'))): ?>
         <meta name="description" content="<?php echo $description; ?>"/>
+    <?php endif; ?>
+    <?php if ($keywords = get_theme_option('Meta Keywords')): ?>
+        <meta name="keywords" content="<?php echo $keywords; ?>"/>
     <?php endif; ?>
 
     <?php
