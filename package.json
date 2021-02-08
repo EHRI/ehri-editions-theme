@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/EHRI/ehri-editions-theme/issues"
   },
-  "homepage": "https://github.com/EHRI/ehri-editions-theme#readme",
+  "homepage": "https://github.com/EHRI/ehri-editions-theme#README.md",
   "devDependencies": {
     "grunt": "^1.3.0",
     "grunt-contrib-clean": "^2.0.0",
