@@ -1,6 +1,6 @@
 {
   "name": "ehri-editions-theme",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Omeka theme for EHRI digital edition sites",
   "main": "index.js",
   "scripts": {
@@ -20,13 +20,14 @@
   },
   "homepage": "https://github.com/EHRI/ehri-editions-theme#readme",
   "devDependencies": {
-    "del": "^4.1.0",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
-    "gulp-watch": "^5.0.1"
+    "grunt": "^1.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^5.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

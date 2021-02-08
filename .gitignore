@@ -6,6 +6,7 @@ node_modules
 
 css/theme.css
 css/print.css
+css/*.map
 javascripts/theme.min.js
+pkg
 
-release-config.sh
