@@ -131,17 +131,19 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
         <h2 class="nav-bar-search-category"><?php echo __('Applied facets'); ?></h2>
 
         <!-- Get the applied facets. -->
-        <?php $facets = SolrSearch_Helpers_Facet::parseFacets(); ?>
-        <?php foreach ($facets as $f): ?>
-            <!-- Facet label. -->
-            <?php $url = SolrSearch_Helpers_Facet::removeFacet($f[0], $f[1]); ?>
-            <div class="nav-bar-search-item"><?php echo $f[1]; ?><a class="nav-bar-search-item-close"
-                                                                    href="<?php echo $url; ?>">close</a></div>
-        <?php endforeach; ?>
+        <?php if(plugin_is_active('SolrSearch')): ?>
+            <?php $facets = SolrSearch_Helpers_Facet::parseFacets(); ?>
+            <?php foreach ($facets as $f): ?>
+                <!-- Facet label. -->
+                <?php $url = SolrSearch_Helpers_Facet::removeFacet($f[0], $f[1]); ?>
+                <div class="nav-bar-search-item"><?php echo $f[1]; ?><a class="nav-bar-search-item-close"
+                                                                        href="<?php echo $url; ?>">close</a></div>
+            <?php endforeach; ?>
 
-        <!-- If facet is empty -->
-        <?php if (empty($facets)): ?>
-            <div class="nav-bar-search-item"><?php echo __('None'); ?></div>
+            <!-- If facet is empty -->
+            <?php if (empty($facets)): ?>
+                <div class="nav-bar-search-item"><?php echo __('None'); ?></div>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
 
@@ -158,7 +160,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
         <div id="nav-bar-limit-search">
             <?php foreach ($counts as $name => $facets): ?>
                 <!-- Does the facet have any hits? -->
-                <?php if (!empty($facets)): ?>
+                <?php if (!empty($facets) && plugin_is_active('SolrSearch')): ?>
 
                     <!-- Facet label. -->
                     <?php $label = SolrSearch_Helpers_Facet::keyToLabel($name); ?>
