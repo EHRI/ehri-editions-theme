@@ -1,6 +1,6 @@
 {
   "name": "ehri-editions-theme",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Omeka theme for EHRI digital edition sites",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/EHRI/ehri-editions-theme#README.md",
   "devDependencies": {
-    "grunt": "^1.3.0",
+    "grunt": "^1.5.3",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-compress": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
