@@ -17,6 +17,12 @@
   text-decoration: none;
 }
 
+#footer-copyright {
+  color: $text-muted;
+  font-size: $font-size-sm;
+  padding: $margin-sm 0;
+}
+
 #footer .navigation {
   float: none;
   text-align: left;

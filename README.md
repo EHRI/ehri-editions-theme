@@ -6,8 +6,8 @@ To build assets, install the relevant tools from the package.json file:
 
 Then run:
 
-    ./node_modules/.bin/gulp dist
+    ./node_modules/.bin/grunt build
 
-Or to regenerate CSS and JS via developing use the default gulp task:
+Or to regenerate CSS and JS via developing use the default grunt task:
 
-    ./node_modules/.bin/gulp
+    ./node_modules/.bin/grunt
