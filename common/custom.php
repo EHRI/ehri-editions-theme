@@ -33,7 +33,7 @@ function footer_logo($num = 1)
         if ($link && ($parts = explode('|', $link)) !== false) {
             $text = $parts[0];
             $url = $parts[1];
-            return "<a href='$url' target='_blank'><img class='footer-logo' alt='$text' src='$uri'/></a>";
+            return "<a href='$url' title='$text' target='_blank'><img class='footer-logo' alt='$text' src='$uri'/></a>";
         } else {
             return "<img class='footer-logo' src='$uri'/>";
         }

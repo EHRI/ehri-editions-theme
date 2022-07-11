@@ -3,18 +3,22 @@
     <footer id="footer" role="contentinfo">
 
         <div id="footer-content">
-            <p>
-                <?php echo footer_logo(1); ?>
-                <?php echo footer_logo(2); ?>
-                <?php echo footer_logo(3); ?>
-            </p>
+            <div id="footer-logos">
+                <?php foreach (range(1, 4) as $num): ?>
+                    <?php echo footer_logo($num); ?>
+                <?php endforeach ?>
+            </div>
+
             <?php if ($footerText = get_theme_option('Footer Text')): ?>
                 <p><?php echo get_theme_option('Footer Text'); ?></p>
             <?php endif; ?>
 
-            <div id="footer-copyright" role="contentinfo">
-                &copy; Copyright EHRI Consortium <?php echo date('Y'); ?>
-            </div>
+            <?php if (get_theme_option("display_footer_copyright")): ?>
+                <div id="footer-copyright" role="contentinfo">
+                    &copy; Copyright EHRI Consortium <?php echo date('Y'); ?>
+                </div>
+            <?php endif; ?>
+
             <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 
         </div><!-- end footer-content -->

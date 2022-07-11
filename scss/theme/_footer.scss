@@ -23,6 +23,15 @@
   padding: $margin-sm 0;
 }
 
+#footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    max-height: 6rem;
+  }
+}
+
 #footer .navigation {
   float: none;
   text-align: left;
