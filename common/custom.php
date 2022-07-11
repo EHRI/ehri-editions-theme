@@ -27,9 +27,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
 function footer_logo($num = 1)
 {
     if ($logo = get_theme_option("Footer Logo$num")) {
+        $link = get_theme_option("Footer Logo Info$num");
         $storage = Zend_Registry::get('storage');
         $uri = $storage->getUri($storage->getPathByType($logo, 'theme_uploads'));
-        return "<img class='footer-logo' src='$uri'/>";
+        if ($link && ($parts = explode('|', $link)) !== false) {
+            $text = $parts[0];
+            $url = $parts[1];
+            return "<a href='$url' target='_blank'><img class='footer-logo' alt='$text' src='$uri'/></a>";
+        } else {
+            return "<img class='footer-logo' src='$uri'/>";
+        }
     }
 }
 
