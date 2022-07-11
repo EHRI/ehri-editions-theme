@@ -1,6 +1,6 @@
 {
   "name": "ehri-editions-theme",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Omeka theme for EHRI digital edition sites",
   "main": "index.js",
   "scripts": {
