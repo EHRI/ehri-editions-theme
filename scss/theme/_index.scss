@@ -196,14 +196,13 @@ a:active {
 .item.record {
   display: grid;
 
-  grid-template-areas: "thumb title" "text text";
-  grid-template-rows: max-content auto;
-  grid-template-columns: min-content auto;
+  grid-template-areas: "thumb" "title" "text";
+  grid-template-rows: max-content 1fr auto;
   grid-gap: $margin-md;
 
   @include media-breakpoint-up(md) {
     grid-template-areas: "thumb title" "thumb text";
-    grid-template-rows: max-content auto;
+    grid-template-rows: max-content 1fr;
     grid-template-columns: max-content auto;
     grid-gap: $margin-lg;
     grid-row-gap: $margin-md;
