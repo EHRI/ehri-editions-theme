@@ -4,10 +4,10 @@ To build assets, install the relevant tools from the package.json file:
 
     npm install
 
-Then run:
+Then, to build a theme package, run:
 
-    ./node_modules/.bin/gulp dist
+    npm run dist
 
-Or to regenerate CSS and JS via developing use the default gulp task:
+Or to regenerate CSS and JS via developing, use the `watch` task:
 
-    ./node_modules/.bin/gulp
+    npm run watch

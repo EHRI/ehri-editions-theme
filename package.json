@@ -1,9 +1,12 @@
 {
   "name": "ehri-editions-theme",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Omeka theme for EHRI digital edition sites",
   "main": "index.js",
   "scripts": {
+    "watch": "grunt",
+    "dist": "grunt package",
+    "sass": "grunt clean sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +30,7 @@
     "grunt-contrib-uglify": "^5.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.1.0",
-    "node-sass": "^5.0.0"
+    "node-sass": "^8.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
