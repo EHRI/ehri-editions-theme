@@ -147,7 +147,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
             <?php foreach ($facets as $f): ?>
                 <!-- Facet label. -->
                 <?php $url = SolrSearch_Helpers_Facet::removeFacet($f[0], $f[1]); ?>
-                <div class="nav-bar-search-item"><?php echo $f[1]; ?><a class="nav-bar-search-item-close"
+                <div class="nav-bar-search-item"><?php echo $f[1]; ?><a class="nav-bar-search-item-close" rel="nofollow"
                                                                         href="<?php echo $url; ?>">close</a></div>
             <?php endforeach; ?>
 
@@ -185,7 +185,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
                             <?php $url = SolrSearch_Helpers_Facet::addFacet($name, $value); ?>
 
                             <!-- Facet link. -->
-                            <a href="<?php echo $url; ?>" class="facet-value">
+                            <a href="<?php echo $url; ?>" class="facet-value" rel="nofollow">
                                 <?php echo $value; ?>
                                 <!-- Facet count. -->
                                 (<span class="facet-count"><?php echo $count; ?></span>)
@@ -217,7 +217,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 <!-- / desktop navbar -->
 
 <div id="container">
-    <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
+    <a href="#content" id="skipnav" rel="nofollow"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
     <header id="header" role="banner" style="background-image: url('<?php echo theme_header_image_url(); ?>');">
         <div id="header-overlay"></div>
