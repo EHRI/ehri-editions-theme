@@ -340,19 +340,10 @@
       $carousels.slick({
           dots: true,
           arrows: true,
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           mobileFirst: true,
           responsive: [
-              // {
-              //     breakpoint: 1300,
-              //     settings: {
-              //         slidesToShow: 4,
-              //         slidesToScroll: 4,
-              //         infinite: true,
-              //         dots: true
-              //     }
-              // },
               {
                   breakpoint: 900,
                   settings: {
@@ -365,17 +356,10 @@
               {
                   breakpoint: 720,
                   settings: {
-                      slidesToShow: 3,
-                      slidesToScroll: 3,
+                      slidesToShow: 2,
+                      slidesToScroll: 2,
                       infinite: true,
                       dots: true
-                  }
-              },
-              {
-                  breakpoint: 540,
-                  settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1
                   }
               }
           ]

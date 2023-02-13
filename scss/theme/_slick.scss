@@ -10,3 +10,27 @@
     margin-left: 0;
   }
 }
+
+@media only screen and (min-width: 400px) {
+  .featured-items {
+    .slick-dots {
+      margin-bottom: 3px;
+
+      li button:before {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+    .slick-list {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .slick-list {
+    padding-bottom: 0;
+  }
+}
+
