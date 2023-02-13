@@ -5,12 +5,6 @@
     background: #fff url('./ajax-loader.gif') center center no-repeat;
 }
 
-.slick-list
-{
-    padding-bottom: 10px;
-    
-    }
-
 /* Icons */
 @font-face
 {
@@ -127,15 +121,18 @@
 
 .slick-dots
 {
+    position: absolute;
+    bottom: -25px;
+
     display: block;
-	
+
     width: 100%;
     padding: 0;
-    margin: 0 0 0 3px;
+    margin: 0;
 
     list-style: none;
 
-    text-align: left;
+    text-align: center;
 }
 .slick-dots li
 {
@@ -181,8 +178,8 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 6px;
+    line-height: 20px;
 
     position: absolute;
     top: 0;
@@ -194,32 +191,14 @@
     content: '•';
     text-align: center;
 
-    color: #fff;
+    opacity: .25;
+    color: black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
-  text-shadow: 0 0 3px #eeeeee; /* horizontal-offset vertical-offset 'blur' colour */
-  -moz-text-shadow: 0 0 3px #eeeeee;
-  -webkit-text-shadow: 0 0 3px #eeeeee;
-  -webkit-text-fill-color: #fff;
-  -webkit-text-stroke-color: #eeeeee;
-  -webkit-text-stroke-width: 3.00px; 
 }
 .slick-dots li.slick-active button:before
 {
+    opacity: .75;
     color: black;
-	text-shadow: 0 0 3px #a8a8a8; /* horizontal-offset vertical-offset 'blur' colour */
-	-moz-text-shadow: 0 0 3px #a8a8a8;
-	-webkit-text-shadow: 0 0 3px #a8a8a8;
-	-webkit-text-fill-color: #360f4f;
-	-webkit-text-stroke-color: #a8a8a8;
-	-webkit-text-stroke-width: 3.00px; 
-}
-
-@media only screen and (max-width: 930px) {
-
-	.slick-list {
-		padding-bottom: 0;
-	}
 }
