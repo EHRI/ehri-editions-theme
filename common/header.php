@@ -105,6 +105,9 @@
             </script>
         <?php endif; ?>
     <?php endif; ?>
+    <?php if ($plausible_domain=trim (get_theme_option('plausible_domain'))): ?>
+        <script defer data-domain="<?php echo $plausible_domain; ?>" src="https://plausible.io/js/script.js"></script>
+    <?php endif; ?>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
