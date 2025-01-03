@@ -147,67 +147,64 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
     </div>
 
     <!-- Applied facets. -->
-    <div id="solr-applied-facets" class="clearfix">
-        <h2 class="nav-bar-search-category"><?php echo __('Applied facets'); ?></h2>
+    <?php if(plugin_is_active('SolrSearch')): ?>
+        <?php $facets = SolrSearch_Helpers_Facet::parseFacets(); ?>
+        <?php if (!empty($facets)): ?>
+            <div id="solr-applied-facets" class="clearfix">
+                <h2 class="nav-bar-search-category"><?php echo __('Applied facets'); ?></h2>
 
-        <!-- Get the applied facets. -->
-        <?php if(plugin_is_active('SolrSearch')): ?>
-            <?php $facets = SolrSearch_Helpers_Facet::parseFacets(); ?>
-            <?php foreach ($facets as $f): ?>
-                <!-- Facet label. -->
-                <?php $url = SolrSearch_Helpers_Facet::removeFacet($f[0], $f[1]); ?>
-                <div class="nav-bar-search-item"><?php echo $f[1]; ?><a class="nav-bar-search-item-close" rel="nofollow"
-                                                                        href="<?php echo $url; ?>">close</a></div>
-            <?php endforeach; ?>
-
-            <!-- If facet is empty -->
-            <?php if (empty($facets)): ?>
-                <div class="nav-bar-search-item"><?php echo __('None'); ?></div>
-            <?php endif; ?>
-        <?php endif; ?>
-    </div>
-
-    <div class="nav-bar-search-line"></div>
-
-    <!-- Facets. -->
-    <?php $counts = isset($results) ? $results->facet_counts->facet_fields : array(); ?>
-    <div id="solr-facets" class="clearfix">
-        <div id="nav-bar-limit-toggle" data-target="#nav-bar-limit-search">
-            <div id="nav-bar-limit-expand">keyboard_arrow_down</div>
-            <div id="nav-bar-limit-shrink">keyboard_arrow_up</div>
-            <h2 class="nav-bar-search-category"><?php echo __('Limit your search'); ?></h2>
-        </div>
-        <div id="nav-bar-limit-search">
-            <?php foreach ($counts as $name => $facets): ?>
-                <!-- Does the facet have any hits? -->
-                <?php if (!empty($facets) && plugin_is_active('SolrSearch')): ?>
-
+                <!-- Get the applied facets. -->
+                <?php foreach ($facets as $f): ?>
                     <!-- Facet label. -->
-                    <?php $label = SolrSearch_Helpers_Facet::keyToLabel($name); ?>
-                    <div class="nav-bar-search-group"><?php echo __($label); ?></div>
+                    <?php $url = SolrSearch_Helpers_Facet::removeFacet($f[0], $f[1]); ?>
+                    <div class="nav-bar-search-item"><?php echo $f[1]; ?><a class="nav-bar-search-item-close" rel="nofollow"
+                                                                            href="<?php echo $url; ?>">close</a></div>
+                <?php endforeach; ?>
+            </div>
 
-                    <!-- Facets. -->
-                    <?php foreach ($facets as $value => $count): ?>
-                        <div class="nav-bar-search-item" value="<?php echo $value; ?>">
+            <div class="nav-bar-search-line"></div>
+        <?php endif; ?>
 
-                            <!-- Facet URL. -->
-                            <?php $url = SolrSearch_Helpers_Facet::addFacet($name, $value); ?>
 
-                            <!-- Facet link. -->
-                            <a href="<?php echo $url; ?>" class="facet-value" rel="nofollow">
-                                <?php echo $value; ?>
-                                <!-- Facet count. -->
-                                (<span class="facet-count"><?php echo $count; ?></span>)
-                            </a>
-                        </div>
+        <!-- Facets. -->
+        <?php $counts = isset($results) ? $results->facet_counts->facet_fields : array(); ?>
+        <?php if (!empty($counts)): ?>
+            <div id="solr-facets" class="clearfix">
+                <div id="nav-bar-limit-toggle" data-target="#nav-bar-limit-search">
+                    <div id="nav-bar-limit-expand">keyboard_arrow_down</div>
+                    <div id="nav-bar-limit-shrink">keyboard_arrow_up</div>
+                    <h2 class="nav-bar-search-category"><?php echo __('Limit your search'); ?></h2>
+                </div>
+                <div id="nav-bar-limit-search">
+                    <?php foreach ($counts as $name => $facets): ?>
+                        <!-- Does the facet have any hits? -->
+                        <?php if (!empty(get_object_vars($facets))): ?>
+
+                            <!-- Facet label. -->
+                            <?php $label = SolrSearch_Helpers_Facet::keyToLabel($name); ?>
+                            <div class="nav-bar-search-group"><?php echo __($label); ?></div>
+
+                            <!-- Facets. -->
+                            <?php foreach ($facets as $value => $count): ?>
+                                <div class="nav-bar-search-item">
+
+                                    <!-- Facet URL. -->
+                                    <?php $url = SolrSearch_Helpers_Facet::addFacet($name, $value); ?>
+
+                                    <!-- Facet link. -->
+                                    <a href="<?php echo $url; ?>" class="facet-value" rel="nofollow">
+                                        <?php echo $value; ?>
+                                        <!-- Facet count. -->
+                                        (<span class="facet-count"><?php echo $count; ?></span>)
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     <?php endforeach; ?>
-                <?php endif; ?>
-            <?php endforeach; ?>
-			<?php if (empty($counts)): ?>
-				<div class="nav-bar-search-item"><?php echo __('None'); ?></div>
-			<?php endif; ?>
+                </div>
+            <?php endif; ?>
         </div>
-    </div>
+    <?php endif; ?>
 </div>
 
 <div class="nav-bar" id="nav-bar-menu">
