@@ -66,6 +66,12 @@
     <!-- photoswipe -->
     <link rel="stylesheet" type="text/css" href="<?php echo WEB_ROOT . "/themes/ehri/photoswipe/dist/photoswipe.css"; ?>"/>
     <link rel="stylesheet" type="text/css" href="<?php echo WEB_ROOT . "/themes/ehri/photoswipe/dist/default-skin/default-skin.css"; ?>"/>
+
+    <?php if ($custom_css = trim(get_theme_option('custom_css'))): ?>
+        <style>
+            <?php echo $custom_css; ?>
+        </style>
+    <?php endif; ?>
     
     <!-- site title -->
 	<?php 
