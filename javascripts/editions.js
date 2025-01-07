@@ -1,4 +1,7 @@
 jQuery(function ($) {
+
+    var MOBILE_WIDTH = 720;
+
     $("#document-text")
         .tabs({
             show: false,
@@ -13,13 +16,13 @@ jQuery(function ($) {
     var $infoPanel = $("#content-info");
 
     function showInPanel($elem, ref) {
-        if ($(window).width() < 720) {
-            console.log("Pop", $elem.prop('outerHTML'));
-            // FIXME: mobile popup...
-            // $(ref).popover({
-            //     content: $elem.get(0).outerHTML,
-            //     html: true
-            // }).popover('show');
+        $('.popover').popover('hide');
+        if ($(window).width() < MOBILE_WIDTH) {
+            $(ref).popover({
+                content: $elem.prop('outerHTML'),
+                html: true,
+                placement: "auto",
+            }).popover('show');
         } else {
             if ($elem.length && $infoPanel.length) {
                 var $clone = $elem.clone().css({display: "block"});
@@ -32,13 +35,10 @@ jQuery(function ($) {
         }
     }
 
-    // Close popovers on mouseup...
+    // Close popovers on mouseup unless clicking in a popover itself...
     $("html").on("mouseup", function (e) {
-        var l = $(e.target);
-        if (l[0].className.indexOf("popover") === -1) {
-            $(".popover").each(function () {
-                $(this).popover("hide");
-            });
+        if (!$(e.target).closest(".popover").length) {
+            $(".popover").popover("hide");
         }
     });
 
