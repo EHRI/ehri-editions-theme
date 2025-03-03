@@ -14,9 +14,11 @@
             <?php endif; ?>
 
             <?php if (get_theme_option("display_footer_copyright")): ?>
-                <div id="footer-copyright" role="contentinfo">
-                    &copy; Copyright EHRI Consortium <?php echo date('Y'); ?>
-                </div>
+                <?php if ($copyright = option('copyright')): ?>
+                    <div id="footer-copyright" role="contentinfo">
+                        &copy; Copyright <?php echo $copyright; ?>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
 
             <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
