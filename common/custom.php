@@ -159,10 +159,22 @@ function theme_header_image_url()
     if ($headerImage) {
         $storage = Zend_Registry::get('storage');
         $headerImage = $storage->getUri($storage->getPathByType($headerImage, 'theme_uploads'));
-    } else { 
+    } else {
         $headerImage = WEB_ROOT . "/themes/ehri/images/header-default.jpg";
     }
     return $headerImage;
+}
+
+function theme_sharing_image_url()
+{
+    $sharingImage = get_theme_option('Sharing Image');
+    if ($sharingImage) {
+        $storage = Zend_Registry::get('storage');
+        $sharingImage = $storage->getUri($storage->getPathByType($sharingImage, 'theme_uploads'));
+    } else { 
+        $sharingImage = WEB_ROOT . "/themes/ehri/images/header-default.jpg";
+    }
+    return $sharingImage;
 }
 
 /**

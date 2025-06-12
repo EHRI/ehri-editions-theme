@@ -40,7 +40,8 @@ module.exports = function(grunt) {
       payload: {
         files: [
           'scss/**',
-          'javascripts/editions.js'
+          'javascripts/editions.js',
+          'javascripts/cite.js'
         ],
         tasks: 'build'
       }
@@ -52,7 +53,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'javascripts/theme.min.js': ['javascripts/editions.js']
+          'javascripts/theme.min.js': ['javascripts/editions.js', 'javascripts/cite.js']
         }
       }
     },
