@@ -1,26 +1,41 @@
+
 <!DOCTYPE html>
 <html class="<?php echo get_theme_option('Style Sheet'); ?>" lang="<?php echo get_html_lang(); ?>">
 <head>
     <?php add_translation_source(dirname(dirname(__FILE__)) . '/languages');?>
     <meta charset="utf-8">
     <?php if ($copyright = option('copyright')): ?>
-        <meta name="description" content="<?php echo $copyright; ?>"/>
+        <meta name="description" content="<?php echo html_escape( $copyright ); ?>"/>
     <?php endif; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
     <?php if ($description = trim(option('description'))): ?>
-        <meta name="description" content="<?php echo $description; ?>"/>
+        <meta name="description" content="<?php echo html_escape($description); ?>"/>
+        <meta property="og:description" content="<?php echo html_escape($description); ?>"/>
     <?php endif; ?>
     <?php if ($keywords = get_theme_option('Meta Keywords')): ?>
-        <meta name="keywords" content="<?php echo $keywords; ?>"/>
+        <meta name="keywords" content="<?php echo html_escape($keywords); ?>"/>
     <?php endif; ?>
 
     <?php
+    include(dirname(__FILE__) . "/custom.php");
     if (isset($title)) {
         $titleParts[] = strip_formatting($title);
     }
     $titleParts[] = option('site_title');
     ?>
-    <title><?php echo implode(' &middot; ', $titleParts); ?></title>
+    <meta property="og:title" content="<?php echo html_escape(implode(' | ', $titleParts)); ?>"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="<?php echo absolute_url(); ?>"/>
+    <?php if($item = get_current_record('item', false)): ?>
+        <?php if ($file = $item->getFile()): ?>
+            <?php $item_img = $file->getWebPath('square_thumbnail'); ?>
+            <meta property="og:image" content="<?php echo $item_img; ?>"/>
+        <?php endif; ?>
+    <?php elseif ($theme_img_url = theme_sharing_image_url()): ?>
+        <meta property="og:image" content="<?php echo $theme_img_url; ?>"/>
+    <?php endif; ?>
+
+    <title><?php echo html_escape( implode(' &middot; ', $titleParts) ); ?></title>
 
     <?php echo auto_discovery_link_tags(); ?>
 
@@ -34,6 +49,9 @@
 	<link rel="mask-icon" href="<?php echo web_path_to('safari-pinned-tab.svg'); ?>" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#603cba">
 	<meta name="theme-color" content="#ffffff">
+
+    <!-- metadata for social media -->
+
 
     <!-- css -->
     <?php if (!$colorScheme = get_theme_option('Color scheme')) { $colorScheme = 'wine-violet'; } ?>
@@ -49,6 +67,7 @@
     <?php queue_js_file('photoswipe.min', 'photoswipe/dist'); ?>
     <?php queue_js_file('photoswipe-ui-default.min', 'photoswipe/dist'); ?>
     <?php queue_js_file('vendor/css-vars-ponyfill.min'); ?>
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/citation-js@0.7.18/build/citation.min.js"></script>
     <?php echo head_js(); ?>
     
     <!-- print -->
@@ -88,28 +107,6 @@
       cssVars();
     </script>
 
-    <?php if ($gaid = trim(get_theme_option('ga_code'))): ?>
-        <!-- Google tag (gtag.js) -->
-        <?php if (trim(get_theme_option('use_ga4_code'))): ?>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $gaid; ?>"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '<?php echo $gaid; ?>');
-            </script>
-        <?php else: ?>
-            <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                ga('create', '<?php echo $gaid; ?>', 'auto');
-                ga('set', 'anonymizeIp', true);
-                ga('send', 'pageview');
-            </script>
-        <?php endif; ?>
-    <?php endif; ?>
     <?php if ($plausible_domain=trim (get_theme_option('plausible_domain'))): ?>
         <script defer data-domain="<?php echo $plausible_domain; ?>" src="https://plausible.io/js/script.js"></script>
     <?php endif; ?>
@@ -119,7 +116,6 @@
 
 <!-- url and customized functions-->
 <?php
-include(dirname(__FILE__) . "/custom.php");
 $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 ?>
 
