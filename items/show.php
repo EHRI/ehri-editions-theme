@@ -1,34 +1,36 @@
-<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'two-columns items show')); ?>
+<?php echo head(array(
+        'title' => metadata('item', array('Dublin Core', 'Title')),
+        'bodyclass' => 'two-columns items show')); ?>
 
 <?php
-    $meta = '';
-    $entities = '';
+$meta = '';
+$entities = '';
 
-    $item = get_view()->{'item'};
-    $texts = tei_editions_render_document_texts($item, $meta, $entities);
-    $images = tei_editions_render_document_images($item);
-    $related = get_related_item_documents($item);
-    $refs = tei_editions_render_document_references($item);
-    $exhibit = tei_editions_get_neatline_exhibit($item);
+$item = get_view()->{'item'};
+$texts = tei_editions_render_document_texts($item, $meta, $entities);
+$images = tei_editions_render_document_images($item);
+$related = get_related_item_documents($item);
+$refs = tei_editions_render_document_references($item);
+$exhibit = tei_editions_get_neatline_exhibit($item);
 ?>
 
 <div id="primary">
-	<div class="item-pagination">
+    <div class="item-pagination">
         <div class="item-pagination-previous"><?php echo link_to_previous_item_show_custom(); ?></div>
         <div class="item-pagination-next"><?php echo link_to_next_item_show_custom(); ?></div>
     </div>
 
-    <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
+    <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 
-	<div id="content-share-mobile">
+    <div id="content-share-mobile">
         <?php echo $this->partial('common/content_share.php', array("item" => $item)); ?>
-	</div>
+    </div>
 
     <!-- Items metadata -->
     <div id="item-texts">
 
         <div class="document-section-tabs">
-            <a href="#document-metadata" class="items-content-button"><?php echo __('Metadata');?></a>
+            <a href="#document-metadata" class="items-content-button"><?php echo __('Metadata'); ?></a>
 
             <?php if ($texts): ?>
                 <a href="#document-text" class="items-content-button"><?php echo __('Document Text'); ?></a>
@@ -62,7 +64,7 @@
 
         <?php if ($texts): ?>
             <div id="document-text" class="document-text document-section">
-                <h3><?php echo __('Document Text');?></h3>
+                <h3><?php echo __('Document Text'); ?></h3>
                 <?php echo $texts; ?>
             </div>
         <?php endif; ?>
@@ -74,7 +76,8 @@
                     <span class="map-document-text"><?php echo __('Toggle fullscreen') ?></span>
                     <div id="map-toggle-fullscreen-icon" class="material-icons">fullscreen</div>
                 </a>
-                <iframe name="neatline" class="element-map" src="/neatline/fullscreen/<?php echo $exhibit->slug; ?>?neatline-embed=true"
+                <iframe name="neatline" class="element-map"
+                        src="/neatline/fullscreen/<?php echo $exhibit->slug; ?>?neatline-embed=true"
                         width=100% height="410" frameborder="0" allowfullscreen></iframe>
             </div>
         <?php endif; ?>
@@ -108,7 +111,7 @@
     </div>
 
     <!-- Mobile navigation -->
-	<div class="item-pagination">
+    <div class="item-pagination">
         <div class="item-pagination-previous"><?php echo link_to_previous_item_show_custom(); ?></div>
         <div class="item-pagination-next"><?php echo link_to_next_item_show_custom(); ?></div>
     </div>
@@ -161,20 +164,20 @@
 </div>
 
 <script>
-    jQuery(function($) {
+    jQuery(function ($) {
         $("#comment-expand-button").click(function (e) {
             $("#comment-form").show(400);
             $("#comment-expand-button").hide(0);
         });
 
         var $html = $('html, body');
-        $("a.items-content-button").click(function(e) {
+        $("a.items-content-button").click(function (e) {
             var href = $.attr(this, "href");
             if (href && href.startsWith("#")) {
                 e.preventDefault();
                 $html.animate({
                     scrollTop: $(href).offset().top + 5
-                }, 400, function() {
+                }, 400, function () {
                     window.location.hash = href;
                 });
             }
