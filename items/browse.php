@@ -14,7 +14,6 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 <?php echo pagination_links(); ?>
 
 <?php if ($total_results > 0): ?>
-
     <?php
     $sortLinks[__('Title')] = 'Dublin Core,Title';
     $sortLinks[__('Creator')] = 'Dublin Core,Creator';

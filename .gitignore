@@ -3,6 +3,7 @@
 build.xml
 .ant-targets-build.xml
 node_modules
+vendor
 
 css/theme.css
 css/print.css
