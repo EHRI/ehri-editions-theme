@@ -5,7 +5,7 @@
         <div id="footer-content">
             <div id="footer-logos">
                 <?php foreach (range(1, 4) as $num): ?>
-                    <?php echo footer_logo($num); ?>
+                    <?php echo ehri_footer_logo($num); ?>
                 <?php endforeach ?>
             </div>
 
