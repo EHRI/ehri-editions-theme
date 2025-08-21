@@ -151,7 +151,6 @@ $exhibit = tei_editions_get_neatline_exhibit($item);
 
         <?php echo $this->partial('common/content_share.php'); ?>
         <?php echo $this->partial('common/feedback.php', array("item" => $item)); ?>
-        <?php echo $this->partial('common/cite.php', array("item" => $item)); ?>
     </div>
 
     <div class="sidebar-section" id="content-files">
