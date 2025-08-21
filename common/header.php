@@ -16,25 +16,27 @@
         <meta name="keywords" content="<?php echo html_escape($keywords); ?>"/>
     <?php endif; ?>
 
+    <meta property="og:site_name" content="<?php echo html_escape(option('site_title')); ?>"/>
     <?php
     if (isset($title)) {
         $titleParts[] = strip_formatting($title);
     }
     $titleParts[] = option('site_title');
     ?>
-    <meta property="og:title" content="<?php echo html_escape(implode(' | ', $titleParts)); ?>"/>
+    <title><?php echo html_escape(implode(' &middot; ', $titleParts)); ?></title>
+
+    <!-- Open Graph metadata -->
+    <?php if (isset($title)): ?>
+        <meta name="og:title" content="<?php echo html_escape(strip_formatting($title)); ?>"/>
+    <?php else: ?>
+        <meta name="og:title" content="<?php echo html_escape(option('site_title')); ?>"/>
+    <?php endif; ?>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="<?php echo absolute_url(); ?>"/>
-    <?php if ($item = get_current_record('item', false)): ?>
-        <?php if ($file = $item->getFile()): ?>
-            <?php $item_img = $file->getWebPath('square_thumbnail'); ?>
-            <meta property="og:image" content="<?php echo $item_img; ?>"/>
-        <?php endif; ?>
-    <?php elseif ($theme_img_url = theme_sharing_image_url()): ?>
+    <?php if ($theme_img_url = ehri_get_representative_image()): ?>
         <meta property="og:image" content="<?php echo $theme_img_url; ?>"/>
     <?php endif; ?>
 
-    <title><?php echo html_escape(implode(' &middot; ', $titleParts)); ?></title>
 
     <?php echo auto_discovery_link_tags(); ?>
 
@@ -228,7 +230,7 @@ $searchQuery = array_key_exists('q', $_GET) ? $_GET['q'] : '';
 <div id="container">
     <a href="#content" id="skipnav" rel="nofollow"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
-    <header id="header" role="banner" style="background-image: url('<?php echo theme_header_image_url(); ?>');">
+    <header id="header" role="banner" style="background-image: url('<?php echo ehri_theme_header_image_url(); ?>');">
         <div id="header-overlay"></div>
         <div id="header-text">
             <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
