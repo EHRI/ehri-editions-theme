@@ -3,6 +3,22 @@
  * This file contains theme-specific functions and is loaded automatically by Omeka.
  */
 
+if (!function_exists('ehri_get_first_file_with_extension')) {
+    /**
+     * Fetch the first file with a given extension from an array.
+     */
+    function ehri_get_first_file_with_extension($files, $ext, $mime = null) {
+        foreach ($files as $f) {
+            $fn = $f->original_filename;
+            $pos = strlen($fn) - strlen($ext);
+            if (stripos($fn, $ext) === $pos && (is_null($mime) || $f->mimetype === $mime)) {
+                return $f;
+            }
+        }
+        return false;
+    }
+}
+
 if (!function_exists('ehri_footer_logo')) {
     /**
      * Get the theme's logo image tag.

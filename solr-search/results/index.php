@@ -12,8 +12,11 @@ $searchQuery = array_key_exists('q', $_GET) ? trim($_GET['q']) : '';
     <?php echo pagination_links(); ?>
 
     <ol class="item-list search-results">
+        <?php $doc_ids = array_map(function($doc) { return $doc->modelid; }, $results->response->docs); ?>
+        <?php $items = get_records("Item", array("range" => implode(',', $doc_ids)), $results->response->numFound); ?>
+        <?php $items_id = array_column($items, null, 'id'); ?>
         <?php foreach ($results->response->docs as $doc): ?>
-            <?php $item = get_db()->getTable("Item")->find($doc->modelid); ?>
+            <?php $item = $items_id[$doc->modelid]; ?>
             <?php if ($item): ?>
                 <li>
                     <?php echo get_view()->partial('items/single.php', array('item' => $item)); ?>
