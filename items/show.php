@@ -119,9 +119,10 @@ $exhibit = tei_editions_get_neatline_exhibit($item);
 
 <div id="sidebar">
     <div id="content-share">
-        <?php $pdf = tei_editions_get_first_file_with_extension($item, ".pdf"); ?>
-        <?php $epub = tei_editions_get_first_file_with_extension($item, ".epub"); ?>
-        <?php $xmlf = tei_editions_get_first_file_with_extension($item, ".xml"); ?>
+        <?php $files = $item->getFiles(); ?>
+        <?php $pdf = ehri_get_first_file_with_extension($files, ".pdf"); ?>
+        <?php $epub = ehri_get_first_file_with_extension($files, ".epub"); ?>
+        <?php $xmlf = ehri_get_first_file_with_extension($files, ".xml"); ?>
 
         <?php if ($pdf or $epub or $xmlf): ?>
             <div class="sidebar-section">
